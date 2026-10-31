@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.3.0 (2026-10-31)
+
+- M3 Expressive motion: spring FAB press/shape morph, dialog spring entrance,
+  button press feedback, card elevation transitions, reading-mode width transition.
+- Snackbar component (`window.chromaSnackbar`).
+- GitHub Actions demo accessibility job (axe-core WCAG 2.2 AA) + screenshot artifact.
+- mediawiki.org Skin page draft, translatewiki preparation and release checklist docs.
+- 1.43 / 1.45 / 1.46 branches smoke-tested after sync.
+
 ## v0.2.0 (2026-10-31)
 
 - MobileFrontend B2 coexistence verified (desktop Chroma, mobile MinervaNeue,
