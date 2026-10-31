@@ -11,12 +11,15 @@
     "lint:css": "stylelint resources/styles/*.css demo/*.css",
     "serve": "python3 -m http.server 8080",
     "test": "echo 'Tests are run in CI (see .github/workflows/ci.yml)'",
-    "presets": "node tools/generate-presets.mjs"
+    "presets": "node tools/generate-presets.mjs",
+    "test:a11y": "node tests/a11y-demo.mjs"
   },
   "devDependencies": {
     "@material/material-color-utilities": "0.2.7",
     "eslint": "^9.0.0",
     "stylelint": "^16.0.0",
-    "stylelint-config-standard": "^36.0.0"
+    "stylelint-config-standard": "^36.0.0",
+    "axe-core": "^4.10.0",
+    "playwright": "1.49.0"
   }
 }
