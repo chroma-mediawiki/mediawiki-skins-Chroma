@@ -43,7 +43,8 @@
 						"chroma-menu",
 						"chroma-theme",
 						"chroma-reading-mode",
-						"toc"
+						"toc",
+						"chroma-search"
 					]
 				}
 			]

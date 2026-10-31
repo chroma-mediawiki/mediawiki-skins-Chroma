@@ -25,6 +25,12 @@
 |---|---|
 | ![1.43](screenshots/mw143-home.png) | ![1.45](screenshots/mw145-home.png) |
 
+移动端（MobileFrontend + MinervaNeue 共存）：默认手机视图由 MinervaNeue 提供，桌面与 `?useskin=chroma` 使用 Chroma。
+
+| 手机端（MinervaNeue） | 手机端（强制 Chroma） |
+|---|---|
+| ![MinervaNeue](screenshots/mw146-mobile-minerva.png) | ![Chroma mobile](screenshots/mw146-mobile-chroma.png) |
+
 
 ## MediaWiki 真机截图（1.46.0）
 

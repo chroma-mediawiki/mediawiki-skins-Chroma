@@ -31,6 +31,16 @@ Known harness issues (not skin defects):
 - CheckUser and TemplateStyles placeholders from the core source archive are not
   installed; they are not needed for the skin harness.
 
+## MobileFrontend (B2) — MediaWiki 1.46.0
+
+- Installed `MobileFrontend` + `MinervaNeue`.
+- Desktop UA: Chroma (skin-chroma).
+- Mobile UA (Pixel 7): MinervaNeue serves the mobile view, Chroma remains the
+  desktop skin; no functional breakage.
+- Forced `?useskin=chroma` on a mobile viewport renders Chroma's responsive
+  layout (drawer becomes overlay, search collapses to an icon, TOC hidden).
+- Result: B2 coexistence verified.
+
 ## Tier 1 — in scope for v0.1
 
 MediaWiki 1.43 bundled extensions (33):

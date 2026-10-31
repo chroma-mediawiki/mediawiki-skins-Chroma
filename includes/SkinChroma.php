@@ -18,6 +18,7 @@ class SkinChroma extends \SkinMustache {
 	public function getTemplateData() {
 		$data = parent::getTemplateData();
 		$data['sitename'] = $this->getConfig()->get( 'Sitename' );
+		$data['link-search'] = \SpecialPage::getTitleFor( 'Search' )->getLocalURL();
 		return $data;
 	}
 }
