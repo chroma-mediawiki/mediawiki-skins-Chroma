@@ -13,36 +13,37 @@
 
 ## 截图
 
+静态原型（浅色 / 深色）：
+
 | 浅色 | 深色 |
 |---|---|
 | ![浅色](screenshots/app-light.png) | ![深色](screenshots/app-dark.png) |
 
-| 阅读模式 | 移动端 |
+布局切换（阅读布局 / 阅读模式）：
+
+| 阅读布局 | 阅读模式 |
 |---|---|
-| ![阅读模式](screenshots/reading-mode.png) | ![移动端](screenshots/app-mobile.png) |
+| ![阅读布局](screenshots/reading-layout.png) | ![阅读模式](screenshots/reading-mode.png) |
+
+真机（MediaWiki 1.43.0 / 1.45.0）：
 
 | MediaWiki 1.43 LTS | MediaWiki 1.45 |
 |---|---|
 | ![1.43](screenshots/mw143-home.png) | ![1.45](screenshots/mw145-home.png) |
 
-移动端（MobileFrontend + MinervaNeue 共存）：默认手机视图由 MinervaNeue 提供，桌面与 `?useskin=chroma` 使用 Chroma。
-
-| 手机端（MinervaNeue） | 手机端（强制 Chroma） |
-|---|---|
-| ![MinervaNeue](screenshots/mw146-mobile-minerva.png) | ![Chroma mobile](screenshots/mw146-mobile-chroma.png) |
-
-
-## MediaWiki 真机截图（1.46.0）
+真机（MediaWiki 1.46.0，含 Cite、Math、SyntaxHighlight、InputBox 等扩展）：
 
 | 浅色 | 深色 |
 |---|---|
-| ![真机浅色](screenshots/mw146-home.png) | ![真机深色](screenshots/mw146-home-dark.png) |
+| ![真机浅色](screenshots/mw146-content.png) | ![真机深色](screenshots/mw146-content-dark.png) |
 
-| 编辑页 | 移动端 |
+手机端（静态原型 / MediaWiki 1.46.0 + MobileFrontend、强制 Chroma）：
+
+| 静态原型（手机） | MediaWiki 1.46.0（手机） |
 |---|---|
-| ![编辑页](screenshots/mw146-edit.png) | ![移动端](screenshots/mw146-mobile.png) |
+| ![手机原型](screenshots/app-mobile.png) | ![手机真机](screenshots/mw146-mobile-chroma.png) |
 
-> 以上为本地安装 MediaWiki 1.46.0 + SQLite、启用 Chroma 后的实际渲染截图（非静态原型）。
+> 真机截图来自本地 MediaWiki 1.46.0 + SQLite，启用 Chroma 后的实际渲染；手机 UA 默认由 MinervaNeue 提供，`?useskin=chroma` 使用 Chroma 响应式布局。
 
 ## 特性
 
