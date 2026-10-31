@@ -1,23 +1,29 @@
 {
-  "@metadata": {
-    "authors": ["HAHAHAHAHAYINING"]
-  },
-  "skinname-chroma": "{{optional}} Name of the skin shown in preferences.",
-  "chroma-desc": "{{desc|name=Chroma|url=https://github.com/chroma-mediawiki/mediawiki-skins-Chroma}}",
-  "chroma-skip-to-content": "Accessibility link at the top of the page.",
-  "chroma-menu": "Label for the navigation drawer toggle button.",
-  "chroma-search": "Label for the search input.",
-  "chroma-theme": "Color scheme preference section label.",
-  "chroma-theme-system": "Option: follow the operating system color scheme.",
-  "chroma-theme-light": "Option: always use light mode.",
-  "chroma-theme-dark": "Option: always use dark mode.",
-  "chroma-seed-color": "Label for the accent/seed color picker.",
-  "chroma-layout": "Layout preference label.",
-  "chroma-layout-app": "Option: app-like layout.",
-  "chroma-layout-reading": "Option: reading layout.",
-  "chroma-reading-mode": "Reading mode toggle label.",
-  "chroma-pref-theme": "Preference label: color scheme.",
-  "chroma-pref-layout": "Preference label: layout.",
-  "chroma-pref-reading": "Preference label: enable reading mode by default.",
-  "chroma-pref-seed": "Preference label: accent color."
+	"@metadata": {
+		"authors": [
+			"HAHAHAHAHAYINING"
+		]
+	},
+	"skinname-chroma": "{{optional}} Name of the skin shown in preferences.",
+	"chroma-desc": "{{desc|name=Chroma|url=https://github.com/chroma-mediawiki/mediawiki-skins-Chroma}}",
+	"chroma-skip-to-content": "Accessibility link at the top of the page.",
+	"chroma-menu": "Label for the navigation drawer toggle button.",
+	"chroma-search": "Label for the search input.",
+	"chroma-theme": "Color scheme preference section label.",
+	"chroma-theme-system": "Option: follow the operating system color scheme.",
+	"chroma-theme-light": "Option: always use light mode.",
+	"chroma-theme-dark": "Option: always use dark mode.",
+	"chroma-seed-color": "Label for the accent/seed color picker.",
+	"chroma-layout": "Layout preference label.",
+	"chroma-layout-app": "Option: app-like layout.",
+	"chroma-layout-reading": "Option: reading layout.",
+	"chroma-reading-mode": "Reading mode toggle label.",
+	"chroma-pref-theme": "Preference label: color scheme.",
+	"chroma-pref-layout": "Preference label: layout.",
+	"chroma-pref-reading": "Preference label: enable reading mode by default.",
+	"chroma-pref-seed": "Preference label: accent/seed color.",
+	"chroma-seed-teal": "Option: teal accent color (default).",
+	"chroma-seed-blue": "Option: blue accent color.",
+	"chroma-seed-green": "Option: green accent color.",
+	"chroma-seed-violet": "Option: violet accent color."
 }

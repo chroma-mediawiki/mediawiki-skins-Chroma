@@ -66,4 +66,5 @@ jobs:
       - name: Regenerate tokens and check drift
         run: |
           npm run tokens
-          git diff --exit-code -- resources/styles/tokens.css docs/tokens.json
+          npm run presets
+          git diff --exit-code -- resources/styles/tokens.css resources/styles/tokens-presets.css docs/tokens.json

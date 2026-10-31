@@ -4,6 +4,7 @@
 
 ```php
 // Seed color used to generate the MD3 palette. Default: #006A6A.
+// Built-in presets: #006A6A (teal), #0061A4 (blue), #386A20 (green), #6750A4 (violet).
 $wgChromaDefaultSeed = '#006A6A';
 
 // 'system' | 'light' | 'dark'
@@ -29,16 +30,18 @@ $wgChromaColorPresets = [
 ];
 ```
 
-Presets are compiled at build time (`npm run tokens`); arbitrary user seeds are
-computed in the browser with `material-color-utilities` and applied as CSS
-variables. Without JS the admin default is used.
+Presets are compiled at build time (`npm run presets`) into
+`resources/styles/tokens-presets.css` and selected with a `chroma-seed-*` class
+on `<body>`. The user preference is available under Appearance once the skin is
+active. Arbitrary seed colors are planned for a later milestone; the four
+presets above are supported in v0.1.
 
 ## User preferences
 
 `Special:Preferences#mw-prefsection-rendering` → Chroma section:
 
 - Color scheme: follow system / light / dark
-- Accent color: preset swatches + custom picker (if allowed)
+- Accent color: teal / blue / green / violet (if allowed)
 - Layout: app-like / reading
 - Reading mode: on/off
 

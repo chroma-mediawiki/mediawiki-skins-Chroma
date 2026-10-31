@@ -60,6 +60,9 @@
 				"resources/styles/tokens.css": {
 					"media": "screen"
 				},
+				"resources/styles/tokens-presets.css": {
+					"media": "screen"
+				},
 				"resources/styles/base.css": {
 					"media": "screen"
 				},
@@ -100,5 +103,9 @@
 	"manifest_version": 2,
 	"AutoloadNamespaces": {
 		"MediaWiki\\Skins\\Chroma\\": "includes/"
+	},
+	"Hooks": {
+		"GetPreferences": "MediaWiki\\Skins\\Chroma\\Hooks::onGetPreferences",
+		"OutputPageBodyAttributes": "MediaWiki\\Skins\\Chroma\\Hooks::onOutputPageBodyAttributes"
 	}
 }

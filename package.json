@@ -10,7 +10,8 @@
     "lint:js": "eslint resources/scripts demo/*.js",
     "lint:css": "stylelint resources/styles/*.css demo/*.css",
     "serve": "python3 -m http.server 8080",
-    "test": "echo 'Tests are run in CI (see .github/workflows/ci.yml)'"
+    "test": "echo 'Tests are run in CI (see .github/workflows/ci.yml)'",
+    "presets": "node tools/generate-presets.mjs"
   },
   "devDependencies": {
     "@material/material-color-utilities": "0.2.7",

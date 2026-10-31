@@ -553,3 +553,10 @@ a:hover { text-decoration-thickness: 2px; }
 	font-size: var(--md-sys-typescale-label-large-size);
 }
 .chroma-user-menu a:hover { background: var(--md-sys-color-surface-container-high); }
+
+/* body-level preference attributes */
+body[data-chroma-theme="light"] { color-scheme: light; }
+body[data-chroma-theme="dark"] { color-scheme: dark; }
+@media (prefers-color-scheme: dark) {
+	body[data-chroma-theme="auto"] { color-scheme: dark; }
+}

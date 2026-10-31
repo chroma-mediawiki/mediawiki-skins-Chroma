@@ -7,7 +7,7 @@
 ( function () {
 	'use strict';
 
-	var root = document.documentElement;
+	var root = document.body || document.documentElement;
 	var STORAGE = {
 		theme: 'chroma-theme',
 		layout: 'chroma-layout',

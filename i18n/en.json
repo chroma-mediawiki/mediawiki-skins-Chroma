@@ -1,23 +1,29 @@
 {
-  "@metadata": {
-    "authors": ["HAHAHAHAHAYINING"]
-  },
-  "skinname-chroma": "Chroma",
-  "chroma-desc": "A MediaWiki skin inspired by Material Design 3 and M3 Expressive.",
-  "chroma-skip-to-content": "Skip to content",
-  "chroma-menu": "Menu",
-  "chroma-search": "Search",
-  "chroma-theme": "Color scheme",
-  "chroma-theme-system": "Follow system",
-  "chroma-theme-light": "Light",
-  "chroma-theme-dark": "Dark",
-  "chroma-seed-color": "Accent color",
-  "chroma-layout": "Layout",
-  "chroma-layout-app": "App-like",
-  "chroma-layout-reading": "Reading",
-  "chroma-reading-mode": "Reading mode",
-  "chroma-pref-theme": "Color scheme",
-  "chroma-pref-layout": "Layout",
-  "chroma-pref-reading": "Enable reading mode",
-  "chroma-pref-seed": "Accent color"
+	"@metadata": {
+		"authors": [
+			"HAHAHAHAHAYINING"
+		]
+	},
+	"skinname-chroma": "Chroma",
+	"chroma-desc": "A MediaWiki skin inspired by Material Design 3 and M3 Expressive.",
+	"chroma-skip-to-content": "Skip to content",
+	"chroma-menu": "Menu",
+	"chroma-search": "Search",
+	"chroma-theme": "Color scheme",
+	"chroma-theme-system": "Follow system",
+	"chroma-theme-light": "Light",
+	"chroma-theme-dark": "Dark",
+	"chroma-seed-color": "Accent color",
+	"chroma-layout": "Layout",
+	"chroma-layout-app": "App-like",
+	"chroma-layout-reading": "Reading",
+	"chroma-reading-mode": "Reading mode",
+	"chroma-pref-theme": "Color scheme",
+	"chroma-pref-layout": "Layout",
+	"chroma-pref-reading": "Enable reading mode",
+	"chroma-pref-seed": "Accent color",
+	"chroma-seed-teal": "Teal (default)",
+	"chroma-seed-blue": "Blue",
+	"chroma-seed-green": "Green",
+	"chroma-seed-violet": "Violet"
 }

@@ -1,23 +1,29 @@
 {
-  "@metadata": {
-    "authors": ["HAHAHAHAHAYINING"]
-  },
-  "skinname-chroma": "Chroma",
-  "chroma-desc": "受 Material Design 3 与 M3 Expressive 启发的 MediaWiki 皮肤。",
-  "chroma-skip-to-content": "跳转到正文",
-  "chroma-menu": "菜单",
-  "chroma-search": "搜索",
-  "chroma-theme": "配色方案",
-  "chroma-theme-system": "跟随系统",
-  "chroma-theme-light": "浅色",
-  "chroma-theme-dark": "深色",
-  "chroma-seed-color": "主题色",
-  "chroma-layout": "布局",
-  "chroma-layout-app": "应用式",
-  "chroma-layout-reading": "阅读式",
-  "chroma-reading-mode": "阅读模式",
-  "chroma-pref-theme": "配色方案",
-  "chroma-pref-layout": "布局",
-  "chroma-pref-reading": "默认启用阅读模式",
-  "chroma-pref-seed": "主题色"
+	"@metadata": {
+		"authors": [
+			"HAHAHAHAHAYINING"
+		]
+	},
+	"skinname-chroma": "Chroma",
+	"chroma-desc": "\u53d7 Material Design 3 \u4e0e M3 Expressive \u542f\u53d1\u7684 MediaWiki \u76ae\u80a4\u3002",
+	"chroma-skip-to-content": "\u8df3\u8f6c\u5230\u6b63\u6587",
+	"chroma-menu": "\u83dc\u5355",
+	"chroma-search": "\u641c\u7d22",
+	"chroma-theme": "\u914d\u8272\u65b9\u6848",
+	"chroma-theme-system": "\u8ddf\u968f\u7cfb\u7edf",
+	"chroma-theme-light": "\u6d45\u8272",
+	"chroma-theme-dark": "\u6df1\u8272",
+	"chroma-seed-color": "\u4e3b\u9898\u8272",
+	"chroma-layout": "\u5e03\u5c40",
+	"chroma-layout-app": "\u5e94\u7528\u5f0f",
+	"chroma-layout-reading": "\u9605\u8bfb\u5f0f",
+	"chroma-reading-mode": "\u9605\u8bfb\u6a21\u5f0f",
+	"chroma-pref-theme": "\u914d\u8272\u65b9\u6848",
+	"chroma-pref-layout": "\u5e03\u5c40",
+	"chroma-pref-reading": "\u9ed8\u8ba4\u542f\u7528\u9605\u8bfb\u6a21\u5f0f",
+	"chroma-pref-seed": "\u4e3b\u9898\u8272",
+	"chroma-seed-teal": "\u9752\u8272\uff08\u9ed8\u8ba4\uff09",
+	"chroma-seed-blue": "\u84dd\u8272",
+	"chroma-seed-green": "\u7eff\u8272",
+	"chroma-seed-violet": "\u7d2b\u8272"
 }
