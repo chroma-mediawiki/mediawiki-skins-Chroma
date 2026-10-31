@@ -7,7 +7,7 @@
 [![MediaWiki](https://img.shields.io/badge/MediaWiki-1.43%20%7C%201.45%20%7C%201.46-36c.svg)](docs/COMPAT-MATRIX.md)
 [![Demo](https://img.shields.io/badge/demo-GitHub%20Pages-006a6a.svg)](https://chroma-mediawiki.github.io/mediawiki-skins-Chroma/demo/)
 
-> 状态：v0.5.0。1.43 / 1.45 / 1.46 真机 + 30 个 Tier 1 扩展矩阵通过；MobileFrontend 手机端全接管；CI 与 Pages 通过。
+> 状态：v0.5.1。1.43 / 1.45 / 1.46 真机 + 30 个 Tier 1 扩展矩阵通过；MobileFrontend 手机端全接管；CI 与 Pages 通过。
 
 ![Chroma 横幅](screenshots/readme-banner.svg)
 
@@ -59,9 +59,9 @@
 
 | MediaWiki | 分支 | 发布 |
 |---|---|---|
-| 1.43 LTS | `REL1_43` | [v0.4.1-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.0-REL1_43) |
-| 1.45 | `REL1_45` | [v0.4.1-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.0-REL1_45) |
-| 1.46 | `REL1_46` | [v0.4.1-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.0-REL1_46) |
+| 1.43 LTS | `REL1_43` | [v0.4.1-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.1-REL1_43) |
+| 1.45 | `REL1_45` | [v0.4.1-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.1-REL1_45) |
+| 1.46 | `REL1_46` | [v0.4.1-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.1-REL1_46) |
 
 每个 Release 提供可直接解压到 `skins/Chroma` 的 ZIP。`main` 分支用于开发，不保证与 Release 同步。
 
