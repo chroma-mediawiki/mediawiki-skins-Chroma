@@ -19,7 +19,7 @@ jobs:
           NAME="Chroma-${GITHUB_REF_NAME}.zip"
           zip -r "$NAME" \
             skin.json composer.json LICENSE NOTICE README.md \
-            i18n includes templates resources docs
+            i18n includes templates resources docs screenshots
           echo "ASSET=$NAME" >> "$GITHUB_ENV"
 
       - name: Create GitHub Release

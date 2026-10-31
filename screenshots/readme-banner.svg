@@ -1,16 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="Chroma">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="Chroma — a Material Design 3 inspired MediaWiki skin">
 	<defs>
-		<linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+		<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
 			<stop offset="0" stop-color="#006a6a"/>
 			<stop offset="1" stop-color="#004f4f"/>
 		</linearGradient>
+		<linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+			<stop offset="0" stop-color="#6ff7f6" stop-opacity=".22"/>
+			<stop offset="1" stop-color="#6ff7f6" stop-opacity="0"/>
+		</linearGradient>
 	</defs>
-	<rect width="1280" height="320" fill="url(#g)"/>
-	<circle cx="1120" cy="60" r="180" fill="#6ff7f6" opacity=".10"/>
-	<circle cx="1210" cy="260" r="140" fill="#cce8e7" opacity=".12"/>
-	<circle cx="118" cy="260" r="120" fill="#6ff7f6" opacity=".08"/>
-	<text x="96" y="150" font-family="Roboto, Segoe UI, sans-serif" font-size="76" font-weight="700" fill="#ffffff">Chroma</text>
-	<text x="96" y="196" font-family="Roboto, Segoe UI, sans-serif" font-size="22" fill="#cce8e7">Material Design 3 · M3 Expressive · MediaWiki skin</text>
-	<rect x="96" y="228" width="152" height="40" rx="20" fill="#ffffff" opacity=".14"/>
-	<text x="118" y="254" font-family="Roboto, Segoe UI, sans-serif" font-size="16" fill="#ffffff">v0.1 in progress</text>
+	<rect width="1280" height="320" fill="url(#bg)"/>
+	<circle cx="1100" cy="40" r="210" fill="url(#glow)"/>
+	<circle cx="1220" cy="280" r="160" fill="#cce8e7" opacity=".10"/>
+	<g opacity=".16" fill="none" stroke="#cce8e7" stroke-width="2">
+		<rect x="850" y="52" width="330" height="216" rx="36"/>
+		<rect x="886" y="88" width="258" height="144" rx="28"/>
+	</g>
+	<g opacity=".35" fill="#cce8e7">
+		<circle cx="900" cy="190" r="6"/>
+		<circle cx="922" cy="190" r="6"/>
+		<circle cx="944" cy="190" r="6"/>
+	</g>
+	<g opacity=".18" fill="#ffffff">
+		<rect x="884" y="112" width="142" height="18" rx="9"/>
+		<rect x="884" y="146" width="214" height="12" rx="6"/>
+		<rect x="884" y="170" width="188" height="12" rx="6"/>
+	</g>
+	<text x="80" y="142" font-family="Roboto, 'Segoe UI', Arial, sans-serif" font-size="82" font-weight="700" fill="#ffffff">Chroma</text>
+	<text x="82" y="184" font-family="Roboto, 'Segoe UI', Arial, sans-serif" font-size="22" fill="#cce8e7">Material Design 3 · MediaWiki 1.43 / 1.45 / 1.46</text>
+	<g font-family="Roboto, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="600">
+		<rect x="82" y="218" width="150" height="38" rx="19" fill="#ffffff" opacity=".14"/>
+		<text x="102" y="243" fill="#ffffff">v0.5.1</text>
+		<rect x="244" y="218" width="188" height="38" rx="19" fill="#ffffff" opacity=".10"/>
+		<text x="264" y="243" fill="#cce8e7">GPL-3.0-or-later</text>
+	</g>
 </svg>

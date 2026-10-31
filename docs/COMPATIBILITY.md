@@ -50,7 +50,8 @@ Known harness issues (not skin defects):
 
 ## MobileFrontend takeover — MediaWiki 1.46.0
 
-- Installed `MobileFrontend` + `MinervaNeue`.
+- Installed `MobileFrontend`; MinervaNeue is installed only for comparison, not
+  required by Chroma.
 - Desktop UA: Chroma (skin-chroma).
 - Mobile UA (Pixel 7): Chroma serves the mobile view directly
   (`$wgDefaultMobileSkin = 'chroma'`); the responsive drawer/search/TOC layout is
@@ -60,7 +61,7 @@ Known harness issues (not skin defects):
 - Result: Chroma full mobile takeover verified with
   `$wgDefaultMobileSkin = 'chroma'`; no MinervaNeue dependency required.
 
-## Tier 1 — in scope for v0.1
+## Tier 1 — current scope (v0.5.x)
 
 MediaWiki 1.43 bundled extensions (33):
 
@@ -120,7 +121,7 @@ Lightweight popular community extensions:
 | MsUpload | edit UI | A+B | planned |
 | YouTube | content | A | planned |
 
-## Tier 2 — not in v0.1 (graceful degradation only)
+## Tier 2 — not in current scope (graceful degradation only)
 
 Semantic MediaWiki, Cargo, PageForms, Translate, UploadWizard, Flow /
 StructuredDiscussions. They must not break (A), but no dedicated visual work.
@@ -132,10 +133,17 @@ extension UI and never depends on extension-internal DOM.
 
 ## Test method
 
-- `dev/install.sh` builds a MediaWiki instance and installs the Tier 1 set.
-- `tests/compat.spec.ts` visits one page per extension, asserts HTTP 200, no PHP
-  error markers, no console errors, no horizontal overflow, key selector present.
-- Screenshots are stored per extension in `screenshots/compat/` and diffed in CI.
+The compatibility matrix was verified manually on disposable local installs:
+
+- Three MediaWiki source installs (1.43.0 / 1.45.0 / 1.46.0) with SQLite;
+- 31 Tier 1 extensions on 1.46 and 30 on each of 1.43/1.45;
+- an extension matrix page containing `<ref>`, `<math>`, `<syntaxhighlight>`,
+  `{{#if:}}`, `<poem>`, `<inputbox>` and `<categorytree>`;
+- HTTP 200 and visual checks, plus the screenshots in `screenshots/`.
+
+There is no automated per-extension Playwright suite. CI runs the demo axe-core
+check, JSON/PHP lint, and token drift checks only. `dev/install.sh` is currently a
+placeholder; the harness setup is not shipped as a one-command script.
 
 ## Reporting a problem
 

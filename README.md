@@ -95,7 +95,7 @@ $wgChromaAllowUserReadingMode = true;
 ## 兼容性
 
 - MediaWiki 1.43 LTS / 1.45 / 1.46，分别维护于 `REL1_43`、`REL1_45`、`REL1_46` 分支。
-- Tier 1 扩展：1.46 harness 加载 31 个；1.43.0 / 1.45.0 各安装 30 个扩展的矩阵。社区扩展清单见 [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md)，尚未全部逐项验证。
+- Tier 1 扩展：1.46 harness 配置 31 个（AbuseFilter 因环境依赖未启用）；1.43.0 / 1.45.0 各安装 30 个扩展的矩阵。社区扩展清单见 [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md)，尚未全部逐项验证。
 - MobileFrontend：**全接管**。安装 MobileFrontend 并设置 `$wgDefaultMobileSkin = 'chroma';` 后，手机 UA 直接使用 Chroma 响应式布局，不再依赖 MinervaNeue。
 
 ## 开发
