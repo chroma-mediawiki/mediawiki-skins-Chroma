@@ -11,6 +11,9 @@
 				<span class="chroma-brand__text">{{sitename}}</span>
 			</a>
 		</div>
+		<a class="chroma-icon-button chroma-search-toggle" href="{{link-search}}" aria-label="{{msg-chroma-search}}">
+			<span class="chroma-icon" data-icon="search" aria-hidden="true"></span>
+		</a>
 		{{#data-search-box}}
 		<form class="chroma-search" action="{{form-action}}" method="get" role="search">
 			<input type="hidden" name="title" value="{{page-title}}">
