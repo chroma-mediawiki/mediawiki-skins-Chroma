@@ -59,9 +59,9 @@
 
 | MediaWiki | 分支 | 发布 |
 |---|---|---|
-| 1.43 LTS | `REL1_43` | [v0.1.0-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.3.0-REL1_43) |
-| 1.45 | `REL1_45` | [v0.1.0-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.3.0-REL1_45) |
-| 1.46 | `REL1_46` | [v0.1.0-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.3.0-REL1_46) |
+| 1.43 LTS | `REL1_43` | [v0.1.0-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.3.2-REL1_43) |
+| 1.45 | `REL1_45` | [v0.1.0-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.3.2-REL1_45) |
+| 1.46 | `REL1_46` | [v0.1.0-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.3.2-REL1_46) |
 
 每个 Release 提供可直接解压到 `skins/Chroma` 的 ZIP。`main` 分支用于开发，不保证与 Release 同步。
 
