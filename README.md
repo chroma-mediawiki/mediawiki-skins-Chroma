@@ -7,42 +7,39 @@
 [![MediaWiki](https://img.shields.io/badge/MediaWiki-1.43%20%7C%201.45%20%7C%201.46-36c.svg)](docs/COMPAT-MATRIX.md)
 [![Demo](https://img.shields.io/badge/demo-GitHub%20Pages-006a6a.svg)](https://chroma-mediawiki.github.io/mediawiki-skins-Chroma/demo/)
 
-> 状态：v0.1 开发中。已在 MediaWiki 1.43.0 / 1.45.0 / 1.46.0 真机通过基础冒烟（CI 与 Pages 均通过）。
+> 状态：v0.5.0。1.43 / 1.45 / 1.46 真机 + 30 个 Tier 1 扩展矩阵通过；MobileFrontend 手机端全接管；CI 与 Pages 通过。
 
 ![Chroma 横幅](screenshots/readme-banner.svg)
 
-## 截图
+## 真机截图
 
-| 浅色 | 深色 |
-|---|---|
-| ![浅色](screenshots/app-light.png) | ![深色](screenshots/app-dark.png) |
+以下全部来自本地安装的 MediaWiki + SQLite，启用 Chroma 后的实际渲染，不是静态原型。
 
-| 阅读模式 | 移动端 |
-|---|---|
-| ![阅读模式](screenshots/reading-mode.png) | ![移动端](screenshots/app-mobile.png) |
+### MediaWiki 1.43.0 / 1.45.0
 
 | MediaWiki 1.43 LTS | MediaWiki 1.45 |
 |---|---|
 | ![1.43](screenshots/mw143-home.png) | ![1.45](screenshots/mw145-home.png) |
 
-移动端（MobileFrontend + MinervaNeue 共存）：默认手机视图由 MinervaNeue 提供，桌面与 `?useskin=chroma` 使用 Chroma。
-
-| 手机端（MinervaNeue） | 手机端（强制 Chroma） |
-|---|---|
-| ![MinervaNeue](screenshots/mw146-mobile-minerva.png) | ![Chroma mobile](screenshots/mw146-mobile-chroma.png) |
-
-
-## MediaWiki 真机截图（1.46.0）
+### MediaWiki 1.46.0（含 Cite、Math、SyntaxHighlight、InputBox 等扩展）
 
 | 浅色 | 深色 |
 |---|---|
-| ![真机浅色](screenshots/mw146-home.png) | ![真机深色](screenshots/mw146-home-dark.png) |
+| ![真机浅色](screenshots/mw146-content.png) | ![真机深色](screenshots/mw146-content-dark.png) |
 
-| 编辑页 | 移动端 |
+### 手机端（MediaWiki 1.46.0 + MobileFrontend 全接管）
+
+| 浅色 | 深色 |
 |---|---|
-| ![编辑页](screenshots/mw146-edit.png) | ![移动端](screenshots/mw146-mobile.png) |
+| ![手机浅色](screenshots/mw146-mobile-chroma.png) | ![手机深色](screenshots/mw146-mobile-dark.png) |
 
-> 以上为本地安装 MediaWiki 1.46.0 + SQLite、启用 Chroma 后的实际渲染截图（非静态原型）。
+扩展矩阵（1.43 / 1.45，Cite、Math、SyntaxHighlight、InputBox、Poem 等）：
+
+| MediaWiki 1.43 | MediaWiki 1.45 |
+|---|---|
+| ![1.43 扩展矩阵](screenshots/mw143-extensions.png) | ![1.45 扩展矩阵](screenshots/mw145-extensions.png) |
+
+> 手机 UA 默认由 MinervaNeue 提供；`?useskin=chroma` 使用 Chroma 响应式布局。
 
 ## 特性
 
@@ -51,17 +48,20 @@
 - 动态色彩：管理员设置默认 seed，用户在偏好设置中选择主题色与明暗模式。
 - 两种布局：应用式（顶栏 + 导航抽屉）与阅读式（接近 Vector 2022），可随时切换。
 - 阅读模式：隐藏侧栏与操作栏，正文限宽居中，专注长文阅读。
+- 搜索联想：接入核心 `mediawiki.searchSuggest`，搜索结果使用 MD3 面板样式。
+- 特殊页：登录（Codex）、历史、版本差异、偏好设置统一 Material 样式。
 - 无外部请求：字体、图标与脚本全部随皮肤分发，不依赖 CDN。
 - 可访问性：WCAG 2.2 AA、键盘可操作、支持 `prefers-reduced-motion`。
+- 页面结构：标题、页面标签与操作同排；侧栏分组 + 图标；目录支持嵌套与 scroll-spy；引用改为编辑式 pull quote。
 
 
 ## 版本与下载
 
 | MediaWiki | 分支 | 发布 |
 |---|---|---|
-| 1.43 LTS | `REL1_43` | [v0.1.0-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.3.2-REL1_43) |
-| 1.45 | `REL1_45` | [v0.1.0-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.3.2-REL1_45) |
-| 1.46 | `REL1_46` | [v0.1.0-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.3.2-REL1_46) |
+| 1.43 LTS | `REL1_43` | [v0.4.1-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.4.1-REL1_43) |
+| 1.45 | `REL1_45` | [v0.4.1-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.4.1-REL1_45) |
+| 1.46 | `REL1_46` | [v0.4.1-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.4.1-REL1_46) |
 
 每个 Release 提供可直接解压到 `skins/Chroma` 的 ZIP。`main` 分支用于开发，不保证与 Release 同步。
 
@@ -73,6 +73,9 @@
 ```php
 wfLoadSkin( 'Chroma' );
 $wgDefaultSkin = 'chroma';
+
+// 可选：MobileFrontend 全接管手机端
+// $wgDefaultMobileSkin = 'chroma';
 ```
 
 ## 配置
@@ -91,7 +94,7 @@ $wgChromaAllowUserColor = true;
 
 - MediaWiki 1.43 LTS / 1.45 / 1.46，分别维护于 `REL1_43`、`REL1_45`、`REL1_46` 分支。
 - Tier 1 扩展（MediaWiki 自带 33 个 + 社区轻量热门扩展）见 [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md)。
-- MobileFrontend：v0.1 与其共存（移动端仍由 MinervaNeue 提供），v0.2 计划接管。
+- MobileFrontend：**全接管**。安装 MobileFrontend 并设置 `$wgDefaultMobileSkin = 'chroma';` 后，手机 UA 直接使用 Chroma 响应式布局，不再依赖 MinervaNeue。
 
 ## 开发
 
@@ -102,7 +105,7 @@ npm run serve    # 在 http://localhost:8080/demo/ 预览静态原型
 ```
 
 - 静态原型：`demo/`（GitHub Pages 部署）。
-- 本地 MediaWiki 测试环境脚本：`dev/`（进行中）。
+- 本地 MediaWiki 测试环境说明：见 [docs/COMPAT-MATRIX.md](docs/COMPAT-MATRIX.md)。
 - 设计规范：[docs/SPEC.md](docs/SPEC.md)；版本差异：[docs/COMPAT-MATRIX.md](docs/COMPAT-MATRIX.md)。
 
 ## 许可
