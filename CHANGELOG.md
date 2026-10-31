@@ -1,3 +1,12 @@
+## v0.5.0 (2026-10-31)
+
+- MobileFrontend full takeover: mobile UA gets Chroma via
+  `$wgDefaultMobileSkin = 'chroma'`; MinervaNeue no longer required.
+- Search suggestions via core `mediawiki.searchSuggest`, themed to MD3.
+- Special pages: Codex login form, history cards and diff colors themed.
+- 1.43.0 / 1.45.0 extension matrix: 30 Tier 1 extensions loaded and rendered.
+- Version bump to 0.5.0.
+
 # Changelog
 
 ## v0.4.1 (2026-10-31)

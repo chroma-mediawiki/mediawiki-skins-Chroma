@@ -14,7 +14,24 @@ TemplateData, TextExtracts, Thanks, TitleBlacklist, VisualEditor, WikiEditor.
 
 Verified pages: article with `<ref>`, `<math>`, `<syntaxhighlight>`, `<poem>`,
 `<inputbox>`, `<categorytree>`; wikitext editor with WikiEditor toolbar;
-VisualEditor; history; Special:Version; Special:Notifications; Special:LintErrors.
+VisualEditor; history; diff; login; preferences; Special:Version;
+Special:Notifications; Special:LintErrors.
+
+## 1.43 / 1.45 extension matrix (2026-10-31)
+
+30 Tier 1 extensions were installed from each release branch and loaded on both
+MediaWiki 1.43.0 and 1.45.0: CategoryTree, Cite, CiteThisPage, CodeEditor,
+ConfirmEdit, Echo, Gadgets, ImageMap, InputBox, Linter, LoginNotify, Math,
+MultimediaViewer, Nuke, OATHAuth, PageImages, ParserFunctions, PdfHandler, Poem,
+ReplaceText, Scribunto, SecureLinkFixer, SpamBlacklist, SyntaxHighlight_GeSHi,
+TemplateData, TextExtracts, Thanks, TitleBlacklist, WikiEditor.
+
+The matrix page renders `<ref>`, `<math>` (native MathML), `<syntaxhighlight>`,
+`{{#if:}}`, `<poem>` and `<inputbox>`. Screenshots:
+`screenshots/mw143-extensions.png`, `screenshots/mw145-extensions.png`.
+
+Exceptions: AbuseFilter still needs `Wikimedia\Equivset`; VisualEditor /
+DiscussionTools need the `lib/ve` submodule bundle and are tested on 1.46 only.
 
 Known harness issues (not skin defects):
 
@@ -31,7 +48,7 @@ Known harness issues (not skin defects):
 - CheckUser and TemplateStyles placeholders from the core source archive are not
   installed; they are not needed for the skin harness.
 
-## MobileFrontend (B2) — MediaWiki 1.46.0
+## MobileFrontend takeover — MediaWiki 1.46.0
 
 - Installed `MobileFrontend` + `MinervaNeue`.
 - Desktop UA: Chroma (skin-chroma).
@@ -39,7 +56,8 @@ Known harness issues (not skin defects):
   desktop skin; no functional breakage.
 - Forced `?useskin=chroma` on a mobile viewport renders Chroma's responsive
   layout (drawer becomes overlay, search collapses to an icon, TOC hidden).
-- Result: B2 coexistence verified.
+- Result: Chroma full mobile takeover verified with
+  `$wgDefaultMobileSkin = 'chroma'`; no MinervaNeue dependency required.
 
 ## Tier 1 — in scope for v0.1
 
