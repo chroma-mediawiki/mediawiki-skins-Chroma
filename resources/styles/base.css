@@ -177,13 +177,37 @@ a:hover { text-decoration-thickness: 2px; }
 .chroma-prose ul, .chroma-prose ol { margin: 0 0 1em; padding-inline-start: 1.5em; }
 .chroma-prose li { margin: .25em 0; }
 .chroma-prose blockquote {
-	margin: 1.25em 0;
-	padding: 12px 20px;
-	border-inline-start: 3px solid var(--md-sys-color-primary);
-	background: var(--md-sys-color-surface-container);
-	border-radius: var(--md-sys-shape-corner-small);
-	color: var(--md-sys-color-on-surface-variant);
+	position: relative;
+	margin: 32px 0;
+	padding: 20px 0 20px 64px;
+	border: 0;
+	border-block: 1px solid var(--md-sys-color-outline-variant);
+	background: none;
+	border-radius: 0;
+	color: var(--md-sys-color-on-surface);
+	font-size: 1.125rem;
+	line-height: 1.7;
 }
+.chroma-prose blockquote::before {
+	content: "\201C";
+	position: absolute;
+	inset-inline-start: 0;
+	top: 4px;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 56px;
+	line-height: 1;
+	color: var(--md-sys-color-primary);
+}
+.chroma-prose blockquote p { margin: 0; }
+.chroma-quote figcaption,
+.chroma-prose blockquote + figcaption {
+	margin: 10px 0 0 64px;
+	color: var(--md-sys-color-on-surface-variant);
+	font-size: var(--md-sys-typescale-label-medium-size);
+	letter-spacing: .02em;
+}
+.chroma-quote { margin: 32px 0; }
+.chroma-quote blockquote { margin: 0; }
 .chroma-prose code {
 	font-family: var(--md-sys-typescale-font-family-mono);
 	font-size: .875em;
