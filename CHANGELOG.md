@@ -1,3 +1,5 @@
+# Changelog
+
 ## v0.5.1 (2026-11-01)
 
 - Removed the floating edit FAB and the hardcoded initial-letter logo fallback.
@@ -13,8 +15,6 @@
 - Special pages: Codex login form, history cards and diff colors themed.
 - 1.43.0 / 1.45.0 extension matrix: 30 Tier 1 extensions loaded and rendered.
 - Version bump to 0.5.0.
-
-# Changelog
 
 ## v0.4.1 (2026-10-31)
 
