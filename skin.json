@@ -110,5 +110,22 @@
 	"Hooks": {
 		"GetPreferences": "MediaWiki\\Skins\\Chroma\\Hooks::onGetPreferences",
 		"OutputPageBodyAttributes": "MediaWiki\\Skins\\Chroma\\Hooks::onOutputPageBodyAttributes"
+	},
+	"ResourceModuleSkinStyles": {
+		"+oojs-ui-core": {
+			"default": "resources/styles/skinStyles/oojs-ui.css"
+		},
+		"+oojs-ui-widgets": {
+			"default": "resources/styles/skinStyles/oojs-ui.css"
+		},
+		"+oojs-ui-windows": {
+			"default": "resources/styles/skinStyles/oojs-ui.css"
+		},
+		"+oojs-ui-toolbars": {
+			"default": "resources/styles/skinStyles/oojs-ui.css"
+		},
+		"+mediawiki.special.preferences.styles.ooui": {
+			"default": "resources/styles/skinStyles/preferences.css"
+		}
 	}
 }

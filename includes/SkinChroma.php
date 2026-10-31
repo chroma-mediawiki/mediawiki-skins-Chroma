@@ -7,12 +7,10 @@
 
 namespace MediaWiki\Skins\Chroma;
 
-use MediaWiki\Skin\SkinMustache;
-
 /**
  * Mustache-based skin for Chroma.
  */
-class SkinChroma extends SkinMustache {
+class SkinChroma extends \SkinMustache {
 
 	/**
 	 * @inheritDoc

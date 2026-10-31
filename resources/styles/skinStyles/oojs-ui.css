@@ -1,0 +1,94 @@
+/* OOUI surface theming for Chroma (loaded via ResourceModuleSkinStyles). */
+.oo-ui-widget { color: var(--md-sys-color-on-surface); }
+
+/* Buttons */
+.oo-ui-buttonElement-button {
+	border-radius: var(--md-sys-shape-corner-full);
+	font-weight: 500;
+}
+.oo-ui-buttonElement-framed > .oo-ui-buttonElement-button {
+	background: var(--md-sys-color-surface-container);
+	border-color: var(--md-sys-color-outline-variant);
+	color: var(--md-sys-color-on-surface);
+}
+.oo-ui-buttonElement-framed > .oo-ui-buttonElement-button:hover {
+	background: var(--md-sys-color-surface-container-high);
+}
+.oo-ui-buttonElement-framed.oo-ui-flaggedElement-primary > .oo-ui-buttonElement-button,
+.oo-ui-buttonElement-framed.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button {
+	background: var(--md-sys-color-primary);
+	border-color: var(--md-sys-color-primary);
+	color: var(--md-sys-color-on-primary);
+}
+.oo-ui-buttonElement-framed.oo-ui-flaggedElement-destructive > .oo-ui-buttonElement-button {
+	background: var(--md-sys-color-error);
+	border-color: var(--md-sys-color-error);
+	color: var(--md-sys-color-on-error);
+}
+
+/* Inputs */
+.oo-ui-inputWidget-input {
+	background: var(--md-sys-color-surface-container-low);
+	color: var(--md-sys-color-on-surface);
+	border: 1px solid var(--md-sys-color-outline-variant);
+	border-radius: var(--md-sys-shape-corner-small);
+}
+.oo-ui-inputWidget-input:focus {
+	border-color: var(--md-sys-color-primary);
+	box-shadow: inset 0 0 0 1px var(--md-sys-color-primary);
+}
+.oo-ui-textInputWidget.oo-ui-widget-enabled > .oo-ui-inputWidget-input {
+	background: var(--md-sys-color-surface-container-low);
+}
+.oo-ui-dropdownWidget-handle {
+	background: var(--md-sys-color-surface-container-low);
+	border-color: var(--md-sys-color-outline-variant);
+	border-radius: var(--md-sys-shape-corner-small);
+	color: var(--md-sys-color-on-surface);
+}
+.oo-ui-dropdownWidget-menu,
+.oo-ui-menuSelectWidget,
+.oo-ui-popupWidget-popup {
+	background: var(--md-sys-color-surface-container);
+	color: var(--md-sys-color-on-surface);
+	border: 1px solid var(--md-sys-color-outline-variant);
+	border-radius: var(--md-sys-shape-corner-medium);
+	box-shadow: var(--md-sys-elevation-2);
+}
+.oo-ui-menuOptionWidget.oo-ui-optionWidget-highlighted,
+.oo-ui-menuOptionWidget.oo-ui-optionWidget-selected {
+	background: var(--md-sys-color-secondary-container);
+	color: var(--md-sys-color-on-secondary-container);
+}
+
+/* Checkbox / radio / toggle */
+.oo-ui-checkboxInputWidget-checkIcon,
+.oo-ui-radioInputWidget .oo-ui-radioInputWidget-frame { color: var(--md-sys-color-primary); }
+.oo-ui-toggleWidget .oo-ui-toggleWidget-frame { border-radius: var(--md-sys-shape-corner-full); }
+.oo-ui-toggleWidget.oo-ui-widget-enabled .oo-ui-toggleWidget-frame { background: var(--md-sys-color-surface-container-highest); }
+.oo-ui-toggleWidget.oo-ui-widget-enabled .oo-ui-toggleWidget-frame.oo-ui-toggleWidget-frame-checked { background: var(--md-sys-color-primary); }
+
+/* Tabs (preferences index layout) */
+.oo-ui-indexLayout > .oo-ui-menuLayout-menu { background: var(--md-sys-color-surface-container); border-radius: var(--md-sys-shape-corner-medium); }
+.oo-ui-tabOptionWidget.oo-ui-optionWidget-selected {
+	background: var(--md-sys-color-secondary-container);
+	color: var(--md-sys-color-on-secondary-container);
+	border-radius: var(--md-sys-shape-corner-full);
+}
+.oo-ui-tabOptionWidget.oo-ui-optionWidget-selected .oo-ui-labelElement-label { color: inherit; }
+.oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget { border-color: transparent; }
+
+/* Windows */
+.oo-ui-window-frame {
+	background: var(--md-sys-color-surface-container-low);
+	border-radius: var(--md-sys-shape-corner-extra-large);
+	box-shadow: var(--md-sys-elevation-3);
+}
+.oo-ui-window-head, .oo-ui-window-foot { background: transparent; }
+.oo-ui-processDialog-actions-primary .oo-ui-buttonElement-button { background: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); }
+.oo-ui-messageDialog-message { color: var(--md-sys-color-on-surface); }
+
+/* Toolbars (VE / WikiEditor OOUI) */
+.oo-ui-toolbar-bar { background: var(--md-sys-color-surface-container); border-color: var(--md-sys-color-outline-variant); }
+.oo-ui-toolbar-tools .oo-ui-tool.oo-ui-widget-enabled .oo-ui-tool-link:hover { background: var(--md-sys-color-surface-container-high); }
+.oo-ui-toolbar-tools .oo-ui-tool.oo-ui-widget-enabled.oo-ui-tool-active { background: var(--md-sys-color-secondary-container); }

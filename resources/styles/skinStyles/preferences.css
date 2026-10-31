@@ -1,0 +1,16 @@
+/* Preferences-specific surfaces (OOUI index layout). */
+.mw-prefs-tabs .oo-ui-menuLayout-menu {
+	background: var(--md-sys-color-surface-container);
+	border-radius: var(--md-sys-shape-corner-medium);
+	padding: 4px;
+}
+.mw-prefs-tabs .oo-ui-tabOptionWidget {
+	border-radius: var(--md-sys-shape-corner-full);
+	margin-block: 2px;
+}
+.mw-prefs-tabs .oo-ui-tabOptionWidget.oo-ui-optionWidget-selected {
+	background: var(--md-sys-color-secondary-container);
+	color: var(--md-sys-color-on-secondary-container);
+}
+.mw-prefs-section-fieldset { border-radius: var(--md-sys-shape-corner-medium); }
+.mw-prefs-section-fieldset > legend { color: var(--md-sys-color-on-surface); font-weight: 600; }

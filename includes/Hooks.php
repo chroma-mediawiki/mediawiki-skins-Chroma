@@ -7,10 +7,6 @@
 
 namespace MediaWiki\Skins\Chroma;
 
-use MediaWiki\MediaWikiServices;
-use MediaWiki\Output\OutputPage;
-use MediaWiki\Skin\Skin;
-
 /**
  * Hook handlers for the Chroma skin.
  */
@@ -85,13 +81,13 @@ class Hooks {
 	 * @param Skin $skin
 	 * @param array &$bodyAttrs
 	 */
-	public static function onOutputPageBodyAttributes( OutputPage $out, Skin $skin, array &$bodyAttrs ) {
+	public static function onOutputPageBodyAttributes( $out, $skin, array &$bodyAttrs ) {
 		if ( $skin->getSkinName() !== 'chroma' ) {
 			return;
 		}
 
 		$user = $out->getUser();
-		$lookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
+		$lookup = \MediaWiki\MediaWikiServices::getInstance()->getUserOptionsLookup();
 
 		$theme = self::config( 'wgChromaDefaultScheme', 'system' );
 		$layout = self::config( 'wgChromaDefaultLayout', 'app' );
