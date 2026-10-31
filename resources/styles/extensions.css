@@ -126,3 +126,39 @@ sup.reference a { color: var(--md-sys-color-primary); }
 
 /* ---------- ConfirmEdit ---------- */
 .mw-confirmedit-captcha { border-radius: var(--md-sys-shape-corner-medium); }
+
+/* ---------- OOUI fallback theming (higher specificity) ---------- */
+.oo-ui-tabOptionWidget.oo-ui-optionWidget-selected {
+	background: var(--md-sys-color-secondary-container) !important;
+	color: var(--md-sys-color-on-secondary-container) !important;
+	border-radius: var(--md-sys-shape-corner-full) !important;
+}
+.oo-ui-tabOptionWidget.oo-ui-optionWidget-selected .oo-ui-labelElement-label { color: inherit !important; }
+.oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget { border-color: transparent !important; }
+.mw-prefs-tabs .oo-ui-menuLayout-menu { background: var(--md-sys-color-surface-container) !important; border-radius: var(--md-sys-shape-corner-medium) !important; }
+.oo-ui-inputWidget-input {
+	background: var(--md-sys-color-surface-container-low) !important;
+	color: var(--md-sys-color-on-surface) !important;
+	border-color: var(--md-sys-color-outline-variant) !important;
+	border-radius: var(--md-sys-shape-corner-small) !important;
+}
+.oo-ui-dropdownWidget-handle {
+	background: var(--md-sys-color-surface-container-low) !important;
+	color: var(--md-sys-color-on-surface) !important;
+	border-color: var(--md-sys-color-outline-variant) !important;
+	border-radius: var(--md-sys-shape-corner-small) !important;
+}
+.oo-ui-buttonElement-framed.oo-ui-flaggedElement-primary > .oo-ui-buttonElement-button {
+	background: var(--md-sys-color-primary) !important;
+	border-color: var(--md-sys-color-primary) !important;
+	color: var(--md-sys-color-on-primary) !important;
+	border-radius: var(--md-sys-shape-corner-full) !important;
+}
+.oo-ui-buttonElement-framed > .oo-ui-buttonElement-button {
+	border-radius: var(--md-sys-shape-corner-full) !important;
+}
+.oo-ui-menuSelectWidget, .oo-ui-popupWidget-popup, .oo-ui-dropdownWidget-menu {
+	background: var(--md-sys-color-surface-container) !important;
+	color: var(--md-sys-color-on-surface) !important;
+	border-radius: var(--md-sys-shape-corner-medium) !important;
+}
