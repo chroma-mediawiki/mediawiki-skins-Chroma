@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.4.1 (2026-10-31)
+
+- Replace the generic callout-style blockquote with an editorial pull quote
+  (large opening quote, hairline rules, attribution). Less "AI card", more magazine.
+
 ## v0.4.0 (2026-10-31)
 
 - Visual redesign: MD3 page composition, proper page header/title, page tabs and
