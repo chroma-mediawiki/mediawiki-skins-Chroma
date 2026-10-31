@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.4.0 (2026-10-31)
+
+- Visual redesign: MD3 page composition, proper page header/title, page tabs and
+  view actions on one aligned row, hierarchical drawer with icons and group labels.
+- TOC rail: nested sections, sticky panel, active scroll-spy, readable spacing.
+- Reading layout genuinely reflows (drawer/TOC leave, content centered).
+- Logo now comes from `$wgLogos` (`data-logos`); edit FAB on editable pages.
+- Demo rebuilt with feature cards, swatches, callout, infobox and layout switch.
+- Mobile/dark/reading screenshots refreshed; all three branches smoke-tested.
+
 ## v0.3.2 (2026-10-31)
 
 - Sync demo ARIA fix, a11y test and release docs to all release branches.
