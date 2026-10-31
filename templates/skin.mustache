@@ -7,12 +7,11 @@
 				<span class="chroma-icon" data-icon="menu" aria-hidden="true"></span>
 			</button>
 			<a class="chroma-brand" href="{{link-mainpage}}">
+				{{#has-logo}}
 				<span class="chroma-brand__mark" aria-hidden="true">
-					{{#data-logos}}
-						{{#icon}}<img src="{{.}}" alt="">{{/icon}}
-						{{^icon}}{{#1x}}<img src="{{.}}" alt="">{{/1x}}{{^1x}}C{{/1x}}{{/icon}}
-					{{/data-logos}}
+					{{#data-logos}}{{#icon}}<img src="{{.}}" alt="">{{/icon}}{{^icon}}{{#1x}}<img src="{{.}}" alt="">{{/1x}}{{/icon}}{{/data-logos}}
 				</span>
+				{{/has-logo}}
 				<span class="chroma-brand__text">{{sitename}}</span>
 			</a>
 		</div>
@@ -28,18 +27,24 @@
 		</form>
 		{{/data-search-box}}
 		<div class="chroma-app-bar__actions">
-			<button type="button" class="chroma-icon-button" id="chroma-layout-toggle" aria-label="{{msg-chroma-layout}}">
-				<span class="chroma-icon" data-icon="layout" aria-hidden="true"></span>
-			</button>
-			<button type="button" class="chroma-icon-button" id="chroma-theme-toggle" aria-label="{{msg-chroma-theme}}">
-				<span class="chroma-icon" data-icon="contrast" aria-hidden="true"></span>
-			</button>
-			<button type="button" class="chroma-icon-button" id="chroma-reading-toggle" aria-label="{{msg-chroma-reading-mode}}">
-				<span class="chroma-icon" data-icon="book" aria-hidden="true"></span>
-			</button>
-			{{#data-portlets}}
-			{{#data-user-menu}}<ul class="chroma-user-menu">{{{html-items}}}</ul>{{/data-user-menu}}
-			{{/data-portlets}}
+			<details class="chroma-app-menu">
+				<summary class="chroma-icon-button" aria-label="{{msg-chroma-view-options}}">
+					<span class="chroma-icon" data-icon="tune" aria-hidden="true"></span>
+				</summary>
+				<div class="chroma-app-menu__panel">
+					<button type="button" class="chroma-menu-item" id="chroma-layout-toggle"><span class="chroma-icon" data-icon="layout" aria-hidden="true"></span><span>{{msg-chroma-layout}}</span></button>
+					<button type="button" class="chroma-menu-item" id="chroma-theme-toggle"><span class="chroma-icon" data-icon="contrast" aria-hidden="true"></span><span>{{msg-chroma-theme}}</span></button>
+					<button type="button" class="chroma-menu-item" id="chroma-reading-toggle"><span class="chroma-icon" data-icon="book" aria-hidden="true"></span><span>{{msg-chroma-reading-mode}}</span></button>
+				</div>
+			</details>
+			<details class="chroma-app-menu chroma-account-menu">
+				<summary class="chroma-icon-button" aria-label="{{msg-chroma-account}}">
+					<span class="chroma-icon" data-icon="person" aria-hidden="true"></span>
+				</summary>
+				<div class="chroma-app-menu__panel">
+					{{#data-portlets}}{{#data-user-menu}}<ul class="chroma-user-menu">{{{html-items}}}</ul>{{/data-user-menu}}{{/data-portlets}}
+				</div>
+			</details>
 		</div>
 	</header>
 	<div class="chroma-body">
@@ -115,10 +120,4 @@
 		</div>
 	</footer>
 </div>
-{{#is-editable}}
-<a class="chroma-fab" href="{{link-edit}}" aria-label="{{msg-chroma-edit}}">
-	<span class="chroma-icon" data-icon="edit" aria-hidden="true"></span>
-	{{msg-chroma-edit}}
-</a>
-{{/is-editable}}
 {{{html-after-content}}}

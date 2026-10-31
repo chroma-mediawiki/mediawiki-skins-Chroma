@@ -28,5 +28,7 @@
 	"chroma-seed-violet": "Violet",
 	"chroma-nav": "Navigation",
 	"chroma-tools": "Tools",
-	"chroma-edit": "Edit"
+	"chroma-edit": "Edit",
+	"chroma-view-options": "View options",
+	"chroma-account": "Account"
 }

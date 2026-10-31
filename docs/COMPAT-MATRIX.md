@@ -29,6 +29,16 @@ version-specific workarounds into a single branch.
 - CI runs the branch's PHP matrix; a branch is released only when its matrix is
   green.
 
+## Released builds (v0.5.0)
+
+- `v0.5.0-REL1_43` / `v0.5.0-REL1_45` / `v0.5.0-REL1_46` tags exist; each tag
+  builds a GitHub Release ZIP via `.github/workflows/release.yml`.
+- Runtime smoke tests completed on MediaWiki **1.43.0**, **1.45.0** and
+  **1.46.0**: skin registers/renders, `data-chroma-*` body attributes and
+  `chroma-seed-*` class are applied, preferences work, no PHP errors.
+- 1.43 namespace/associated-pages tabs are rendered after the v0.1.2 patch
+  (`data-namespaces` legacy menu).
+
 ## Local smoke test (2026-10-31)
 
 - MediaWiki **1.46.0**, PHP **8.3.6**, SQLite, skin `main` (pre-branch split).
@@ -36,12 +46,12 @@ version-specific workarounds into a single branch.
   Special:Version, Special:UserLogin.
 - Result: skin registers and renders, no PHP errors, no browser console errors,
   CI green, GitHub Pages deployment green.
-- Known gaps at this stage:
-  - OOUI-based preferences tabs/buttons are not yet MD3-themed (P7).
-  - Search suggestions/typeahead not implemented yet (P4).
-  - Footer "places" links are empty on a default wiki (only shown when configured).
-  - TOC renders top-level sections only; nested sections land in P4.
-  - MobileFrontend not installed in this harness; responsive layout checked directly.
-  - Tier 1 extensions are installed from GitHub release branches; see
-    `docs/COMPATIBILITY.md` for the exact list and known harness issues.
+- Verified after v0.5.0:
+  - OOUI preferences/Codex login/history/diff surfaces use MD3 tokens.
+  - Search suggestions are provided by core `mediawiki.searchSuggest`.
+  - MobileFrontend is installed; `$wgDefaultMobileSkin = 'chroma'` serves
+    Chroma on mobile UA without MinervaNeue.
+  - Nested TOC sections and scroll-spy are implemented.
+  - 30 Tier 1 extensions are installed on 1.43.0 and 1.45.0 and render the
+    matrix page; see `docs/COMPATIBILITY.md`.
   - Math is tested with `native` mode (MathML mode needs RESTBase/Mathoid).
