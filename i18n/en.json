@@ -25,5 +25,8 @@
 	"chroma-seed-teal": "Teal (default)",
 	"chroma-seed-blue": "Blue",
 	"chroma-seed-green": "Green",
-	"chroma-seed-violet": "Violet"
+	"chroma-seed-violet": "Violet",
+	"chroma-nav": "Navigation",
+	"chroma-tools": "Tools",
+	"chroma-edit": "Edit"
 }

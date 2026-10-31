@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.3.2 (2026-10-31)
+
+- Sync demo ARIA fix, a11y test and release docs to all release branches.
+- All branch CI jobs (validate / tokens / demo a11y) pass.
+
 ## v0.3.0 (2026-10-31)
 
 - M3 Expressive motion: spring FAB press/shape morph, dialog spring entrance,

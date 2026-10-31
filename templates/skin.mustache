@@ -1,13 +1,18 @@
 <a class="chroma-skip-link" href="#content">{{msg-chroma-skip-to-content}}</a>
 {{{html-site-notice}}}
-<div id="chroma-shell" class="chroma-shell" data-chroma-layout="app">
+<div id="chroma-shell" class="chroma-shell">
 	<header id="chroma-app-bar" class="chroma-app-bar">
 		<div class="chroma-app-bar__start">
 			<button type="button" class="chroma-icon-button" id="chroma-drawer-toggle" aria-label="{{msg-chroma-menu}}" aria-expanded="false" aria-controls="chroma-drawer">
 				<span class="chroma-icon" data-icon="menu" aria-hidden="true"></span>
 			</button>
 			<a class="chroma-brand" href="{{link-mainpage}}">
-				<span class="chroma-brand__mark" aria-hidden="true">C</span>
+				<span class="chroma-brand__mark" aria-hidden="true">
+					{{#data-logos}}
+						{{#icon}}<img src="{{.}}" alt="">{{/icon}}
+						{{^icon}}{{#1x}}<img src="{{.}}" alt="">{{/1x}}{{^1x}}C{{/1x}}{{/icon}}
+					{{/data-logos}}
+				</span>
 				<span class="chroma-brand__text">{{sitename}}</span>
 			</a>
 		</div>
@@ -23,7 +28,7 @@
 		</form>
 		{{/data-search-box}}
 		<div class="chroma-app-bar__actions">
-			<button type="button" class="chroma-icon-button" id="chroma-layout-toggle" aria-label="Layout">
+			<button type="button" class="chroma-icon-button" id="chroma-layout-toggle" aria-label="{{msg-chroma-layout}}">
 				<span class="chroma-icon" data-icon="layout" aria-hidden="true"></span>
 			</button>
 			<button type="button" class="chroma-icon-button" id="chroma-theme-toggle" aria-label="{{msg-chroma-theme}}">
@@ -33,48 +38,87 @@
 				<span class="chroma-icon" data-icon="book" aria-hidden="true"></span>
 			</button>
 			{{#data-portlets}}
-			{{#data-personal}}<ul class="chroma-user-menu">{{{html-items}}}</ul>{{/data-personal}}
+			{{#data-user-menu}}<ul class="chroma-user-menu">{{{html-items}}}</ul>{{/data-user-menu}}
 			{{/data-portlets}}
 		</div>
 	</header>
 	<div class="chroma-body">
 		<aside id="chroma-drawer" class="chroma-drawer chroma-nav" aria-label="{{msg-chroma-menu}}">
 			{{#data-portlets-sidebar}}
-			{{#data-portlets-first}}<ul>{{{html-items}}}</ul>{{/data-portlets-first}}
-			{{#array-portlets-rest}}<ul>{{{html-items}}}</ul>{{/array-portlets-rest}}
+			{{#data-portlets-first}}
+			<nav aria-label="{{msg-chroma-nav}}">
+				<p class="chroma-nav__label">{{msg-chroma-nav}}</p>
+				<ul>{{{html-items}}}</ul>
+			</nav>
+			{{/data-portlets-first}}
+			{{#array-portlets-rest}}
+			<nav aria-label="{{msg-chroma-tools}}">
+				<p class="chroma-nav__label">{{msg-chroma-tools}}</p>
+				<ul>{{{html-items}}}</ul>
+			</nav>
+			{{/array-portlets-rest}}
 			{{/data-portlets-sidebar}}
 		</aside>
 		<main id="content" class="chroma-content">
-			<div class="chroma-page-actions">
-				{{#data-portlets}}
-					{{#data-namespaces}}<ul class="chroma-tabs">{{{html-items}}}</ul>{{/data-namespaces}}
-					{{#data-views}}<ul class="chroma-tabs">{{{html-items}}}</ul>{{/data-views}}
-				{{/data-portlets}}
-			</div>
-			<div class="chroma-article">
-				{{{html-subtitle}}}
-				<div class="chroma-prose">
-					{{{html-body-content}}}
+			<div class="chroma-page">
+				<div class="chroma-page__topline">
+					{{#data-portlets}}
+					{{#data-namespaces}}<nav class="chroma-tabs" aria-label="Namespaces"><ul>{{{html-items}}}</ul></nav>{{/data-namespaces}}
+					{{#data-views}}<nav class="chroma-tabs chroma-tabs--views" aria-label="Views"><ul>{{{html-items}}}</ul></nav>{{/data-views}}
+					{{/data-portlets}}
 				</div>
-				{{{html-categories}}}
+				<header class="chroma-page__header">
+					{{{html-title-heading}}}
+					{{{html-subtitle}}}
+				</header>
+				<div class="chroma-page__body">
+					<div class="chroma-article">
+						<div class="chroma-prose">
+							{{{html-body-content}}}
+						</div>
+						{{{html-categories}}}
+					</div>
+					{{#data-toc}}
+					<aside class="chroma-toc" aria-label="{{msg-toc}}" id="chroma-toc">
+						<p class="chroma-toc__title">{{msg-toc}}</p>
+						<ul>
+							{{#array-sections}}
+							<li>
+								<a href="#{{anchor}}">{{{line}}}</a>
+								{{#array-sections}}
+								<ul>
+									<li>
+										<a href="#{{anchor}}">{{{line}}}</a>
+										{{#array-sections}}
+										<ul>
+											<li><a href="#{{anchor}}">{{{line}}}</a></li>
+										</ul>
+										{{/array-sections}}
+									</li>
+								</ul>
+								{{/array-sections}}
+							</li>
+							{{/array-sections}}
+						</ul>
+					</aside>
+					{{/data-toc}}
+				</div>
 			</div>
 		</main>
-		{{#data-toc}}
-		<aside class="chroma-toc" aria-label="Contents">
-			<p class="chroma-toc__title">{{msg-toc}}</p>
-			<ul>
-				{{#array-sections}}
-				<li><a href="#{{anchor}}">{{line}}</a></li>
-				{{/array-sections}}
-			</ul>
-		</aside>
-		{{/data-toc}}
 	</div>
 	<footer id="chroma-footer" class="chroma-footer">
-		{{#data-footer}}
-		{{#data-info}}<ul>{{{html-items}}}</ul>{{/data-info}}
-		{{#data-places}}<ul>{{{html-items}}}</ul>{{/data-places}}
-		{{/data-footer}}
+		<div class="chroma-footer__inner">
+			{{#data-footer}}
+			{{#data-info}}<ul>{{{html-items}}}</ul>{{/data-info}}
+			{{#data-places}}<ul>{{{html-items}}}</ul>{{/data-places}}
+			{{/data-footer}}
+		</div>
 	</footer>
 </div>
+{{#is-editable}}
+<a class="chroma-fab" href="{{link-edit}}" aria-label="{{msg-chroma-edit}}">
+	<span class="chroma-icon" data-icon="edit" aria-hidden="true"></span>
+	{{msg-chroma-edit}}
+</a>
+{{/is-editable}}
 {{{html-after-content}}}

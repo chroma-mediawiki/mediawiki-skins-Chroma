@@ -41,7 +41,11 @@
 						"chroma-theme",
 						"chroma-reading-mode",
 						"toc",
-						"chroma-search"
+						"chroma-search",
+						"chroma-layout",
+						"chroma-nav",
+						"chroma-tools",
+						"chroma-edit"
 					]
 				}
 			]
