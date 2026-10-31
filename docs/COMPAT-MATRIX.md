@@ -33,9 +33,12 @@ version-specific workarounds into a single branch.
 
 - `v0.1.0-REL1_43` / `v0.1.0-REL1_45` / `v0.1.0-REL1_46` tags exist; each tag
   builds a GitHub Release ZIP via `.github/workflows/release.yml`.
-- Runtime smoke test evidence currently comes from MediaWiki 1.46.0; 1.43/1.45
-  branches are CI-validated (schema/lint) and will get their own runtime smoke
-  tests in the next milestone.
+- Runtime smoke tests completed on MediaWiki **1.43.0**, **1.45.0** and
+  **1.46.0**: skin registers/renders, `data-chroma-*` body attributes and
+  `chroma-seed-*` class are applied, preferences work, no PHP errors.
+- Known 1.43 gap: the associated-pages (namespace) tab row is not rendered by
+  the legacy menu template yet; views/actions render normally. Tracked for the
+  next patch.
 
 ## Local smoke test (2026-10-31)
 
