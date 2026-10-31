@@ -1,3 +1,10 @@
+## v0.5.1 (2026-11-01)
+
+- Removed the floating edit FAB and the hardcoded initial-letter logo fallback.
+- Top app bar rework: view-options and account popovers, 8/12dp spacing.
+- MD3 surface layers, type rhythm, section spacing and mobile section expansion.
+- README screenshots refreshed without FAB/fallback logo.
+
 ## v0.5.0 (2026-10-31)
 
 - MobileFrontend full takeover: mobile UA gets Chroma via

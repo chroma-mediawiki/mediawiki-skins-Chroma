@@ -209,3 +209,16 @@ body { min-height: 100vh; }
 }
 
 .demo-body { padding-bottom: 84px; }
+
+/* reading mode must collapse both page grids */
+[data-chroma-reading="on"] .demo-body .chroma-body { grid-template-columns: minmax(0, 1fr); }
+[data-chroma-reading="on"] .chroma-page__body { grid-template-columns: minmax(0, 1fr); max-width: 760px; margin-inline: auto; }
+
+/* reading layout: collapse drawer column and center the page */
+[data-chroma-layout="reading"] .demo-body .chroma-body { grid-template-columns: minmax(0, 1fr); }
+[data-chroma-layout="reading"] .demo-body .chroma-content { display: flex; justify-content: center; }
+[data-chroma-layout="reading"] .chroma-page { width: 100%; }
+
+.chroma-account-summary { list-style: none; cursor: pointer; display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; }
+.chroma-account-summary::-webkit-details-marker { display: none; }
+.chroma-account-menu[open] .chroma-account-summary { background: var(--md-sys-color-surface-container-high); }

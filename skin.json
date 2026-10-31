@@ -1,7 +1,7 @@
 {
 	"name": "Chroma",
 	"namemsg": "skinname-chroma",
-	"version": "0.5.0",
+	"version": "0.5.1",
 	"author": [
 		"HAHAHAHAHAYINING"
 	],
@@ -46,7 +46,9 @@
 						"chroma-layout",
 						"chroma-nav",
 						"chroma-tools",
-						"chroma-edit"
+						"chroma-edit",
+						"chroma-view-options",
+						"chroma-account"
 					]
 				}
 			]
