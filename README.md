@@ -21,6 +21,19 @@
 |---|---|
 | ![阅读模式](screenshots/reading-mode.png) | ![移动端](screenshots/app-mobile.png) |
 
+
+## MediaWiki 真机截图（1.46.0）
+
+| 浅色 | 深色 |
+|---|---|
+| ![真机浅色](screenshots/mw146-home.png) | ![真机深色](screenshots/mw146-home-dark.png) |
+
+| 编辑页 | 移动端 |
+|---|---|
+| ![编辑页](screenshots/mw146-edit.png) | ![移动端](screenshots/mw146-mobile.png) |
+
+> 以上为本地安装 MediaWiki 1.46.0 + SQLite、启用 Chroma 后的实际渲染截图（非静态原型）。
+
 ## 特性
 
 - 完整的 Material Design 3 token：色彩角色、字阶、形状、海拔、动效与状态层。

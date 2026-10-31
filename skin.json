@@ -1,66 +1,104 @@
 {
-  "name": "Chroma",
-  "namemsg": "skinname-chroma",
-  "version": "0.1.0",
-  "author": [
-    "HAHAHAHAHAYINING"
-  ],
-  "url": "https://github.com/chroma-mediawiki/mediawiki-skins-Chroma",
-  "descriptionmsg": "chroma-desc",
-  "license-name": "GPL-3.0-or-later",
-  "type": "skin",
-  "requires": {
-    "MediaWiki": ">= 1.43.0"
-  },
-  "ValidSkinNames": {
-    "chroma": {
-      "class": "SkinMustache",
-      "args": [
-        {
-          "name": "chroma",
-          "responsive": true,
-          "template": "skin",
-          "styles": [
-            "skins.chroma.styles"
-          ],
-          "scripts": [
-            "skins.chroma.scripts"
-          ]
-        }
-      ]
-    }
-  },
-  "MessagesDirs": {
-    "Chroma": [
-      "i18n"
-    ]
-  },
-  "ResourceModules": {
-    "skins.chroma.styles": {
-      "styles": {
-        "resources/styles/tokens.css": {
-          "media": "screen"
-        },
-        "resources/styles/base.css": {
-          "media": "screen"
-        },
-        "resources/styles/codex-bridge.css": {
-          "media": "screen"
-        },
-        "resources/styles/print.css": {
-          "media": "print"
-        }
-      }
-    },
-    "skins.chroma.scripts": {
-      "scripts": [
-        "resources/scripts/chroma.js"
-      ]
-    }
-  },
-  "ResourceFileModulePaths": {
-    "localBasePath": "",
-    "remoteSkinPath": "Chroma"
-  },
-  "manifest_version": 2
+	"name": "Chroma",
+	"namemsg": "skinname-chroma",
+	"version": "0.1.0",
+	"author": [
+		"HAHAHAHAHAYINING"
+	],
+	"url": "https://github.com/chroma-mediawiki/mediawiki-skins-Chroma",
+	"descriptionmsg": "chroma-desc",
+	"license-name": "GPL-3.0-or-later",
+	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.43.0"
+	},
+	"ValidSkinNames": {
+		"chroma": {
+			"class": "MediaWiki\\Skins\\Chroma\\SkinChroma",
+			"args": [
+				{
+					"name": "chroma",
+					"responsive": true,
+					"template": "skin",
+					"styles": [
+						"skins.chroma.core",
+						"skins.chroma.styles"
+					],
+					"scripts": [
+						"skins.chroma.scripts"
+					],
+					"menus": [
+						"associated-pages",
+						"views",
+						"actions",
+						"variants",
+						"user-menu",
+						"user-page",
+						"user-interface-preferences",
+						"notifications"
+					],
+					"messages": [
+						"sitename",
+						"chroma-skip-to-content",
+						"chroma-menu",
+						"chroma-theme",
+						"chroma-reading-mode",
+						"toc"
+					]
+				}
+			]
+		}
+	},
+	"MessagesDirs": {
+		"Chroma": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"skins.chroma.styles": {
+			"styles": {
+				"resources/styles/tokens.css": {
+					"media": "screen"
+				},
+				"resources/styles/base.css": {
+					"media": "screen"
+				},
+				"resources/styles/codex-bridge.css": {
+					"media": "screen"
+				},
+				"resources/styles/print.css": {
+					"media": "print"
+				}
+			}
+		},
+		"skins.chroma.scripts": {
+			"scripts": [
+				"resources/scripts/chroma.js"
+			]
+		},
+		"skins.chroma.core": {
+			"class": "MediaWiki\\ResourceLoader\\SkinModule",
+			"features": {
+				"accessibility": true,
+				"normalize": true,
+				"elements": true,
+				"content-media": true,
+				"content-links": true,
+				"content-tables": true,
+				"content-links-external": true,
+				"logo": true,
+				"i18n-ordered-lists": true,
+				"i18n-all-lists-margins": true,
+				"i18n-headings": true
+			}
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "Chroma"
+	},
+	"manifest_version": 2,
+	"AutoloadNamespaces": {
+		"MediaWiki\\Skins\\Chroma\\": "includes/"
+	}
 }
