@@ -560,3 +560,22 @@ body[data-chroma-theme="dark"] { color-scheme: dark; }
 @media (prefers-color-scheme: dark) {
 	body[data-chroma-theme="auto"] { color-scheme: dark; }
 }
+
+/* ---------- mobile app bar ---------- */
+.chroma-search-toggle { display: none; }
+@media (max-width: 720px) {
+	.chroma-search { display: none; }
+	.chroma-search-toggle { display: inline-grid; }
+	.chroma-app-bar__start { min-width: 0; }
+	.chroma-brand { min-width: 0; }
+	.chroma-brand__text {
+		max-width: 34vw;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.chroma-app-bar__actions { gap: 0; }
+	.chroma-user-menu { display: none; }
+	.chroma-brand__mark { flex: 0 0 auto; }
+	.chroma-app-bar { overflow: hidden; }
+}
