@@ -162,3 +162,82 @@ sup.reference a { color: var(--md-sys-color-primary); }
 	color: var(--md-sys-color-on-surface) !important;
 	border-radius: var(--md-sys-shape-corner-medium) !important;
 }
+
+/* core search suggestions, aligned to the Chroma search shell */
+.suggestions {
+	margin-top: 6px;
+	padding: 6px;
+	background: var(--md-sys-color-surface-container) !important;
+	border: 1px solid var(--md-sys-color-outline-variant) !important;
+	border-radius: var(--md-sys-shape-corner-medium) !important;
+	box-shadow: var(--md-sys-elevation-2) !important;
+}
+.suggestions a.mw-searchSuggest-link {
+	border-radius: var(--md-sys-shape-corner-small);
+	color: var(--md-sys-color-on-surface) !important;
+}
+.suggestions-result-current a.mw-searchSuggest-link,
+.suggestions a.mw-searchSuggest-link:hover {
+	background: var(--md-sys-color-secondary-container) !important;
+	color: var(--md-sys-color-on-secondary-container) !important;
+}
+
+/* ---------- special pages: Codex login / preferences ---------- */
+.cdx-text-input__input {
+	background: var(--md-sys-color-surface-container-low) !important;
+	color: var(--md-sys-color-on-surface) !important;
+	border: 1px solid var(--md-sys-color-outline-variant) !important;
+	border-radius: var(--md-sys-shape-corner-small) !important;
+	min-height: 44px;
+	padding: 10px 14px !important;
+}
+.cdx-text-input__input:focus {
+	border-color: var(--md-sys-color-primary) !important;
+	box-shadow: inset 0 0 0 1px var(--md-sys-color-primary) !important;
+}
+.cdx-button {
+	border-radius: var(--md-sys-shape-corner-full) !important;
+	min-height: 44px;
+	padding-inline: 24px !important;
+	font-weight: 500 !important;
+}
+.cdx-button--weight-primary {
+	background: var(--md-sys-color-primary) !important;
+	color: var(--md-sys-color-on-primary) !important;
+	border-color: var(--md-sys-color-primary) !important;
+}
+.cdx-checkbox__input { accent-color: var(--md-sys-color-primary); }
+.mw-htmlform-codex { max-width: 560px; }
+.mw-htmlform-codex .cdx-field { margin-block: 16px; }
+.mw-userlogin-help .cdx-field,
+.mw-form-related-link-container { margin-block: 8px; }
+
+/* ---------- history ---------- */
+#pagehistory { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+#pagehistory li {
+	margin: 0;
+	padding: 12px 16px;
+	border: 1px solid var(--md-sys-color-outline-variant);
+	border-radius: var(--md-sys-shape-corner-medium);
+	background: var(--md-sys-color-surface-container-low);
+}
+#pagehistory li.selected { background: var(--md-sys-color-secondary-container); border-color: transparent; }
+#pagehistory li .mw-history-pager,
+#pagehistory li .history-deleted { color: var(--md-sys-color-on-surface-variant); }
+.mw-history-compare { margin-block: 16px; }
+.mw-history-compare .mw-ui-button,
+.mw-history-compare button { border-radius: var(--md-sys-shape-corner-full); }
+.mw-history-filter { border: 0; padding: 0; }
+.mw-history-filter legend { color: var(--md-sys-color-on-surface); font-weight: 600; }
+
+/* ---------- diffs ---------- */
+.mw-diff-table { border-collapse: separate; border-spacing: 0; width: 100%; }
+.mw-diff-table td { border: 0; padding: 8px 12px; }
+.mw-diff-marker { width: 2em; color: var(--md-sys-color-on-surface-variant); }
+.diff-addedline { background: color-mix(in srgb, var(--md-sys-color-tertiary-container) 70%, transparent); border-radius: var(--md-sys-shape-corner-extra-small); }
+.diff-deletedline { background: color-mix(in srgb, var(--md-sys-color-error-container) 60%, transparent); border-radius: var(--md-sys-shape-corner-extra-small); }
+.diff-addedline ins, .diff-deletedline del { text-decoration: none; border-radius: 4px; }
+.diff-addedline ins { background: var(--md-sys-color-tertiary-container); }
+.diff-deletedline del { background: var(--md-sys-color-error-container); }
+.mw-diff-inline-added, .mw-diff-inline-changed { background: var(--md-sys-color-tertiary-container); border-radius: 4px; }
+.mw-diff-inline-deleted { background: var(--md-sys-color-error-container); border-radius: 4px; }

@@ -1,7 +1,7 @@
 {
 	"name": "Chroma",
 	"namemsg": "skinname-chroma",
-	"version": "0.1.0",
+	"version": "0.5.0",
 	"author": [
 		"HAHAHAHAHAYINING"
 	],
@@ -25,7 +25,8 @@
 						"skins.chroma.styles"
 					],
 					"scripts": [
-						"skins.chroma.scripts"
+						"skins.chroma.scripts",
+						"mediawiki.searchSuggest"
 					],
 					"menus": [
 						"namespaces",
