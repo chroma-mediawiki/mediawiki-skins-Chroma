@@ -25,5 +25,8 @@
 	"chroma-seed-teal": "Option: teal accent color (default).",
 	"chroma-seed-blue": "Option: blue accent color.",
 	"chroma-seed-green": "Option: green accent color.",
-	"chroma-seed-violet": "Option: violet accent color."
+	"chroma-seed-violet": "Option: violet accent color.",
+	"chroma-nav": "Navigation menu group label",
+	"chroma-tools": "Tools menu group label",
+	"chroma-edit": "Edit this page action label"
 }
