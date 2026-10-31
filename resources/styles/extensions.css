@@ -1,0 +1,128 @@
+/* Chroma extension overrides (Tier 1). */
+
+/* We render our own TOC; hide the core in-content TOC. */
+.chroma-content #toc,
+.chroma-content .toc,
+.chroma-content .mw-toc { display: none !important; }
+
+/* ---------- WikiEditor ---------- */
+.wikiEditor-ui-toolbar {
+	background: var(--md-sys-color-surface-container);
+	border: 1px solid var(--md-sys-color-outline-variant);
+	border-radius: var(--md-sys-shape-corner-large) var(--md-sys-shape-corner-large) 0 0;
+	box-shadow: none;
+}
+.wikiEditor-ui-toolbar .section,
+.wikiEditor-ui-toolbar .booklet { background: transparent; }
+.wikiEditor-ui-toolbar .tool:hover,
+.wikiEditor-ui-toolbar .tool:focus { background: var(--md-sys-color-surface-container-high); }
+.wikiEditor-ui-toolbar .tool.current { background: var(--md-sys-color-secondary-container); }
+.wikiEditor-ui-toolbar .tab.current { border-color: var(--md-sys-color-primary); }
+.wikiEditor-ui-text textarea,
+#wpTextbox1 {
+	background: var(--md-sys-color-surface-container-low);
+	color: var(--md-sys-color-on-surface);
+	border: 1px solid var(--md-sys-color-outline-variant);
+	border-radius: 0 0 var(--md-sys-shape-corner-large) var(--md-sys-shape-corner-large);
+	font-family: var(--md-sys-typescale-font-family-mono);
+}
+.wikiEditor-ui-toolbar .oo-ui-iconElement-icon { opacity: .85; }
+
+/* ---------- OOUI ---------- */
+.oo-ui-window,
+.oo-ui-dialog,
+.oo-ui-messageDialog-content { border-radius: var(--md-sys-shape-corner-extra-large); }
+.oo-ui-windowManager-modal > .oo-ui-dialog > .oo-ui-window-frame { border-radius: var(--md-sys-shape-corner-extra-large); }
+.oo-ui-buttonElement-framed > .oo-ui-buttonElement-button {
+	border-radius: var(--md-sys-shape-corner-full);
+	border-color: var(--md-sys-color-outline);
+}
+.oo-ui-buttonElement-framed.oo-ui-flaggedElement-primary > .oo-ui-buttonElement-button {
+	background: var(--md-sys-color-primary);
+	border-color: var(--md-sys-color-primary);
+	color: var(--md-sys-color-on-primary);
+}
+.oo-ui-buttonElement-framed.oo-ui-flaggedElement-primary > .oo-ui-buttonElement-button:hover {
+	background: var(--md-sys-color-primary);
+	filter: brightness(1.08);
+}
+.oo-ui-textInputWidget > .oo-ui-inputWidget-input,
+.oo-ui-dropdownWidget-handle {
+	background: var(--md-sys-color-surface-container-low);
+	color: var(--md-sys-color-on-surface);
+	border-color: var(--md-sys-color-outline-variant);
+	border-radius: var(--md-sys-shape-corner-small);
+}
+.oo-ui-menuSelectWidget,
+.oo-ui-dropdownWidget-menu {
+	background: var(--md-sys-color-surface-container);
+	border-radius: var(--md-sys-shape-corner-medium);
+	box-shadow: var(--md-sys-elevation-2);
+}
+.oo-ui-menuOptionWidget.oo-ui-optionWidget-selected { background: var(--md-sys-color-secondary-container); }
+.oo-ui-tabOptionWidget.oo-ui-optionWidget-selected { border-color: var(--md-sys-color-primary); }
+.oo-ui-toolbar-bar { background: var(--md-sys-color-surface-container); }
+
+/* ---------- Cite ---------- */
+.mw-references-wrap,
+ol.references { font-size: var(--md-sys-typescale-body-small-size); }
+sup.reference a { color: var(--md-sys-color-primary); }
+.mw-cite-backlink { font-size: .9em; }
+
+/* ---------- Math ---------- */
+.mwe-math-element {
+	display: inline-block;
+	padding: 4px 8px;
+	border-radius: var(--md-sys-shape-corner-small);
+	background: var(--md-sys-color-surface-container-low);
+}
+.mwe-math-fallback-image-inline { vertical-align: middle; }
+
+/* ---------- SyntaxHighlight / Pygments ---------- */
+.mw-highlight {
+	background: var(--md-sys-color-surface-container-highest) !important;
+	border-radius: var(--md-sys-shape-corner-medium);
+	padding: 12px 16px;
+	overflow-x: auto;
+}
+
+/* ---------- InputBox ---------- */
+.mw-inputbox input[type="text"],
+.mw-inputbox input[type="search"] {
+	background: var(--md-sys-color-surface-container-low);
+	border: 1px solid var(--md-sys-color-outline-variant);
+	border-radius: var(--md-sys-shape-corner-small);
+	padding: 8px 12px;
+	color: var(--md-sys-color-on-surface);
+}
+.mw-inputbox input[type="submit"],
+.mw-inputbox button {
+	background: var(--md-sys-color-primary);
+	color: var(--md-sys-color-on-primary);
+	border: 0;
+	border-radius: var(--md-sys-shape-corner-full);
+	padding: 8px 18px;
+}
+
+/* ---------- CategoryTree ---------- */
+.CategoryTreeItem a { color: var(--md-sys-color-primary); }
+.CategoryTreeToggle { color: var(--md-sys-color-on-surface-variant); }
+
+/* ---------- VisualEditor ---------- */
+.ve-ui-surface { background: var(--md-sys-color-surface); }
+.ve-init-mw-desktopArticleTarget-toolbar .oo-ui-toolbar-bar,
+.ve-ui-toolbar .oo-ui-toolbar-bar { background: var(--md-sys-color-surface-container); }
+.ve-ui-toolbar .oo-ui-tool:hover { background: var(--md-sys-color-surface-container-high); }
+.ve-ui-toolbar .oo-ui-tool.oo-ui-widget-enabled.oo-ui-tool-active { background: var(--md-sys-color-secondary-container); }
+.ve-ui-targetWidget { border-radius: var(--md-sys-shape-corner-medium); }
+
+/* ---------- DiscussionTools ---------- */
+.ext-discussiontools-ui-replyWidget,
+.ext-discussiontools-ui-newTopicWidget { border-radius: var(--md-sys-shape-corner-large); }
+
+/* ---------- Echo ---------- */
+.mw-echo-ui-notificationBadgeButton .oo-ui-buttonElement-button { border-radius: var(--md-sys-shape-corner-full); }
+.mw-echo-ui-notificationItemWidget { border-radius: var(--md-sys-shape-corner-medium); }
+
+/* ---------- ConfirmEdit ---------- */
+.mw-confirmedit-captcha { border-radius: var(--md-sys-shape-corner-medium); }

@@ -42,5 +42,6 @@ version-specific workarounds into a single branch.
   - Footer "places" links are empty on a default wiki (only shown when configured).
   - TOC renders top-level sections only; nested sections land in P4.
   - MobileFrontend not installed in this harness; responsive layout checked directly.
-  - Bundled extensions are git submodules and were not installed in the harness yet
-    (Tier 1 compatibility testing is P7).
+  - Tier 1 extensions are installed from GitHub release branches; see
+    `docs/COMPATIBILITY.md` for the exact list and known harness issues.
+  - Math is tested with `native` mode (MathML mode needs RESTBase/Mathoid).

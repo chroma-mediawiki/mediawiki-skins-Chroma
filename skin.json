@@ -71,6 +71,9 @@
 				},
 				"resources/styles/print.css": {
 					"media": "print"
+				},
+				"resources/styles/extensions.css": {
+					"media": "screen"
 				}
 			}
 		},

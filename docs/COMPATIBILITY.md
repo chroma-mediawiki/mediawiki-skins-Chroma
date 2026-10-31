@@ -3,6 +3,34 @@
 Status legend: **A** functional, **B** visually consistent, **C** pixel parity
 (not promised for third-party UI). `planned` = not yet implemented in v0.1.
 
+## Harness result — MediaWiki 1.46.0 (2026-10-31)
+
+The 1.46.0 harness has the following Tier 1 extensions installed and loading:
+AbuseFilter (disabled, see below), CategoryTree, Cite, CodeEditor, ConfirmEdit,
+DiscussionTools, Echo, Gadgets, ImageMap, InputBox, Linter, LoginNotify, Math,
+MultimediaViewer, Nuke, OATHAuth, PageImages, ParserFunctions, PdfHandler, Poem,
+ReplaceText, Scribunto, SecureLinkFixer, SpamBlacklist, SyntaxHighlight_GeSHi,
+TemplateData, TextExtracts, Thanks, TitleBlacklist, VisualEditor, WikiEditor.
+
+Verified pages: article with `<ref>`, `<math>`, `<syntaxhighlight>`, `<poem>`,
+`<inputbox>`, `<categorytree>`; wikitext editor with WikiEditor toolbar;
+VisualEditor; history; Special:Version; Special:Notifications; Special:LintErrors.
+
+Known harness issues (not skin defects):
+
+- VisualEditor needs two extra pieces that are git submodules/foreign resources in
+  the upstream repo: `lib/ve` (VisualEditor core) and `lib/spark-md5/spark-md5.js`.
+- DiscussionTools requires VisualEditor; both load together.
+- Math renders with `$wgMathValidModes = [ 'native' ]` in this local harness
+  (MathML mode needs a RESTBase/Mathoid service).
+- AbuseFilter is disabled because its `Wikimedia\Equivset\Equivset` composer
+  dependency is not present in the source install; install extension composer
+  dependencies to test it.
+- Interwiki is part of MediaWiki core since 1.44; the standalone extension is a
+  stub and must not be loaded.
+- CheckUser and TemplateStyles placeholders from the core source archive are not
+  installed; they are not needed for the skin harness.
+
 ## Tier 1 — in scope for v0.1
 
 MediaWiki 1.43 bundled extensions (33):
