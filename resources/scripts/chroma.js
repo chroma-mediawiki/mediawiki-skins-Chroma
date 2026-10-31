@@ -72,6 +72,20 @@
 	}
 
 	function init() {
+		// Explicit URL parameters win (used by the static prototype and
+		// screenshot tooling): ?chroma-theme=dark&chroma-layout=reading
+		try {
+			var params = new URLSearchParams( window.location.search );
+			[ 'theme', 'layout', 'reading' ].forEach( function ( key ) {
+				var value = params.get( 'chroma-' + key );
+				if ( value ) {
+					root.setAttribute( 'data-chroma-' + key, value );
+				}
+			} );
+		} catch ( e ) {
+			// URLSearchParams is available in all supported browsers.
+		}
+
 		// Apply stored preferences before first paint where possible.
 		var theme = read( STORAGE.theme );
 		if ( theme ) {

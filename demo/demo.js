@@ -27,6 +27,9 @@
 	forward( 'demo-theme', 'chroma-theme-toggle' );
 	forward( 'demo-layout', 'chroma-layout-toggle' );
 	forward( 'demo-reading', 'chroma-reading-toggle' );
+	if ( new URLSearchParams( window.location.search ).has( 'clean' ) ) {
+		document.body.classList.add( 'demo-clean' );
+	}
 	new MutationObserver( refresh ).observe( root, { attributes: true } );
 	refresh();
 }() );

@@ -92,3 +92,18 @@ body { min-height: 100vh; }
 	.demo-search { width: auto; flex: 1; }
 	.demo-toolbar { flex-wrap: wrap; max-width: calc(100vw - 16px); }
 }
+
+.demo-clean .demo-toolbar { display: none; }
+
+@media (max-width: 720px) {
+	.chroma-app-bar { gap: 4px; padding-inline: 8px; }
+	.demo-search { display: none; }
+	.chroma-brand { min-width: 0; }
+	.chroma-brand__text {
+		max-width: 42vw;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.chroma-app-bar__actions { gap: 0; }
+}

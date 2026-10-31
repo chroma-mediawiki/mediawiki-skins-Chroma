@@ -13,6 +13,16 @@ A MediaWiki skin inspired by Material Design 3 and M3 Expressive.
 
 ![Chroma banner](screenshots/readme-banner.svg)
 
+## 截图 / Screenshots
+
+| 浅色 / Light | 深色 / Dark |
+|---|---|
+| ![Light](screenshots/app-light.png) | ![Dark](screenshots/app-dark.png) |
+
+| 阅读模式 / Reading mode | 移动端 / Mobile |
+|---|---|
+| ![Reading mode](screenshots/reading-mode.png) | ![Mobile](screenshots/app-mobile.png) |
+
 ## 特性 / Features
 
 - 完整的 Material Design 3 token：色彩角色、字阶、形状、海拔、动效与状态层。
