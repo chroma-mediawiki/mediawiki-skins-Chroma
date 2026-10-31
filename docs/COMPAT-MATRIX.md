@@ -29,14 +29,6 @@ version-specific workarounds into a single branch.
 - CI runs the branch's PHP matrix; a branch is released only when its matrix is
   green.
 
-## Released builds (v0.1.0)
-
-- `v0.1.0-REL1_43` / `v0.1.0-REL1_45` / `v0.1.0-REL1_46` tags exist; each tag
-  builds a GitHub Release ZIP via `.github/workflows/release.yml`.
-- Runtime smoke test evidence currently comes from MediaWiki 1.46.0; 1.43/1.45
-  branches are CI-validated (schema/lint) and will get their own runtime smoke
-  tests in the next milestone.
-
 ## Local smoke test (2026-10-31)
 
 - MediaWiki **1.46.0**, PHP **8.3.6**, SQLite, skin `main` (pre-branch split).

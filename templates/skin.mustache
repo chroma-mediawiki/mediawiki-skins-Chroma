@@ -30,7 +30,6 @@
 				<span class="chroma-icon" data-icon="book" aria-hidden="true"></span>
 			</button>
 			{{#data-portlets}}
-			{{#data-user-menu}}<ul class="chroma-user-menu">{{{html-items}}}</ul>{{/data-user-menu}}
 			{{#data-personal}}<ul class="chroma-user-menu">{{{html-items}}}</ul>{{/data-personal}}
 			{{/data-portlets}}
 		</div>
@@ -45,8 +44,7 @@
 		<main id="content" class="chroma-content">
 			<div class="chroma-page-actions">
 				{{#data-portlets}}
-				{{#data-associated-pages}}<ul class="chroma-tabs">{{{html-items}}}</ul>{{/data-associated-pages}}
-				{{#data-views}}<ul class="chroma-tabs">{{{html-items}}}</ul>{{/data-views}}
+					{{#data-views}}<ul class="chroma-tabs">{{{html-items}}}</ul>{{/data-views}}
 				{{/data-portlets}}
 			</div>
 			<div class="chroma-article">

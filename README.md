@@ -44,17 +44,6 @@
 - 无外部请求：字体、图标与脚本全部随皮肤分发，不依赖 CDN。
 - 可访问性：WCAG 2.2 AA、键盘可操作、支持 `prefers-reduced-motion`。
 
-
-## 版本与下载
-
-| MediaWiki | 分支 | 发布 |
-|---|---|---|
-| 1.43 LTS | `REL1_43` | [v0.1.0-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.1.0-REL1_43) |
-| 1.45 | `REL1_45` | [v0.1.0-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.1.0-REL1_45) |
-| 1.46 | `REL1_46` | [v0.1.0-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.1.0-REL1_46) |
-
-每个 Release 提供可直接解压到 `skins/Chroma` 的 ZIP。`main` 分支用于开发，不保证与 Release 同步。
-
 ## 安装
 
 1. 下载与你 MediaWiki 版本对应的 Release ZIP，解压到 `skins/Chroma`。
