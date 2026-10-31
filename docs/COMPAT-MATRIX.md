@@ -36,9 +36,8 @@ version-specific workarounds into a single branch.
 - Runtime smoke tests completed on MediaWiki **1.43.0**, **1.45.0** and
   **1.46.0**: skin registers/renders, `data-chroma-*` body attributes and
   `chroma-seed-*` class are applied, preferences work, no PHP errors.
-- Known 1.43 gap: the associated-pages (namespace) tab row is not rendered by
-  the legacy menu template yet; views/actions render normally. Tracked for the
-  next patch.
+- 1.43 namespace/associated-pages tabs are rendered after the v0.1.2 patch
+  (`data-namespaces` legacy menu).
 
 ## Local smoke test (2026-10-31)
 

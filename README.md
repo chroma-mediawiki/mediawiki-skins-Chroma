@@ -53,7 +53,7 @@
 
 | MediaWiki | 分支 | 发布 |
 |---|---|---|
-| 1.43 LTS | `REL1_43` | [v0.1.0-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.1.1-REL1_43) |
+| 1.43 LTS | `REL1_43` | [v0.1.0-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.1.2-REL1_43) |
 | 1.45 | `REL1_45` | [v0.1.0-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.1.1-REL1_45) |
 | 1.46 | `REL1_46` | [v0.1.0-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.1.1-REL1_46) |
 
