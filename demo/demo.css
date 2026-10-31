@@ -1,0 +1,94 @@
+/* Prototype-only styles (not shipped with the skin). */
+body { min-height: 100vh; }
+
+.demo-search {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	width: min(420px, 40vw);
+	height: 44px;
+	padding: 0 16px;
+	border-radius: var(--md-sys-shape-corner-full);
+	background: var(--md-sys-color-surface-container-high);
+	color: var(--md-sys-color-on-surface-variant);
+}
+.demo-search input {
+	flex: 1;
+	border: 0;
+	background: transparent;
+	color: var(--md-sys-color-on-surface);
+	font: inherit;
+	outline: none;
+}
+.demo-search .chroma-icon { width: 20px; height: 20px; }
+
+.demo-avatar {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: var(--md-sys-color-tertiary-container);
+	color: var(--md-sys-color-on-tertiary-container);
+	display: grid;
+	place-items: center;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.demo-layout {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 240px;
+	gap: 40px;
+	max-width: 1120px;
+	margin-inline: auto;
+}
+.demo-page-head { margin-bottom: 8px; }
+.demo-page-head .chroma-tabs { margin-top: 0; }
+
+.demo-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 24px; }
+
+.demo-callout {
+	display: flex;
+	gap: 12px;
+	align-items: flex-start;
+	margin: 24px 0;
+	padding: 16px 20px;
+	border-radius: var(--md-sys-shape-corner-large);
+	background: var(--md-sys-color-primary-container);
+	color: var(--md-sys-color-on-primary-container);
+}
+.demo-callout strong { display: block; margin-bottom: 4px; }
+
+.demo-toolbar {
+	position: fixed;
+	inset-inline-start: 16px;
+	bottom: 16px;
+	z-index: 60;
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	padding: 8px;
+	border-radius: var(--md-sys-shape-corner-large);
+	background: var(--md-sys-color-surface-container-highest);
+	box-shadow: var(--md-sys-elevation-3);
+	font-size: 12px;
+}
+.demo-toolbar button {
+	border: 0;
+	border-radius: var(--md-sys-shape-corner-full);
+	padding: 8px 12px;
+	background: var(--md-sys-color-surface-container);
+	color: var(--md-sys-color-on-surface);
+	font: inherit;
+	cursor: pointer;
+}
+.demo-toolbar button:hover { background: var(--md-sys-color-secondary-container); }
+.demo-toolbar__state { color: var(--md-sys-color-on-surface-variant); padding-inline: 4px; }
+
+@media (max-width: 1100px) {
+	.demo-layout { grid-template-columns: minmax(0, 1fr); }
+	.demo-toolbar { inset-inline-start: 8px; bottom: 8px; }
+}
+@media (max-width: 720px) {
+	.demo-search { width: auto; flex: 1; }
+	.demo-toolbar { flex-wrap: wrap; max-width: calc(100vw - 16px); }
+}

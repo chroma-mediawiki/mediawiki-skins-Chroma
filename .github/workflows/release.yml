@@ -1,0 +1,29 @@
+name: Release
+
+on:
+  push:
+    tags: [ 'v*' ]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build installable ZIP
+        run: |
+          set -e
+          NAME="Chroma-${GITHUB_REF_NAME}.zip"
+          zip -r "$NAME" \
+            skin.json composer.json LICENSE NOTICE README.md \
+            i18n includes templates resources docs
+          echo "ASSET=$NAME" >> "$GITHUB_ENV"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ env.ASSET }}
+          generate_release_notes: true

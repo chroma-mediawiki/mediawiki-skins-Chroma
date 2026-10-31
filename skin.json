@@ -1,0 +1,66 @@
+{
+  "name": "Chroma",
+  "namemsg": "skinname-chroma",
+  "version": "0.1.0",
+  "author": [
+    "HAHAHAHAHAYINING"
+  ],
+  "url": "https://github.com/chroma-mediawiki/mediawiki-skins-Chroma",
+  "descriptionmsg": "chroma-desc",
+  "license-name": "GPL-3.0-or-later",
+  "type": "skin",
+  "requires": {
+    "MediaWiki": ">= 1.43.0"
+  },
+  "ValidSkinNames": {
+    "chroma": {
+      "class": "SkinMustache",
+      "args": [
+        {
+          "name": "chroma",
+          "responsive": true,
+          "template": "skin",
+          "styles": [
+            "skins.chroma.styles"
+          ],
+          "scripts": [
+            "skins.chroma.scripts"
+          ]
+        }
+      ]
+    }
+  },
+  "MessagesDirs": {
+    "Chroma": [
+      "i18n"
+    ]
+  },
+  "ResourceModules": {
+    "skins.chroma.styles": {
+      "styles": {
+        "resources/styles/tokens.css": {
+          "media": "screen"
+        },
+        "resources/styles/base.css": {
+          "media": "screen"
+        },
+        "resources/styles/codex-bridge.css": {
+          "media": "screen"
+        },
+        "resources/styles/print.css": {
+          "media": "print"
+        }
+      }
+    },
+    "skins.chroma.scripts": {
+      "scripts": [
+        "resources/scripts/chroma.js"
+      ]
+    }
+  },
+  "ResourceFileModulePaths": {
+    "localBasePath": "",
+    "remoteSkinPath": "Chroma"
+  },
+  "manifest_version": 2
+}

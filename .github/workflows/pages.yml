@@ -1,0 +1,53 @@
+name: Pages
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'demo/**'
+      - 'resources/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build static site
+        run: |
+          set -e
+          mkdir -p _site
+          cp -r demo _site/demo
+          mkdir -p _site/resources
+          cp -r resources/styles _site/resources/styles
+          cp -r resources/scripts _site/resources/scripts
+          cp -r resources/icons _site/resources/icons 2>/dev/null || true
+          cp -r resources/fonts _site/resources/fonts 2>/dev/null || true
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,23 @@
+{
+  "@metadata": {
+    "authors": ["HAHAHAHAHAYINING"]
+  },
+  "skinname-chroma": "Chroma",
+  "chroma-desc": "受 Material Design 3 與 M3 Expressive 啟發的 MediaWiki 面板。",
+  "chroma-skip-to-content": "跳至內容",
+  "chroma-menu": "選單",
+  "chroma-search": "搜尋",
+  "chroma-theme": "配色方案",
+  "chroma-theme-system": "跟隨系統",
+  "chroma-theme-light": "淺色",
+  "chroma-theme-dark": "深色",
+  "chroma-seed-color": "主題色",
+  "chroma-layout": "版面",
+  "chroma-layout-app": "應用式",
+  "chroma-layout-reading": "閱讀式",
+  "chroma-reading-mode": "閱讀模式",
+  "chroma-pref-theme": "配色方案",
+  "chroma-pref-layout": "版面",
+  "chroma-pref-reading": "預設啟用閱讀模式",
+  "chroma-pref-seed": "主題色"
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-chroma-theme="auto" data-chroma-layout="app" data-chroma-reading="off">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chroma 静态原型 · 示例条目</title>
+	<link rel="stylesheet" href="../resources/styles/tokens.css">
+	<link rel="stylesheet" href="../resources/styles/base.css">
+	<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+	<a class="chroma-skip-link" href="#content">跳转到正文</a>
+
+	<header class="chroma-app-bar">
+		<div class="chroma-app-bar__start">
+			<button type="button" class="chroma-icon-button" id="chroma-drawer-toggle" aria-label="菜单" aria-expanded="false" aria-controls="chroma-drawer">
+				<span class="chroma-icon" data-icon="menu" aria-hidden="true"></span>
+			</button>
+			<a class="chroma-brand" href="#">
+				<span class="chroma-brand__mark" aria-hidden="true">C</span>
+				<span class="chroma-brand__text">Chroma 示例维基</span>
+			</a>
+		</div>
+		<form class="demo-search" role="search" onsubmit="return false">
+			<span class="chroma-icon" data-icon="search" aria-hidden="true"></span>
+			<input type="search" placeholder="搜索示例维基" aria-label="搜索">
+		</form>
+		<div class="chroma-app-bar__actions">
+			<button type="button" class="chroma-icon-button" id="chroma-reading-toggle" aria-label="阅读模式">
+				<span class="chroma-icon" data-icon="book" aria-hidden="true"></span>
+			</button>
+			<button type="button" class="chroma-icon-button" id="chroma-layout-toggle" aria-label="切换布局">
+				<span class="chroma-icon" data-icon="layout" aria-hidden="true"></span>
+			</button>
+			<button type="button" class="chroma-icon-button" id="chroma-theme-toggle" aria-label="切换配色">
+				<span class="chroma-icon" data-icon="contrast" aria-hidden="true"></span>
+			</button>
+			<span class="demo-avatar" title="示例用户">HY</span>
+		</div>
+	</header>
+
+	<div class="chroma-body">
+		<aside id="chroma-drawer" class="chroma-drawer chroma-nav" aria-label="站点导航">
+			<ul>
+				<li><a href="#" aria-current="page">首页</a></li>
+				<li><a href="#">随机条目</a></li>
+				<li><a href="#">最近更改</a></li>
+			</ul>
+			<p class="chroma-toc__title" style="margin: 20px 16px 8px;">参与</p>
+			<ul>
+				<li><a href="#">编辑条目</a></li>
+				<li><a href="#">社区门户</a></li>
+				<li><a href="#">方针与指引</a></li>
+			</ul>
+			<p class="chroma-toc__title" style="margin: 20px 16px 8px;">工具</p>
+			<ul>
+				<li><a href="#">链入页面</a></li>
+				<li><a href="#">特殊页面</a></li>
+				<li><a href="#">打印版本</a></li>
+			</ul>
+		</aside>
+
+		<main id="content" class="chroma-content">
+			<div class="demo-layout">
+				<article class="chroma-article">
+					<div class="demo-page-head">
+						<nav class="chroma-tabs" aria-label="页面标签">
+							<a href="#" aria-selected="true">条目</a>
+							<a href="#">讨论</a>
+							<a href="#">编辑</a>
+							<a href="#">历史</a>
+						</nav>
+						<h1 class="chroma-article__title">Chroma 设计语言</h1>
+						<p class="chroma-article__subtitle">一个受 Material Design 3 与 M3 Expressive 启发的 MediaWiki 皮肤原型</p>
+						<div class="demo-meta">
+							<span class="chroma-chip">示例条目</span>
+							<span class="chroma-chip">最后编辑于今天</span>
+							<span class="chroma-chip">5 分钟阅读</span>
+						</div>
+					</div>
+
+					<div class="chroma-prose">
+						<p><strong>Chroma</strong> 是一个面向 MediaWiki 的皮肤项目，目标是把 Material Design 3 的色彩、排版、形状与动效系统带入 wiki 的阅读与编辑体验，同时保持 MediaWiki 的既有结构与扩展兼容性。</p>
+
+						<div class="demo-callout">
+							<span class="chroma-icon" data-icon="book" aria-hidden="true"></span>
+							<div>
+								<strong>阅读模式已就绪</strong>
+								点击右上角的书本图标，隐藏侧栏与工具，专注长文阅读。
+							</div>
+						</div>
+
+						<h2>设计原则</h2>
+						<ul>
+							<li><strong>阅读优先</strong>：正文安静、工具后退，阅读模式是一等公民。</li>
+							<li><strong>Token 驱动</strong>：组件不写死颜色，全部解析到 <code>--md-sys-*</code> 变量。</li>
+							<li><strong>渐进增强</strong>：无 JavaScript 也能阅读、导航与搜索。</li>
+							<li><strong>零外部请求</strong>：字体、图标与脚本随皮肤分发，不依赖 CDN。</li>
+						</ul>
+
+						<div class="chroma-infobox">
+							<p class="chroma-infobox__title">Chroma</p>
+							<dl>
+								<dt>类型</dt><dd>MediaWiki 皮肤</dd>
+								<dt>设计语言</dt><dd>MD3 / M3 Expressive</dd>
+								<dt>支持版本</dt><dd>1.43 LTS · 1.45 · 1.46</dd>
+								<dt>默认主色</dt><dd><code>#006A6A</code></dd>
+								<dt>许可</dt><dd>GPL-3.0-or-later</dd>
+							</dl>
+						</div>
+
+						<h2>色彩系统</h2>
+						<p>所有颜色由 seed color 生成五组 tonal palette，再映射为 MD3 语义角色。下面的表格展示浅色主题中的主要角色：</p>
+						<table>
+							<thead>
+								<tr><th>Token</th><th>用途</th><th>浅色值</th></tr>
+							</thead>
+							<tbody>
+								<tr><td><code>--md-sys-color-primary</code></td><td>主操作、链接</td><td><code>#006a6a</code></td></tr>
+								<tr><td><code>--md-sys-color-surface</code></td><td>页面底色</td><td><code>#f6fbfa</code></td></tr>
+								<tr><td><code>--md-sys-color-surface-container</code></td><td>卡片、分区</td><td><code>#eaf1f0</code></td></tr>
+								<tr><td><code>--md-sys-color-on-surface</code></td><td>正文文字</td><td><code>#171d1d</code></td></tr>
+								<tr><td><code>--md-sys-color-outline-variant</code></td><td>分隔线</td><td><code>#bec9c8</code></td></tr>
+							</tbody>
+						</table>
+						<pre><code>/* 站点 CSS 可以直接覆盖 token */
+:root {
+  --md-sys-color-primary: #005a5a;
+}</code></pre>
+
+						<h2>排版与节奏</h2>
+						<p>正文使用 MD3 <em>body-large</em> 字阶，行高 1.75，中文优先使用系统字体，拉丁字母使用 Roboto Flex 子集。标题层级按 headline / title 划分，避免在 wiki 内出现过多层级。</p>
+						<blockquote>好的 wiki 皮肤应该让读者忘记皮肤的存在，只在需要时提供熟悉的工具。</blockquote>
+
+						<h2>布局与切换</h2>
+						<p>默认是应用式布局：顶栏、导航抽屉、正文与右侧目录。偏好设置中可切换为阅读式布局，接近 Vector 2022 的左侧栏结构。两个布局共享同一套模板与 token。</p>
+						<p>移动端断点下，抽屉变为覆盖层，正文单列，编辑按钮变为浮动操作按钮。</p>
+
+						<h2>参考文献</h2>
+						<ol>
+							<li>Material Design 3 官方规范（m3.material.io）。</li>
+							<li>MediaWiki 皮肤开发文档（Manual:Skinning）。</li>
+							<li>本项目 <code>docs/SPEC.md</code> 与 <code>docs/COMPATIBILITY.md</code>。</li>
+						</ol>
+					</div>
+				</article>
+
+				<aside class="chroma-toc" aria-label="目录">
+					<p class="chroma-toc__title">目录</p>
+					<ul>
+						<li><a href="#">设计原则</a></li>
+						<li><a href="#">色彩系统</a></li>
+						<li><a href="#">排版与节奏</a></li>
+						<li><a href="#">布局与切换</a></li>
+						<li><a href="#">参考文献</a></li>
+					</ul>
+				</aside>
+			</div>
+		</main>
+	</div>
+
+	<footer class="chroma-footer">
+		<p>Chroma 静态原型 · 仅用于设计评审，未接入 MediaWiki。</p>
+		<p>最后编辑于 2026-10-31 · 内容采用 CC BY-SA 4.0 · 皮肤采用 GPL-3.0-or-later</p>
+	</footer>
+
+	<button type="button" class="chroma-fab" aria-label="编辑本页">
+		<span class="chroma-icon" data-icon="edit" aria-hidden="true"></span>
+		编辑
+	</button>
+
+	<div class="demo-toolbar" role="group" aria-label="原型控制">
+		<button type="button" id="demo-theme">配色</button>
+		<button type="button" id="demo-layout">布局</button>
+		<button type="button" id="demo-reading">阅读模式</button>
+		<span class="demo-toolbar__state" id="demo-state">theme=auto · layout=app · reading=off</span>
+	</div>
+
+	<script src="../resources/scripts/chroma.js"></script>
+	<script src="demo.js"></script>
+</body>
+</html>

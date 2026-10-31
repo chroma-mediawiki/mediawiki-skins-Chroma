@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html {{{html-tag-attributes}}}>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{{{html-head}}}
+</head>
+<body {{{html-body-attributes}}}>
+	<a class="chroma-skip-link" href="#content">{{msg-chroma-skip-to-content}}</a>
+	{{{html-site-notice}}}
+	<div id="chroma-shell" class="chroma-shell" data-chroma-layout="app">
+		<header id="chroma-app-bar" class="chroma-app-bar">
+			<div class="chroma-app-bar__start">
+				<button type="button" class="chroma-icon-button" id="chroma-drawer-toggle" aria-label="{{msg-chroma-menu}}" aria-expanded="false" aria-controls="chroma-drawer">
+					<span class="chroma-icon" aria-hidden="true">menu</span>
+				</button>
+				<a class="chroma-brand" href="{{link-mainpage}}">
+					<span class="chroma-brand__text">{{msg-sitename}}</span>
+				</a>
+			</div>
+			<div class="chroma-app-bar__actions">
+				<button type="button" class="chroma-icon-button" id="chroma-theme-toggle" aria-label="{{msg-chroma-theme}}">
+					<span class="chroma-icon" aria-hidden="true">contrast</span>
+				</button>
+				<button type="button" class="chroma-icon-button" id="chroma-reading-toggle" aria-label="{{msg-chroma-reading-mode}}">
+					<span class="chroma-icon" aria-hidden="true">book</span>
+				</button>
+			</div>
+		</header>
+		<div class="chroma-body">
+			<aside id="chroma-drawer" class="chroma-drawer" aria-label="{{msg-chroma-menu}}">
+				{{{html-sidebar}}}
+			</aside>
+			<main id="content" class="chroma-content">
+				{{{html-body-content}}}
+			</main>
+		</div>
+		<footer id="chroma-footer" class="chroma-footer">
+			{{{html-footer}}}
+		</footer>
+	</div>
+	{{{html-after-content}}}
+</body>
+</html>

@@ -1,0 +1,23 @@
+Chroma — a MediaWiki skin inspired by Material Design 3 and M3 Expressive.
+
+This project is licensed under the GNU General Public License v3.0 or later
+(see LICENSE). It bundles or derives from the following third-party works:
+
+1. Material Web (@material/web), Copyright Google LLC.
+   Licensed under the Apache License, Version 2.0.
+   https://github.com/material-components/material-web
+
+2. Roboto / Roboto Flex fonts, Copyright Google LLC.
+   Licensed under the Apache License, Version 2.0.
+   https://fonts.google.com/specimen/Roboto+Flex
+
+3. Material Symbols icons, Copyright Google LLC.
+   Licensed under the Apache License, Version 2.0.
+   https://fonts.google.com/icons
+
+4. material-color-utilities, Copyright Google LLC.
+   Licensed under the Apache License, Version 2.0.
+   Used at build time only (not distributed at runtime).
+
+Material Design and Material 3 are trademarks of Google LLC. Chroma is an
+independent community project and is not affiliated with or endorsed by Google.

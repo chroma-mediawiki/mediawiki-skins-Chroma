@@ -1,0 +1,8 @@
+@media print {
+	.chroma-app-bar, .chroma-drawer, .chroma-toc, .chroma-fab, .chroma-tabs, .chroma-footer { display: none !important; }
+	.chroma-shell { min-height: 0; }
+	.chroma-content { padding: 0; }
+	.chroma-article, .chroma-prose { max-width: none; }
+	body { background: #fff; color: #000; }
+	a { color: #000; text-decoration: underline; }
+}

@@ -1,0 +1,11 @@
+node_modules/
+vendor/
+.npm-cache/
+_site/
+*.zip
+*.tar.gz
+.DS_Store
+Thumbs.db
+test-results/
+playwright-report/
+screenshots/generated/

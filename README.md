@@ -1,0 +1,88 @@
+# Chroma
+
+受 Material Design 3 与 M3 Expressive 启发的 MediaWiki 皮肤。
+A MediaWiki skin inspired by Material Design 3 and M3 Expressive.
+
+[![CI](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/actions/workflows/ci.yml/badge.svg)](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/actions/workflows/ci.yml)
+[![License: GPL-3.0-or-later](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](LICENSE)
+[![MediaWiki](https://img.shields.io/badge/MediaWiki-1.43%20%7C%201.45%20%7C%201.46-36c.svg)](docs/COMPAT-MATRIX.md)
+[![Demo](https://img.shields.io/badge/demo-GitHub%20Pages-006a6a.svg)](https://chroma-mediawiki.github.io/mediawiki-skins-Chroma/demo/)
+
+> 状态：v0.1 开发中。
+> Status: v0.1 in development.
+
+![Chroma banner](screenshots/readme-banner.svg)
+
+## 特性 / Features
+
+- 完整的 Material Design 3 token：色彩角色、字阶、形状、海拔、动效与状态层。
+- Full Material Design 3 token set: color roles, typescale, shape, elevation, motion and state layers.
+- M3 Expressive 视觉子集：强调字阶、更大圆角与形状、弹簧动效、Expressive 组件。
+- A pragmatic M3 Expressive subset: emphasized type, larger shapes, spring-like motion, expressive components.
+- 动态色彩：管理员设置默认 seed，用户在偏好设置中选择主题色与明暗模式。
+- Dynamic color: admin-defined seed plus per-user accent color and light/dark preference.
+- 两种布局：应用式（顶栏 + 导航抽屉）与阅读式（接近 Vector 2022），可随时切换。
+- Two layouts: App-like (top app bar + navigation drawer) and Reading (closer to Vector 2022), switchable.
+- 阅读模式：隐藏侧栏与操作栏，正文限宽居中，专注长文阅读。
+- Reading mode: hides chrome and centres the article at a comfortable measure.
+- 无外部请求：字体、图标与脚本全部随皮肤分发。
+- No external requests: fonts, icons and scripts ship with the skin.
+- 可访问性：WCAG 2.2 AA、键盘可操作、支持 `prefers-reduced-motion`。
+- Accessibility: WCAG 2.2 AA, keyboard operable, respects `prefers-reduced-motion`.
+
+## 安装 / Installation
+
+1. 下载与你 MediaWiki 版本对应的 Release ZIP，解压到 `skins/Chroma`。
+2. Download the Release ZIP matching your MediaWiki version and extract it to `skins/Chroma`.
+3. 在 `LocalSettings.php` 末尾加入：
+3. Add to the end of `LocalSettings.php`:
+
+```php
+wfLoadSkin( 'Chroma' );
+$wgDefaultSkin = 'chroma';
+```
+
+## 配置 / Configuration
+
+```php
+$wgChromaDefaultSeed = '#006A6A';   // 主题色种子 / seed color
+$wgChromaDefaultScheme = 'system';  // system | light | dark
+$wgChromaDefaultLayout = 'app';     // app | reading
+$wgChromaDefaultReadingMode = false;
+$wgChromaAllowUserColor = true;
+```
+
+完整配置与用户偏好说明见 [docs/THEMING.md](docs/THEMING.md)。
+See [docs/THEMING.md](docs/THEMING.md) for all options and user preferences.
+
+## 兼容性 / Compatibility
+
+- MediaWiki 1.43 LTS / 1.45 / 1.46，分别维护于 `REL1_43`、`REL1_45`、`REL1_46` 分支。
+- MediaWiki 1.43 LTS / 1.45 / 1.46, maintained on separate `REL1_43`, `REL1_45`, `REL1_46` branches.
+- Tier 1 扩展（MediaWiki 自带 33 个 + 社区轻量热门扩展）见 [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md)。
+- Tier 1 extensions (the 33 bundled with MediaWiki plus lightweight popular ones) are listed in [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md).
+- MobileFrontend：v0.1 与其共存（移动端仍由 MinervaNeue 提供），v0.2 计划接管。
+- MobileFrontend: co-exists in v0.1 (mobile stays on MinervaNeue); takeover is planned for v0.2.
+
+## 开发 / Development
+
+```bash
+npm install
+npm run tokens   # regenerate resources/styles/tokens.css from the seed color
+npm run serve    # serve the static prototype at http://localhost:8080/demo/
+```
+
+- 静态原型：`demo/`（GitHub Pages 部署）。
+- Static prototype: `demo/` (deployed to GitHub Pages).
+- 本地 MediaWiki 测试环境脚本：`dev/`（进行中）。
+- Local MediaWiki harness scripts: `dev/` (work in progress).
+- 设计规范：[docs/SPEC.md](docs/SPEC.md)；版本差异：[docs/COMPAT-MATRIX.md](docs/COMPAT-MATRIX.md)。
+- Spec: [docs/SPEC.md](docs/SPEC.md); version differences: [docs/COMPAT-MATRIX.md](docs/COMPAT-MATRIX.md).
+
+## 许可 / License
+
+GPL-3.0-or-later。第三方组件许可见 [NOTICE](NOTICE)。
+GPL-3.0-or-later. See [NOTICE](NOTICE) for third-party components.
+
+Chroma 是独立的社区项目，与 Google 无关联，也未获其背书。Material Design 与 Material 3 是 Google LLC 的商标。
+Chroma is an independent community project, not affiliated with or endorsed by Google. Material Design and Material 3 are trademarks of Google LLC.

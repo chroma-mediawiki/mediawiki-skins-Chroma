@@ -1,0 +1,31 @@
+name: Feature request
+description: Suggest a design or feature improvement.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Layout / navigation
+        - Color / theming
+        - Typography
+        - Components
+        - Editing UI
+        - Accessibility
+        - Compatibility
+        - Documentation / tooling
+  - type: textarea
+    id: references
+    attributes:
+      label: References (MD3 spec, other skins, mockups)

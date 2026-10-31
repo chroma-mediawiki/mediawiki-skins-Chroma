@@ -1,0 +1,21 @@
+{
+  "name": "chroma-mediawiki-skin",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Build tooling for the Chroma MediaWiki skin",
+  "type": "module",
+  "scripts": {
+    "tokens": "node tools/generate-tokens.mjs '#006A6A' resources/styles/tokens.css docs/tokens.json",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "eslint resources/scripts demo/*.js",
+    "lint:css": "stylelint resources/styles/*.css demo/*.css",
+    "serve": "python3 -m http.server 8080",
+    "test": "echo 'Tests are run in CI (see .github/workflows/ci.yml)'"
+  },
+  "devDependencies": {
+    "@material/material-color-utilities": "0.2.7",
+    "eslint": "^9.0.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0"
+  }
+}
