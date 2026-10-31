@@ -1,7 +1,7 @@
 # Extension compatibility
 
 Status legend: **A** functional, **B** visually consistent, **C** pixel parity
-(not promised for third-party UI). `planned` = not yet implemented in v0.1.
+(not promised for third-party UI). `tested` = exercised in the 1.43/1.45/1.46 harnesses.
 
 ## Harness result — MediaWiki 1.46.0 (2026-10-31)
 
@@ -52,10 +52,11 @@ Known harness issues (not skin defects):
 
 - Installed `MobileFrontend` + `MinervaNeue`.
 - Desktop UA: Chroma (skin-chroma).
-- Mobile UA (Pixel 7): MinervaNeue serves the mobile view, Chroma remains the
-  desktop skin; no functional breakage.
-- Forced `?useskin=chroma` on a mobile viewport renders Chroma's responsive
-  layout (drawer becomes overlay, search collapses to an icon, TOC hidden).
+- Mobile UA (Pixel 7): Chroma serves the mobile view directly
+  (`$wgDefaultMobileSkin = 'chroma'`); the responsive drawer/search/TOC layout is
+  active without MinervaNeue.
+- `?useskin=chroma` is no longer required for mobile; it remains useful for
+  forcing Chroma from desktop UA.
 - Result: Chroma full mobile takeover verified with
   `$wgDefaultMobileSkin = 'chroma'`; no MinervaNeue dependency required.
 
@@ -65,39 +66,39 @@ MediaWiki 1.43 bundled extensions (33):
 
 | Extension | UI impact | Target | Status |
 |---|---|---|---|
-| AbuseFilter | special pages/forms | A | planned |
-| CategoryTree | content tree | A+B | planned |
-| Cite | reference popups/content | A+B | planned |
-| CiteThisPage | special page | A | planned |
-| CodeEditor | edit textarea | A+B | planned |
-| ConfirmEdit | CAPTCHA forms | A+B | planned |
-| DiscussionTools | talk reply UI | A+B | planned |
-| Echo | notifications/badges | A+B | planned |
-| Gadgets | preferences | A | planned |
-| ImageMap | content | A | planned |
-| InputBox | content forms | A+B | planned |
-| Interwiki | special page | A | planned |
-| Linter | special page | A | planned |
-| LoginNotify | notifications | A | planned |
-| Math | content (MathML) | A+B | planned |
-| MultimediaViewer | lightbox | A+B | planned |
-| Nuke | special page | A | planned |
-| OATHAuth | special page/forms | A | planned |
-| PageImages | API only | A | planned |
-| ParserFunctions | content | A | planned |
-| PdfHandler | file pages | A | planned |
-| Poem | content | A | planned |
-| ReplaceText | special page | A | planned |
-| Scribunto | content | A | planned |
-| SecureLinkFixer | none | A | planned |
-| SpamBlacklist | special page | A | planned |
-| SyntaxHighlight_GeSHi | content | A+B | planned |
-| TemplateData | edit UI | A+B | planned |
-| TextExtracts | API only | A | planned |
-| Thanks | links/snackbar | A+B | planned |
-| TitleBlacklist | special page | A | planned |
-| VisualEditor | full editor UI | A+B | planned |
-| WikiEditor | toolbar | A+B | planned |
+| AbuseFilter | special pages/forms | A | blocked (Equivset) |
+| CategoryTree | content tree | A+B | tested 1.43/1.45/1.46 |
+| Cite | reference popups/content | A+B | tested 1.43/1.45/1.46 |
+| CiteThisPage | special page | A | tested 1.43/1.45/1.46 |
+| CodeEditor | edit textarea | A+B | tested 1.43/1.45/1.46 |
+| ConfirmEdit | CAPTCHA forms | A+B | tested 1.43/1.45/1.46 |
+| DiscussionTools | talk reply UI | A+B | tested 1.46 (VE dep) |
+| Echo | notifications/badges | A+B | tested 1.43/1.45/1.46 |
+| Gadgets | preferences | A | tested 1.43/1.45/1.46 |
+| ImageMap | content | A | tested 1.43/1.45/1.46 |
+| InputBox | content forms | A+B | tested 1.43/1.45/1.46 |
+| Interwiki | special page | A | core since 1.44 |
+| Linter | special page | A | tested 1.43/1.45/1.46 |
+| LoginNotify | notifications | A | tested 1.43/1.45/1.46 |
+| Math | content (MathML) | A+B | tested 1.43/1.45/1.46 (native) |
+| MultimediaViewer | lightbox | A+B | tested 1.43/1.45/1.46 |
+| Nuke | special page | A | tested 1.43/1.45/1.46 |
+| OATHAuth | special page/forms | A | tested 1.43/1.45/1.46 |
+| PageImages | API only | A | tested 1.43/1.45/1.46 |
+| ParserFunctions | content | A | tested 1.43/1.45/1.46 |
+| PdfHandler | file pages | A | tested 1.43/1.45/1.46 |
+| Poem | content | A | tested 1.43/1.45/1.46 |
+| ReplaceText | special page | A | tested 1.43/1.45/1.46 |
+| Scribunto | content | A | tested 1.43/1.45/1.46 |
+| SecureLinkFixer | none | A | tested 1.43/1.45/1.46 |
+| SpamBlacklist | special page | A | tested 1.43/1.45/1.46 |
+| SyntaxHighlight_GeSHi | content | A+B | tested 1.43/1.45/1.46 |
+| TemplateData | edit UI | A+B | tested 1.43/1.45/1.46 |
+| TextExtracts | API only | A | tested 1.43/1.45/1.46 |
+| Thanks | links/snackbar | A+B | tested 1.43/1.45/1.46 |
+| TitleBlacklist | special page | A | tested 1.43/1.45/1.46 |
+| VisualEditor | full editor UI | A+B | tested 1.46 |
+| WikiEditor | toolbar | A+B | tested 1.43/1.45/1.46 |
 
 Lightweight popular community extensions:
 

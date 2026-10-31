@@ -46,12 +46,12 @@ version-specific workarounds into a single branch.
   Special:Version, Special:UserLogin.
 - Result: skin registers and renders, no PHP errors, no browser console errors,
   CI green, GitHub Pages deployment green.
-- Known gaps at this stage:
-  - OOUI-based preferences tabs/buttons are not yet MD3-themed (P7).
-  - Search suggestions/typeahead not implemented yet (P4).
-  - Footer "places" links are empty on a default wiki (only shown when configured).
-  - TOC renders top-level sections only; nested sections land in P4.
-  - MobileFrontend not installed in this harness; responsive layout checked directly.
-  - Tier 1 extensions are installed from GitHub release branches; see
-    `docs/COMPATIBILITY.md` for the exact list and known harness issues.
+- Verified after v0.5.0:
+  - OOUI preferences/Codex login/history/diff surfaces use MD3 tokens.
+  - Search suggestions are provided by core `mediawiki.searchSuggest`.
+  - MobileFrontend is installed; `$wgDefaultMobileSkin = 'chroma'` serves
+    Chroma on mobile UA without MinervaNeue.
+  - Nested TOC sections and scroll-spy are implemented.
+  - 30 Tier 1 extensions are installed on 1.43.0 and 1.45.0 and render the
+    matrix page; see `docs/COMPATIBILITY.md`.
   - Math is tested with `native` mode (MathML mode needs RESTBase/Mathoid).
