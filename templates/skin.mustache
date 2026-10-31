@@ -44,6 +44,7 @@
 		<main id="content" class="chroma-content">
 			<div class="chroma-page-actions">
 				{{#data-portlets}}
+					{{#data-namespaces}}<ul class="chroma-tabs">{{{html-items}}}</ul>{{/data-namespaces}}
 					{{#data-views}}<ul class="chroma-tabs">{{{html-items}}}</ul>{{/data-views}}
 				{{/data-portlets}}
 			</div>
