@@ -7,7 +7,7 @@
 [![MediaWiki](https://img.shields.io/badge/MediaWiki-1.43%20%7C%201.45%20%7C%201.46-36c.svg)](docs/COMPAT-MATRIX.md)
 [![Demo](https://img.shields.io/badge/demo-GitHub%20Pages-006a6a.svg)](https://chroma-mediawiki.github.io/mediawiki-skins-Chroma/demo/)
 
-> 状态：v0.1 开发中。
+> 状态：v0.1 开发中。已在 MediaWiki 1.46.0 真机通过基础冒烟（CI 与 Pages 均通过）。
 
 ![Chroma 横幅](screenshots/readme-banner.svg)
 

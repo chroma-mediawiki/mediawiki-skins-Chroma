@@ -28,3 +28,19 @@ version-specific workarounds into a single branch.
   exceptions documented here.
 - CI runs the branch's PHP matrix; a branch is released only when its matrix is
   green.
+
+## Local smoke test (2026-10-31)
+
+- MediaWiki **1.46.0**, PHP **8.3.6**, SQLite, skin `main` (pre-branch split).
+- Checked pages: main page, edit, history, Special:Preferences, Special:Search,
+  Special:Version, Special:UserLogin.
+- Result: skin registers and renders, no PHP errors, no browser console errors,
+  CI green, GitHub Pages deployment green.
+- Known gaps at this stage:
+  - OOUI-based preferences tabs/buttons are not yet MD3-themed (P7).
+  - Search suggestions/typeahead not implemented yet (P4).
+  - Footer "places" links are empty on a default wiki (only shown when configured).
+  - TOC renders top-level sections only; nested sections land in P4.
+  - MobileFrontend not installed in this harness; responsive layout checked directly.
+  - Bundled extensions are git submodules and were not installed in the harness yet
+    (Tier 1 compatibility testing is P7).
