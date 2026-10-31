@@ -49,7 +49,9 @@
 						"chroma-layout",
 						"chroma-nav",
 						"chroma-tools",
-						"chroma-edit"
+						"chroma-edit",
+						"chroma-view-options",
+						"chroma-account"
 					]
 				}
 			]

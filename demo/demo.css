@@ -218,3 +218,7 @@ body { min-height: 100vh; }
 [data-chroma-layout="reading"] .demo-body .chroma-body { grid-template-columns: minmax(0, 1fr); }
 [data-chroma-layout="reading"] .demo-body .chroma-content { display: flex; justify-content: center; }
 [data-chroma-layout="reading"] .chroma-page { width: 100%; }
+
+.chroma-account-summary { list-style: none; cursor: pointer; display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; }
+.chroma-account-summary::-webkit-details-marker { display: none; }
+.chroma-account-menu[open] .chroma-account-summary { background: var(--md-sys-color-surface-container-high); }

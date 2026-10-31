@@ -28,5 +28,7 @@
 	"chroma-seed-violet": "Option: violet accent color.",
 	"chroma-nav": "Navigation menu group label",
 	"chroma-tools": "Tools menu group label",
-	"chroma-edit": "Edit this page action label"
+	"chroma-edit": "Edit this page action label",
+	"chroma-view-options": "Menu label for view options",
+	"chroma-account": "Menu label for account links"
 }
