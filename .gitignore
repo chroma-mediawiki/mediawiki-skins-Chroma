@@ -9,3 +9,4 @@ Thumbs.db
 test-results/
 playwright-report/
 screenshots/generated/
+screenshots/ci-demo.png

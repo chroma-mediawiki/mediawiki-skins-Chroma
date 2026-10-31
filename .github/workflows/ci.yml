@@ -54,6 +54,32 @@ jobs:
           test -s resources/scripts/chroma.js
           test -s demo/index.html
 
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Demo accessibility audit
+        run: |
+          python3 -m http.server 8080 --directory . &
+          SERVER_PID=$!
+          sleep 2
+          node tests/a11y-demo.mjs
+          kill "$SERVER_PID"
+      - name: Upload demo screenshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: demo-screenshot
+          path: screenshots/ci-demo.png
+          if-no-files-found: ignore
+
   tokens:
     runs-on: ubuntu-latest
     steps:

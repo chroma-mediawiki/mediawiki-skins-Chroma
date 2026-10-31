@@ -61,6 +61,44 @@
 		return next;
 	}
 
+	/**
+	 * Display a Material-style snackbar.
+	 *
+	 * @param {string} message
+	 * @param {{label?: string, onClick?: Function}} [action]
+	 */
+	function snackbar( message, action ) {
+		var existing = document.querySelector( '.chroma-snackbar' );
+		if ( existing ) {
+			existing.remove();
+		}
+		var el = document.createElement( 'div' );
+		el.className = 'chroma-snackbar';
+		el.setAttribute( 'role', 'status' );
+		var text = document.createElement( 'span' );
+		text.textContent = message;
+		el.appendChild( text );
+		if ( action && action.label ) {
+			var button = document.createElement( 'button' );
+			button.className = 'chroma-snackbar__action';
+			button.type = 'button';
+			button.textContent = action.label;
+			button.addEventListener( 'click', function () {
+				if ( action.onClick ) {
+					action.onClick();
+				}
+				el.remove();
+			} );
+			el.appendChild( button );
+		}
+		document.body.appendChild( el );
+		window.setTimeout( function () {
+			el.remove();
+		}, 6000 );
+	}
+
+	window.chromaSnackbar = snackbar;
+
 	function bind( id, handler ) {
 		var el = document.getElementById( id );
 		if ( el ) {
