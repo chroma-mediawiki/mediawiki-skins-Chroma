@@ -1,13 +1,20 @@
+<p align="right"><strong>简体中文</strong> · <a href="README.en.md">English</a></p>
+
+<img src="logo.svg" width="72" height="72" align="right" alt="Chroma logo">
+
 # Chroma
 
-受 Material Design 3 与 M3 Expressive 启发的 MediaWiki 皮肤。
+给 MediaWiki 上色。
 
 [![CI](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/actions/workflows/ci.yml/badge.svg)](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/actions/workflows/ci.yml)
 [![License: GPL-3.0-or-later](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](LICENSE)
-[![MediaWiki](https://img.shields.io/badge/MediaWiki-1.43%20%7C%201.45%20%7C%201.46-36c.svg)](docs/COMPAT-MATRIX.md)
-[![Demo](https://img.shields.io/badge/demo-GitHub%20Pages-006a6a.svg)](https://chroma-mediawiki.github.io/mediawiki-skins-Chroma/demo/)
+[![MediaWiki](https://img.shields.io/badge/MediaWiki-1.43%20%7C%201.45%20%7C%201.46-36c.svg)](https://chroma-mediawiki.github.io/guide/compatibility)
+[![QQ](https://img.shields.io/badge/QQ-join-12B7F5.svg)](https://qm.qq.com/q/zSaZRWS4eY)
+[![Bilibili](https://img.shields.io/badge/Bilibili-follow-00A1D6.svg)](https://b23.tv/QiGlLcm)
 
-> 状态：v0.5.2。1.43 / 1.45 / 1.46 真机 + 30 个 Tier 1 扩展矩阵通过；MobileFrontend 手机端全接管；CI 与 Pages 通过。
+> 文档与官网：https://chroma-mediawiki.github.io/
+>
+> 状态：v0.6.0。1.43 / 1.45 / 1.46 真机 + 30 个 Tier 1 扩展矩阵通过；MobileFrontend 手机端全接管；CI 通过。
 
 ![Chroma 横幅](screenshots/readme-banner.svg)
 
@@ -41,17 +48,25 @@
 
 > 手机 UA 默认直接使用 Chroma（MobileFrontend 全接管），不再依赖 MinervaNeue。
 
+## 八套主题色
+
+| Teal | Blue | Green | Violet |
+|---|---|---|---|
+| <img src="screenshots/preset-teal.png" width="280" alt="Teal"> | <img src="screenshots/preset-blue.png" width="280" alt="Blue"> | <img src="screenshots/preset-green.png" width="280" alt="Green"> | <img src="screenshots/preset-violet.png" width="280" alt="Violet"> |
+| **Rose** | **Amber** | **Indigo** | **Lime** |
+| <img src="screenshots/preset-rose.png" width="280" alt="Rose"> | <img src="screenshots/preset-amber.png" width="280" alt="Amber"> | <img src="screenshots/preset-indigo.png" width="280" alt="Indigo"> | <img src="screenshots/preset-lime.png" width="280" alt="Lime"> |
+
 ## 特性
 
 - MD3 token 系统：色彩角色、字阶、形状、海拔、动效与状态层；不是完整 MD3 组件库。
 - M3 Expressive 视觉子集：更大圆角/形状、弹簧动效、顶部应用栏菜单与部分 Expressive 模式。
-- 动态色彩：默认 seed `#006A6A`，提供 teal / blue / green / violet 四套预设；用户可在偏好设置选择主题色与明暗模式。
+- 动态色彩：默认 seed `#006A6A`，提供 teal / blue / green / violet / rose / amber / indigo / lime 八套预设；用户可在偏好设置选择主题色与明暗模式。
 - 两种布局：应用式（顶栏 + 导航抽屉）与阅读式（接近 Vector 2022），可随时切换。
 - 阅读模式：隐藏侧栏与操作栏，正文限宽居中，专注长文阅读。
 - 搜索联想：接入核心 `mediawiki.searchSuggest`，搜索结果使用 MD3 面板样式。
 - 特殊页：登录（Codex）、历史、版本差异、偏好设置统一 Material 样式。
 - 无外部请求：字体、图标与脚本全部随皮肤分发，不依赖 CDN。
-- 可访问性：自动化 axe-core 检查（WCAG 2.2 AA 规则）为 0 violations；完整人工审计仍待补。支持键盘操作与 `prefers-reduced-motion`。
+- 可访问性：支持键盘操作与 `prefers-reduced-motion`；当前没有自动化 axe 套件，完整人工审计仍待补。
 - 页面结构：标题、页面标签与操作同排；侧栏分组 + 图标；目录支持嵌套与 scroll-spy；引用改为编辑式 pull quote。
 
 
@@ -59,9 +74,9 @@
 
 | MediaWiki | 分支 | 发布 |
 |---|---|---|
-| 1.43 LTS | `REL1_43` | [v0.5.1-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.1-REL1_43) |
-| 1.45 | `REL1_45` | [v0.5.1-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.1-REL1_45) |
-| 1.46 | `REL1_46` | [v0.5.1-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.1-REL1_46) |
+| 1.43 LTS | `REL1_43` | [v0.6.0-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.6.0-REL1_43) |
+| 1.45 | `REL1_45` | [v0.6.0-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.6.0-REL1_45) |
+| 1.46 | `REL1_46` | [v0.6.0-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.6.0-REL1_46) |
 
 每个 Release 提供可直接解压到 `skins/Chroma` 的 ZIP。`main` 分支用于开发，不保证与 Release 同步。
 
@@ -78,6 +93,8 @@ $wgDefaultSkin = 'chroma';
 // $wgDefaultMobileSkin = 'chroma';
 ```
 
+更完整的安装步骤和排错见 [安装文档](https://chroma-mediawiki.github.io/guide/installation)。
+
 ## 配置
 
 ```php
@@ -90,12 +107,13 @@ $wgChromaAllowUserLayout = true;
 $wgChromaAllowUserReadingMode = true;
 ```
 
-完整配置与用户偏好说明见 [docs/THEMING.md](docs/THEMING.md)。
+完整的配置项、默认值和用户偏好说明见 [配置文档](https://chroma-mediawiki.github.io/guide/configuration)。
+想改主题色、深色模式或自定义颜色，见 [主题与配色](https://chroma-mediawiki.github.io/guide/theming)。
 
 ## 兼容性
 
 - MediaWiki 1.43 LTS / 1.45 / 1.46，分别维护于 `REL1_43`、`REL1_45`、`REL1_46` 分支。
-- Tier 1 扩展：1.46 harness 配置 31 个（AbuseFilter 因环境依赖未启用）；1.43.0 / 1.45.0 各安装 30 个扩展的矩阵。社区扩展清单见 [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md)，尚未全部逐项验证。
+- Tier 1 扩展：1.46 harness 配置 31 个（AbuseFilter 因环境依赖未启用）；1.43.0 / 1.45.0 各安装 30 个扩展的矩阵。社区扩展清单见 [兼容性](https://chroma-mediawiki.github.io/guide/compatibility)，尚未全部逐项验证。
 - MobileFrontend：**全接管**。安装 MobileFrontend 并设置 `$wgDefaultMobileSkin = 'chroma';` 后，手机 UA 直接使用 Chroma 响应式布局，不再依赖 MinervaNeue。
 
 ## 开发
@@ -103,12 +121,10 @@ $wgChromaAllowUserReadingMode = true;
 ```bash
 npm install
 npm run tokens   # 根据 seed 色重新生成 resources/styles/tokens.css
-npm run serve    # 在 http://localhost:8080/demo/ 预览静态原型
 ```
 
-- 静态原型：`demo/`（GitHub Pages 部署）。
-- 本地 MediaWiki 测试环境说明：见 [docs/COMPAT-MATRIX.md](docs/COMPAT-MATRIX.md)。
-- 设计规范：[docs/SPEC.md](docs/SPEC.md)；版本差异：[docs/COMPAT-MATRIX.md](docs/COMPAT-MATRIX.md)。
+- 本地 MediaWiki 测试环境说明：见 [测试与兼容性](https://chroma-mediawiki.github.io/dev/testing)。
+- 开发概览：[开发文档](https://chroma-mediawiki.github.io/dev/)；兼容性：[兼容性](https://chroma-mediawiki.github.io/guide/compatibility)。
 
 ## 许可
 

@@ -30,5 +30,9 @@
 	"chroma-tools": "Tools",
 	"chroma-edit": "Edit",
 	"chroma-view-options": "View options",
-	"chroma-account": "Account"
+	"chroma-account": "Account",
+	"chroma-seed-rose": "Rose",
+	"chroma-seed-amber": "Amber",
+	"chroma-seed-indigo": "Indigo",
+	"chroma-seed-lime": "Lime"
 }

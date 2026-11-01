@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.6.0 (2026-11-01)
+
+- Added four new color presets: Rose, Amber, Indigo and Lime. Eight presets total.
+- Updated preferences, i18n and generated preset palettes.
+- Added preset screenshots and documentation.
+
 ## v0.5.2 (2026-11-01)
 
 - Page header hierarchy: title first, page tabs/actions in a toolbar below.

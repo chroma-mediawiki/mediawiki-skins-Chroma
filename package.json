@@ -1,8 +1,8 @@
 {
   "name": "chroma-mediawiki-skin",
   "private": true,
-  "version": "0.5.2",
-  "description": "Build tooling and static demo for the Chroma MediaWiki skin",
+  "version": "0.6.0",
+  "description": "Build tooling for the Chroma MediaWiki skin",
   "keywords": [
     "mediawiki",
     "mediawiki-skin",
@@ -19,21 +19,17 @@
   ],
   "type": "module",
   "scripts": {
-    "tokens": "node tools/generate-tokens.mjs '#006A6A' resources/styles/tokens.css docs/tokens.json",
+    "tokens": "node tools/generate-tokens.mjs '#006A6A' resources/styles/tokens.css tokens.json",
     "lint": "npm run lint:js && npm run lint:css",
-    "lint:js": "eslint resources/scripts demo/*.js",
-    "lint:css": "stylelint resources/styles/*.css demo/*.css",
-    "serve": "python3 -m http.server 8080",
-    "test": "echo 'Tests are run in CI (see .github/workflows/ci.yml)'",
-    "presets": "node tools/generate-presets.mjs",
-    "test:a11y": "node tests/a11y-demo.mjs"
+    "lint:js": "eslint resources/scripts",
+    "lint:css": "stylelint resources/styles/*.css",
+    "test": "echo 'No automated tests configured.'",
+    "presets": "node tools/generate-presets.mjs"
   },
   "devDependencies": {
     "@material/material-color-utilities": "0.2.7",
     "eslint": "^9.0.0",
     "stylelint": "^16.0.0",
-    "stylelint-config-standard": "^36.0.0",
-    "axe-core": "^4.10.0",
-    "playwright": "1.49.0"
+    "stylelint-config-standard": "^36.0.0"
   }
 }
