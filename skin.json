@@ -10,7 +10,7 @@
 	"license-name": "GPL-3.0-or-later",
 	"type": "skin",
 	"requires": {
-		"MediaWiki": ">= 1.43.0 < 1.44.0"
+		"MediaWiki": ">= 1.45.0 < 1.46.0"
 	},
 	"ValidSkinNames": {
 		"chroma": {
@@ -29,11 +29,14 @@
 						"mediawiki.searchSuggest"
 					],
 					"menus": [
-						"namespaces",
+						"associated-pages",
 						"views",
 						"actions",
 						"variants",
-						"personal"
+						"user-menu",
+						"user-page",
+						"user-interface-preferences",
+						"notifications"
 					],
 					"messages": [
 						"sitename",
