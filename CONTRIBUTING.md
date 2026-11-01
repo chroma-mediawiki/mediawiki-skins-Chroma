@@ -14,9 +14,9 @@ GPL-3.0-or-later license.
 1. `npm run lint`
 2. `php -l` on changed PHP files
 3. Test the affected pages on the MediaWiki versions listed in
-   the [testing & compatibility](https://chroma-mediawiki.github.io/chroma-docs/dev/testing) page
+   the [testing & compatibility](https://chroma-mediawiki.github.io/dev/testing) page
 4. Add before/after screenshots for visual changes
-5. Update the [compatibility](https://chroma-mediawiki.github.io/chroma-docs/guide/compatibility) page if you touch extension styles
+5. Update the [compatibility](https://chroma-mediawiki.github.io/guide/compatibility) page if you touch extension styles
 
 ## Commit messages
 

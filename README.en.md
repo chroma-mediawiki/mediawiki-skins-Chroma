@@ -8,11 +8,11 @@ Color for MediaWiki.
 
 [![CI](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/actions/workflows/ci.yml/badge.svg)](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/actions/workflows/ci.yml)
 [![License: GPL-3.0-or-later](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](LICENSE)
-[![MediaWiki](https://img.shields.io/badge/MediaWiki-1.43%20%7C%201.45%20%7C%201.46-36c.svg)](https://chroma-mediawiki.github.io/chroma-docs/en/guide/compatibility)
+[![MediaWiki](https://img.shields.io/badge/MediaWiki-1.43%20%7C%201.45%20%7C%201.46-36c.svg)](https://chroma-mediawiki.github.io/en/guide/compatibility)
 [![QQ](https://img.shields.io/badge/QQ-join-12B7F5.svg)](https://qm.qq.com/q/zSaZRWS4eY)
 [![Bilibili](https://img.shields.io/badge/Bilibili-follow-00A1D6.svg)](https://b23.tv/QiGlLcm)
 
-> Docs & website: https://chroma-mediawiki.github.io/chroma-docs/en/
+> Docs & website: https://chroma-mediawiki.github.io/en/
 >
 > Status: v0.5.2. Real MediaWiki 1.43 / 1.45 / 1.46 installs, a 30-extension Tier 1 matrix, and a MobileFrontend takeover. CI green.
 
@@ -96,12 +96,12 @@ $wgChromaAllowUserLayout = true;
 $wgChromaAllowUserReadingMode = true;
 ```
 
-See the [configuration docs](https://chroma-mediawiki.github.io/chroma-docs/en/guide/configuration).
+See the [configuration docs](https://chroma-mediawiki.github.io/en/guide/configuration).
 
 ## Compatibility
 
 - MediaWiki 1.43 LTS / 1.45 / 1.46, maintained on `REL1_43`, `REL1_45`, `REL1_46`.
-- Tier 1 extensions: 31 configured on the 1.46 harness (AbuseFilter disabled for an environment dependency); 30-extension matrices on 1.43.0 / 1.45.0. See [compatibility](https://chroma-mediawiki.github.io/chroma-docs/en/guide/compatibility); not every community extension is verified.
+- Tier 1 extensions: 31 configured on the 1.46 harness (AbuseFilter disabled for an environment dependency); 30-extension matrices on 1.43.0 / 1.45.0. See [compatibility](https://chroma-mediawiki.github.io/en/guide/compatibility); not every community extension is verified.
 - MobileFrontend: **full takeover**. Install MobileFrontend and set `$wgDefaultMobileSkin = 'chroma';`; mobile UAs use Chroma's responsive layout directly.
 
 ## Development
@@ -111,8 +111,8 @@ npm install
 npm run tokens   # regenerate resources/styles/tokens.css from the seed
 ```
 
-- Local MediaWiki test environment: [testing and compatibility](https://chroma-mediawiki.github.io/chroma-docs/en/dev/testing).
-- [Development overview](https://chroma-mediawiki.github.io/chroma-docs/en/dev/) and [compatibility](https://chroma-mediawiki.github.io/chroma-docs/en/guide/compatibility).
+- Local MediaWiki test environment: [testing and compatibility](https://chroma-mediawiki.github.io/en/dev/testing).
+- [Development overview](https://chroma-mediawiki.github.io/en/dev/) and [compatibility](https://chroma-mediawiki.github.io/en/guide/compatibility).
 
 ## License
 
