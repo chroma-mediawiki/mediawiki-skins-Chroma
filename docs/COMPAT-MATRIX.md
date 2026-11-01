@@ -30,9 +30,8 @@ releases; only the local 1.46 harness was exercised for UI screenshots.
 - Codex/OOUI bridge files may differ per branch; keep them in
   `resources/styles/codex-bridge.css` and `oojs-bridge.css` with branch-specific
   exceptions documented here.
-- CI currently runs PHP lint/JSON/required-file checks with PHP 8.3, plus the
-  token drift and demo accessibility jobs. It does not run a full MediaWiki
-  matrix; branch runtime checks are manual.
+- CI currently runs PHP lint/JSON/required-file checks with PHP 8.3 plus token
+  drift. It does not run a full MediaWiki matrix; branch runtime checks are manual.
 
 ## Released builds (v0.5.2)
 
@@ -50,7 +49,7 @@ releases; only the local 1.46 harness was exercised for UI screenshots.
 - Checked pages: main page, article with extensions, edit, history, diff,
   Special:Preferences, Special:Search, Special:Version, Special:UserLogin.
 - Result: skin registers and renders, no PHP errors, no browser console errors,
-  CI green, GitHub Pages deployment green.
+  CI green.
 - Verified after v0.5.0/v0.5.1:
   - OOUI preferences/Codex login/history/diff surfaces use Chroma tokens.
   - Search suggestions are provided by core `mediawiki.searchSuggest`.

@@ -141,8 +141,8 @@ The compatibility matrix was verified manually on disposable local installs:
   `{{#if:}}`, `<poem>`, `<inputbox>` and `<categorytree>`;
 - HTTP 200 and visual checks, plus the screenshots in `screenshots/`.
 
-There is no automated per-extension Playwright suite. CI runs the demo axe-core
-check, JSON/PHP lint, and token drift checks only. `dev/install.sh` is currently a
+There is no automated per-extension Playwright suite. CI runs JSON/PHP lint and
+token drift checks only. `dev/install.sh` is currently a
 placeholder; the harness setup is not shipped as a one-command script.
 
 ## Reporting a problem

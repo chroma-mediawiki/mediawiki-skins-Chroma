@@ -115,10 +115,9 @@ allow-user-override flags. User settings: Preferences → Appearance.
 
 ## 10. Accessibility
 
-Automated axe-core WCAG 2.0/2.1/2.2 A+AA scans run in CI against the static demo
-and currently report 0 violations. Visible focus, skip links, labelled drawer
-and menus, and `prefers-reduced-motion` handling are implemented. A full manual
-audit of every MediaWiki page remains open.
+There is no automated axe-core suite in the repository. Visible focus, skip
+links, labelled drawer/menus and `prefers-reduced-motion` handling are
+implemented; a full manual audit of every MediaWiki page remains open.
 
 ## 11. Performance
 
@@ -143,21 +142,19 @@ Current two versions of Chrome, Edge, Firefox and Safari; no Internet Explorer.
    functions, poem and inputbox.
 3. Light/dark/auto, app/reading layout, reading mode and four seed presets work.
 4. MobileFrontend takeover works with `$wgDefaultMobileSkin = 'chroma'`.
-5. axe-core demo scan has 0 violations; CI and Pages are green.
+5. CI is green; there is no hosted demo or Pages deployment.
 6. Chinese README and English technical docs; mediawiki.org listing and
   translatewiki registration remain external account tasks.
 
 ## 15. Repository layout
 
 ```
-.github/        CI, release, Pages, issue templates
+.github/        CI, release and issue templates
 docs/           SPEC, THEMING, COMPATIBILITY, COMPAT-MATRIX, tokens.json
 i18n/           en, qqq, zh-hans, zh-hant
 includes/       PHP hooks and skin class
 templates/      Mustache template
 resources/      tokens, base/extension styles, scripts
-demo/           static GitHub Pages prototype
-tests/          axe-core demo test
 tools/          token/preset generators
 dev/            local harness placeholder (not used by CI)
 ```

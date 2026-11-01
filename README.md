@@ -5,9 +5,8 @@
 [![CI](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/actions/workflows/ci.yml/badge.svg)](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/actions/workflows/ci.yml)
 [![License: GPL-3.0-or-later](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](LICENSE)
 [![MediaWiki](https://img.shields.io/badge/MediaWiki-1.43%20%7C%201.45%20%7C%201.46-36c.svg)](docs/COMPAT-MATRIX.md)
-[![Demo](https://img.shields.io/badge/demo-GitHub%20Pages-006a6a.svg)](https://chroma-mediawiki.github.io/mediawiki-skins-Chroma/demo/)
 
-> 状态：v0.5.2。1.43 / 1.45 / 1.46 真机 + 30 个 Tier 1 扩展矩阵通过；MobileFrontend 手机端全接管；CI 与 Pages 通过。
+> 状态：v0.5.2。1.43 / 1.45 / 1.46 真机 + 30 个 Tier 1 扩展矩阵通过；MobileFrontend 手机端全接管；CI 通过。
 
 ![Chroma 横幅](screenshots/readme-banner.svg)
 
@@ -103,10 +102,8 @@ $wgChromaAllowUserReadingMode = true;
 ```bash
 npm install
 npm run tokens   # 根据 seed 色重新生成 resources/styles/tokens.css
-npm run serve    # 在 http://localhost:8080/demo/ 预览静态原型
 ```
 
-- 静态原型：`demo/`（GitHub Pages 部署）。
 - 本地 MediaWiki 测试环境说明：见 [docs/COMPAT-MATRIX.md](docs/COMPAT-MATRIX.md)。
 - 设计规范：[docs/SPEC.md](docs/SPEC.md)；版本差异：[docs/COMPAT-MATRIX.md](docs/COMPAT-MATRIX.md)。
 
