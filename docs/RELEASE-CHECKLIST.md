@@ -16,4 +16,3 @@
    `resources/`, `i18n/`, `screenshots/` (for README images), `docs/`, `LICENSE`,
    `NOTICE`.
 8. Update README download table and mediawiki.org page if needed.
-9. Verify `screenshots/readme-banner.svg` version string matches the release.
