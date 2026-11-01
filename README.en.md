@@ -84,6 +84,8 @@ $wgDefaultSkin = 'chroma';
 // $wgDefaultMobileSkin = 'chroma';
 ```
 
+See [Installation](https://chroma-mediawiki.github.io/en/guide/installation) for full steps and troubleshooting.
+
 ## Configuration
 
 ```php
@@ -96,7 +98,7 @@ $wgChromaAllowUserLayout = true;
 $wgChromaAllowUserReadingMode = true;
 ```
 
-See the [configuration docs](https://chroma-mediawiki.github.io/en/guide/configuration).
+See the [configuration docs](https://chroma-mediawiki.github.io/en/guide/configuration) for every option and default. To change the theme color, dark mode or custom colors, see [Themes & color](https://chroma-mediawiki.github.io/en/guide/theming).
 
 ## Compatibility
 

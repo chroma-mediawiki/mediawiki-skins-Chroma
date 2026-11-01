@@ -85,6 +85,8 @@ $wgDefaultSkin = 'chroma';
 // $wgDefaultMobileSkin = 'chroma';
 ```
 
+更完整的安装步骤和排错见 [安装文档](https://chroma-mediawiki.github.io/guide/installation)。
+
 ## 配置
 
 ```php
@@ -97,7 +99,8 @@ $wgChromaAllowUserLayout = true;
 $wgChromaAllowUserReadingMode = true;
 ```
 
-完整配置与用户偏好说明见 [主题与配色](https://chroma-mediawiki.github.io/guide/theming)。
+完整的配置项、默认值和用户偏好说明见 [配置文档](https://chroma-mediawiki.github.io/guide/configuration)。
+想改主题色、深色模式或自定义颜色，见 [主题与配色](https://chroma-mediawiki.github.io/guide/theming)。
 
 ## 兼容性
 
