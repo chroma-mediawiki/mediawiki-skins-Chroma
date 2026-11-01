@@ -6,6 +6,10 @@ const presets = {
   blue: '#0061A4',
   green: '#386A20',
   violet: '#6750A4',
+  rose: '#984061',
+  amber: '#7D5700',
+  indigo: '#4355B9',
+  lime: '#4C6700',
 };
 
 const T = (p, n) => hexFromArgb(p.tone(n));
