@@ -14,7 +14,7 @@ Color for MediaWiki.
 
 > Docs & website: https://chroma-mediawiki.github.io/en/
 >
-> Status: v0.5.2. Real MediaWiki 1.43 / 1.45 / 1.46 installs, a 30-extension Tier 1 matrix, and a MobileFrontend takeover. CI green.
+> Status: v0.6.0. Real MediaWiki 1.43 / 1.45 / 1.46 installs, a 30-extension Tier 1 matrix, and a MobileFrontend takeover. CI green.
 
 ![Chroma banner](screenshots/readme-banner.svg)
 
@@ -48,11 +48,19 @@ Extension matrix (1.43 / 1.45, Cite, Math, SyntaxHighlight, InputBox, Poem and m
 
 > Mobile UAs use Chroma directly (MobileFrontend takeover); MinervaNeue is no longer required.
 
+## Eight presets
+
+| Teal | Blue | Green | Violet |
+|---|---|---|---|
+| <img src="screenshots/preset-teal-en.png" width="280" alt="Teal"> | <img src="screenshots/preset-blue-en.png" width="280" alt="Blue"> | <img src="screenshots/preset-green-en.png" width="280" alt="Green"> | <img src="screenshots/preset-violet-en.png" width="280" alt="Violet"> |
+| **Rose** | **Amber** | **Indigo** | **Lime** |
+| <img src="screenshots/preset-rose-en.png" width="280" alt="Rose"> | <img src="screenshots/preset-amber-en.png" width="280" alt="Amber"> | <img src="screenshots/preset-indigo-en.png" width="280" alt="Indigo"> | <img src="screenshots/preset-lime-en.png" width="280" alt="Lime"> |
+
 ## Features
 
 - **MD3 token system:** color roles, type scale, shape, elevation, motion and state layers. Not a complete MD3 component library.
 - **M3 Expressive subset:** larger shapes/radii, spring motion, top-app-bar menus and selected Expressive patterns.
-- **Dynamic color:** seed `#006A6A` by default with teal / blue / green / violet presets; users can choose color and scheme in Preferences.
+- **Dynamic color:** seed `#006A6A` by default with teal / blue / green / violet / rose / amber / indigo / lime presets; users can choose color and scheme in Preferences.
 - **Two layouts:** app (top bar + drawer) and reading layout (closer to Vector 2022), switchable at any time.
 - **Reading mode:** hides the drawer and page actions, constrains and centers long-form content.
 - **Search suggestions:** core `mediawiki.searchSuggest`, styled as MD3 surfaces.
@@ -65,9 +73,9 @@ Extension matrix (1.43 / 1.45, Cite, Math, SyntaxHighlight, InputBox, Poem and m
 
 | MediaWiki | Branch | Release |
 |---|---|---|
-| 1.43 LTS | `REL1_43` | [v0.5.2-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_43) |
-| 1.45 | `REL1_45` | [v0.5.2-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_45) |
-| 1.46 | `REL1_46` | [v0.5.2-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_46) |
+| 1.43 LTS | `REL1_43` | [v0.6.0-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.6.0-REL1_43) |
+| 1.45 | `REL1_45` | [v0.6.0-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.6.0-REL1_45) |
+| 1.46 | `REL1_46` | [v0.6.0-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.6.0-REL1_46) |
 
 Each release ships a ZIP that can be extracted directly into `skins/Chroma`. `main` is development and is not guaranteed to match a release.
 

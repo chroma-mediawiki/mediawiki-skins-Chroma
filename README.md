@@ -14,7 +14,7 @@
 
 > 文档与官网：https://chroma-mediawiki.github.io/
 >
-> 状态：v0.5.2。1.43 / 1.45 / 1.46 真机 + 30 个 Tier 1 扩展矩阵通过；MobileFrontend 手机端全接管；CI 通过。
+> 状态：v0.6.0。1.43 / 1.45 / 1.46 真机 + 30 个 Tier 1 扩展矩阵通过；MobileFrontend 手机端全接管；CI 通过。
 
 ![Chroma 横幅](screenshots/readme-banner.svg)
 
@@ -48,11 +48,19 @@
 
 > 手机 UA 默认直接使用 Chroma（MobileFrontend 全接管），不再依赖 MinervaNeue。
 
+## 八套主题色
+
+| Teal | Blue | Green | Violet |
+|---|---|---|---|
+| <img src="screenshots/preset-teal.png" width="280" alt="Teal"> | <img src="screenshots/preset-blue.png" width="280" alt="Blue"> | <img src="screenshots/preset-green.png" width="280" alt="Green"> | <img src="screenshots/preset-violet.png" width="280" alt="Violet"> |
+| **Rose** | **Amber** | **Indigo** | **Lime** |
+| <img src="screenshots/preset-rose.png" width="280" alt="Rose"> | <img src="screenshots/preset-amber.png" width="280" alt="Amber"> | <img src="screenshots/preset-indigo.png" width="280" alt="Indigo"> | <img src="screenshots/preset-lime.png" width="280" alt="Lime"> |
+
 ## 特性
 
 - MD3 token 系统：色彩角色、字阶、形状、海拔、动效与状态层；不是完整 MD3 组件库。
 - M3 Expressive 视觉子集：更大圆角/形状、弹簧动效、顶部应用栏菜单与部分 Expressive 模式。
-- 动态色彩：默认 seed `#006A6A`，提供 teal / blue / green / violet 四套预设；用户可在偏好设置选择主题色与明暗模式。
+- 动态色彩：默认 seed `#006A6A`，提供 teal / blue / green / violet / rose / amber / indigo / lime 八套预设；用户可在偏好设置选择主题色与明暗模式。
 - 两种布局：应用式（顶栏 + 导航抽屉）与阅读式（接近 Vector 2022），可随时切换。
 - 阅读模式：隐藏侧栏与操作栏，正文限宽居中，专注长文阅读。
 - 搜索联想：接入核心 `mediawiki.searchSuggest`，搜索结果使用 MD3 面板样式。
@@ -66,9 +74,9 @@
 
 | MediaWiki | 分支 | 发布 |
 |---|---|---|
-| 1.43 LTS | `REL1_43` | [v0.5.2-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_43) |
-| 1.45 | `REL1_45` | [v0.5.2-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_45) |
-| 1.46 | `REL1_46` | [v0.5.2-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_46) |
+| 1.43 LTS | `REL1_43` | [v0.6.0-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.6.0-REL1_43) |
+| 1.45 | `REL1_45` | [v0.6.0-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.6.0-REL1_45) |
+| 1.46 | `REL1_46` | [v0.6.0-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.6.0-REL1_46) |
 
 每个 Release 提供可直接解压到 `skins/Chroma` 的 ZIP。`main` 分支用于开发，不保证与 Release 同步。
 

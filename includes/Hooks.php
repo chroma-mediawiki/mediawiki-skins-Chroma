@@ -19,6 +19,10 @@ class Hooks {
 		'blue' => '#0061A4',
 		'green' => '#386A20',
 		'violet' => '#6750A4',
+		'rose' => '#984061',
+		'amber' => '#7D5700',
+		'indigo' => '#4355B9',
+		'lime' => '#4C6700',
 	];
 
 	/**
@@ -69,6 +73,10 @@ class Hooks {
 				'chroma-seed-blue' => 'blue',
 				'chroma-seed-green' => 'green',
 				'chroma-seed-violet' => 'violet',
+				'chroma-seed-rose' => 'rose',
+				'chroma-seed-amber' => 'amber',
+				'chroma-seed-indigo' => 'indigo',
+				'chroma-seed-lime' => 'lime',
 			],
 			'default' => $defaultSeed,
 		];

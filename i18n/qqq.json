@@ -30,5 +30,9 @@
 	"chroma-tools": "Tools menu group label",
 	"chroma-edit": "Edit this page action label",
 	"chroma-view-options": "Menu label for view options",
-	"chroma-account": "Menu label for account links"
+	"chroma-account": "Menu label for account links",
+	"chroma-seed-rose": "Option: rose accent color.",
+	"chroma-seed-amber": "Option: amber accent color.",
+	"chroma-seed-indigo": "Option: indigo accent color.",
+	"chroma-seed-lime": "Option: lime accent color."
 }
