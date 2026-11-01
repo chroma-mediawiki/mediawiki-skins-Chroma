@@ -9,9 +9,11 @@
    Check: main page, article with extensions, edit, history, diff,
    preferences, mobile UA (Chroma with `$wgDefaultMobileSkin = 'chroma'`).
    `?useskin=chroma` is only a fallback, not required for mobile.
-4. Update `CHANGELOG.md` and version notes.
-5. Tag `vX.Y.Z-REL1_43`, `vX.Y.Z-REL1_45`, `vX.Y.Z-REL1_46` on the branch heads.
-6. Confirm GitHub Release ZIPs contain `skin.json`, `includes/`, `templates/`,
+4. Run `node tests/a11y-demo.mjs` against the static demo; expect 0 violations.
+5. Update `CHANGELOG.md` and version notes.
+6. Tag `vX.Y.Z-REL1_43`, `vX.Y.Z-REL1_45`, `vX.Y.Z-REL1_46` on the branch heads.
+7. Confirm GitHub Release ZIPs contain `skin.json`, `includes/`, `templates/`,
    `resources/`, `i18n/`, `screenshots/` (for README images), `docs/`, `LICENSE`,
    `NOTICE`.
-7. Update README download table and mediawiki.org page if needed.
+8. Update README download table and mediawiki.org page if needed.
+9. Verify `screenshots/readme-banner.svg` version string matches the release.

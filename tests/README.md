@@ -1,15 +1,15 @@
 # Tests
 
-Current automated test coverage:
+Planned layers (P9):
 
-- **`tests/a11y-demo.mjs`** — Playwright + axe-core scan of `demo/` against
-  WCAG 2.0/2.1/2.2 A+AA rules. Runs in the `demo` CI job and fails on any
-  violation or browser console error.
+1. **PHPUnit** — PHP unit tests for preference handling and config.
+2. **Playwright** — smoke tests per MediaWiki version:
+   - page loads without PHP error markers
+   - no console errors
+   - no horizontal overflow at 360 / 768 / 1024 / 1440
+   - key selectors present (app bar, drawer, content, TOC, footer)
+   - axe-core accessibility scan
+3. **Golden screenshots** — per page and per Tier 1 extension; diffed in CI.
 
-Not implemented yet:
-
-- PHPUnit tests for preferences/config.
-- Playwright smoke tests against the three MediaWiki installs.
-- Golden screenshot diffing and a per-extension compatibility suite.
-
-Extension compatibility was checked manually; see `docs/COMPATIBILITY.md`.
+Until the harness lands, CI only validates JSON, PHP syntax of committed PHP
+files, requirement files and token drift.

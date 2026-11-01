@@ -1,14 +1,18 @@
 # Local MediaWiki harness
 
-The disposable MediaWiki instances used for Chroma screenshots and compatibility
-checks are **not** shipped as working scripts yet.
+Scripts in this directory build disposable MediaWiki instances for Chroma
+development and compatibility testing. They are **not** part of the skin.
 
-- `install.sh` is currently a placeholder and exits with an error.
-- The actual harness used in development consisted of three separate
-  MediaWiki source installs (1.43.0 / 1.45.0 / 1.46.0) with SQLite, the skin
-  symlinked into `skins/Chroma`, and extension archives downloaded from the
-  matching release branches.
-- `extensions.sh`, `seed-pages.php` and one-command setup are not implemented.
+Planned entry points (P1/P9):
 
-For the tested extension list and how each version was checked, see
-the [compatibility](https://chroma-mediawiki.github.io/guide/compatibility) and [testing](https://chroma-mediawiki.github.io/dev/testing) pages.
+- `install.sh` — download a MediaWiki release tarball, install with SQLite,
+  symlink this skin to `skins/Chroma`, enable it.
+- `extensions.sh` — download the Tier 1 extension set for the target MW line.
+- `seed-pages.php` — import sample pages covering citations, tables, math,
+  syntax highlighting, maps, images and talk pages.
+
+Environment variables:
+
+- `MW_VERSION` (default: 1.46.0)
+- `MW_DIR` (default: `../mw`)
+- `MW_PORT` (default: 8080)

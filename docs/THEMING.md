@@ -52,7 +52,7 @@ All tokens are CSS custom properties on `:root`:
 ```
 
 Dark mode is selected with `data-chroma-theme="dark"` on `<body>` (JS mirrors
-it to `<html>` for compatibility); `auto` follows `prefers-color-scheme`. Site CSS can override any variable, e.g. in
+it to `<html>` for the static demo); `auto` follows `prefers-color-scheme`. Site CSS can override any variable, e.g. in
 `MediaWiki:Chroma.css`:
 
 ```css

@@ -12,6 +12,7 @@ project is ready to be listed. Keep the infobox fields in sync with `skin.json`.
 |compatibility = MediaWiki 1.43 LTS, 1.45, 1.46
 |download = https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases
 |repo = https://github.com/chroma-mediawiki/mediawiki-skins-Chroma
+|demo = https://chroma-mediawiki.github.io/mediawiki-skins-Chroma/demo/
 |phabricator =
 }}
 

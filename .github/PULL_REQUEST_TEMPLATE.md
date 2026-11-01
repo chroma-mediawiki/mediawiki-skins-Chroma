@@ -6,7 +6,7 @@
 
 - [ ] feat
 - [ ] fix
-- [ ] Docs site (chroma-docs)
+- [ ] docs
 - [ ] style
 - [ ] test
 - [ ] chore
@@ -17,5 +17,5 @@
 - [ ] `php -l` passes on changed PHP files
 - [ ] Tested on MediaWiki versions: <!-- 1.43 / 1.45 / 1.46 -->
 - [ ] Screenshots attached for visual changes
-- [ ] Docs site updated (chroma-docs) if extension styles changed
+- [ ] `docs/COMPATIBILITY.md` updated if extension styles changed
 - [ ] No secrets or tokens committed
