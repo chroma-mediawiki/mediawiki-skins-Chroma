@@ -10,6 +10,7 @@
 [![License: GPL-3.0-or-later](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](LICENSE)
 [![MediaWiki](https://img.shields.io/badge/MediaWiki-1.43%20%7C%201.45%20%7C%201.46-36c.svg)](https://chroma-mediawiki.github.io/chroma-docs/guide/compatibility)
 [![QQ](https://img.shields.io/badge/QQ-join-12B7F5.svg)](https://qm.qq.com/q/zSaZRWS4eY)
+[![Bilibili](https://img.shields.io/badge/Bilibili-follow-00A1D6.svg)](https://b23.tv/QiGlLcm)
 
 > 文档与官网：https://chroma-mediawiki.github.io/chroma-docs/
 >
