@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.5.2 (2026-11-01)
+
+- Page header hierarchy: title first, page tabs/actions in a toolbar below.
+- Material icons for page tabs and actions; mobile actions are equal 44px icon buttons.
+- Removed the dead band between header and content.
+- Flattened SyntaxHighlight output to a single code card (no nested boxes).
+
 ## v0.5.1 (2026-11-01)
 
 - Removed the floating edit FAB and the hardcoded initial-letter logo fallback.

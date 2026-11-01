@@ -30,7 +30,7 @@
 	<text x="100" y="316" font-family="Roboto, 'Segoe UI', Arial, sans-serif" font-size="36" fill="#cce8e7">Material Design 3 · MediaWiki 1.43 / 1.45 / 1.46</text>
 	<g font-family="Roboto, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600">
 		<rect x="100" y="362" width="222" height="58" rx="29" fill="#ffffff" opacity=".14"/>
-		<text x="132" y="399" fill="#ffffff">v0.5.1</text>
+		<text x="132" y="399" fill="#ffffff">v0.5.2</text>
 		<rect x="344" y="362" width="292" height="58" rx="29" fill="#ffffff" opacity=".10"/>
 		<text x="376" y="399" fill="#cce8e7">GPL-3.0-or-later</text>
 	</g>

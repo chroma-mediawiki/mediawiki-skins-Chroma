@@ -1,7 +1,7 @@
 {
   "name": "chroma-mediawiki-skin",
   "private": true,
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Build tooling and static demo for the Chroma MediaWiki skin",
   "keywords": [
     "mediawiki",
