@@ -21,20 +21,13 @@ $wgChromaAllowUserColor = true;
 $wgChromaAllowUserLayout = true;
 $wgChromaAllowUserReadingMode = true;
 
-// Optional preset swatches shown in Preferences.
-$wgChromaColorPresets = [
-    'teal'   => '#006A6A',
-    'blue'   => '#0061A4',
-    'green'  => '#386A20',
-    'violet' => '#6750A4',
-];
 ```
 
 Presets are compiled at build time (`npm run presets`) into
 `resources/styles/tokens-presets.css` and selected with a `chroma-seed-*` class
 on `<body>`. The user preference is available under Appearance once the skin is
-active. Arbitrary seed colors are planned for a later milestone; the four
-presets above are supported in v0.1.
+active. Arbitrary seed colors are not implemented in v0.5.1; the four presets
+above are the supported values.
 
 ## User preferences
 
@@ -45,8 +38,10 @@ presets above are supported in v0.1.
 - Layout: app-like / reading
 - Reading mode: on/off
 
-Quick toggles are also exposed in the page header (theme, layout, reading mode)
-and persisted server-side for logged-in users.
+Quick toggles live in the top app bar's “显示选项 / View options” menu
+(layout, theme, reading mode). They are client-side (localStorage) quick
+switches; logged-in users get persistent values through Special:Preferences.
+The “账户 / Account” menu contains the personal tools.
 
 ## CSS variables
 
@@ -56,8 +51,8 @@ All tokens are CSS custom properties on `:root`:
 .example { color: var(--md-sys-color-on-surface); }
 ```
 
-Dark mode is selected with `data-chroma-theme="dark"` on `<html>`; `auto`
-follows `prefers-color-scheme`. Site CSS can override any variable, e.g. in
+Dark mode is selected with `data-chroma-theme="dark"` on `<body>` (JS mirrors
+it to `<html>` for the static demo); `auto` follows `prefers-color-scheme`. Site CSS can override any variable, e.g. in
 `MediaWiki:Chroma.css`:
 
 ```css
@@ -66,7 +61,8 @@ follows `prefers-color-scheme`. Site CSS can override any variable, e.g. in
 
 ## Logo
 
-Chroma renders `$wgLogos` through MediaWiki's core logo API, so it automatically
-uses whatever variants the running MediaWiki version supports (note: 1.46
-removed the `1.5x` key). It falls back to a text wordmark when `$wgLogos` is
-empty. Favicon comes from `$wgFavicon` / `$wgLogos['icon']`.
+Chroma renders a logo mark only when a custom `$wgLogos` entry is configured;
+the default MediaWiki “change-your-logo” assets are treated as no logo. Without
+a custom logo the top app bar shows only the site name — no letter placeholder.
+The skin does not read `$wgLogos['1.5x']` (removed in MediaWiki 1.46). The
+favicon is controlled separately by `$wgFavicon`.

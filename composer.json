@@ -1,13 +1,27 @@
 {
-  "name": "chroma/mediawiki-skin-chroma",
-  "description": "A MediaWiki skin inspired by Material Design 3 and M3 Expressive.",
-  "type": "mediawiki-skin",
-  "license": "GPL-3.0-or-later",
-  "homepage": "https://github.com/chroma-mediawiki/mediawiki-skins-Chroma",
-  "require": {
-    "composer/installers": ">=1.0.1"
-  },
-  "extra": {
-    "installer-name": "Chroma"
-  }
+	"name": "chroma/mediawiki-skin-chroma",
+	"description": "A color-first MediaWiki skin with Material 3-style tokens and reading-first layouts.",
+	"keywords": [
+		"mediawiki",
+		"mediawiki-skin",
+		"skin",
+		"material-design",
+		"material-design-3",
+		"m3-expressive",
+		"design-tokens",
+		"php",
+		"css",
+		"dark-mode",
+		"accessibility",
+		"theme"
+	],
+	"type": "mediawiki-skin",
+	"license": "GPL-3.0-or-later",
+	"homepage": "https://github.com/chroma-mediawiki/mediawiki-skins-Chroma",
+	"require": {
+		"composer/installers": ">=1.0.1"
+	},
+	"extra": {
+		"installer-name": "Chroma"
+	}
 }

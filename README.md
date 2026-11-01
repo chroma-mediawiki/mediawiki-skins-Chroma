@@ -7,7 +7,7 @@
 [![MediaWiki](https://img.shields.io/badge/MediaWiki-1.43%20%7C%201.45%20%7C%201.46-36c.svg)](docs/COMPAT-MATRIX.md)
 [![Demo](https://img.shields.io/badge/demo-GitHub%20Pages-006a6a.svg)](https://chroma-mediawiki.github.io/mediawiki-skins-Chroma/demo/)
 
-> 状态：v0.5.1。1.43 / 1.45 / 1.46 真机 + 30 个 Tier 1 扩展矩阵通过；MobileFrontend 手机端全接管；CI 与 Pages 通过。
+> 状态：v0.5.2。1.43 / 1.45 / 1.46 真机 + 30 个 Tier 1 扩展矩阵通过；MobileFrontend 手机端全接管；CI 与 Pages 通过。
 
 ![Chroma 横幅](screenshots/readme-banner.svg)
 
@@ -39,19 +39,19 @@
 |---|---|
 | ![1.43 扩展矩阵](screenshots/mw143-extensions.png) | ![1.45 扩展矩阵](screenshots/mw145-extensions.png) |
 
-> 手机 UA 默认由 MinervaNeue 提供；`?useskin=chroma` 使用 Chroma 响应式布局。
+> 手机 UA 默认直接使用 Chroma（MobileFrontend 全接管），不再依赖 MinervaNeue。
 
 ## 特性
 
-- 完整的 Material Design 3 token：色彩角色、字阶、形状、海拔、动效与状态层。
-- M3 Expressive 视觉子集：强调字阶、更大圆角与形状、弹簧动效、Expressive 组件。
-- 动态色彩：管理员设置默认 seed，用户在偏好设置中选择主题色与明暗模式。
+- MD3 token 系统：色彩角色、字阶、形状、海拔、动效与状态层；不是完整 MD3 组件库。
+- M3 Expressive 视觉子集：更大圆角/形状、弹簧动效、顶部应用栏菜单与部分 Expressive 模式。
+- 动态色彩：默认 seed `#006A6A`，提供 teal / blue / green / violet 四套预设；用户可在偏好设置选择主题色与明暗模式。
 - 两种布局：应用式（顶栏 + 导航抽屉）与阅读式（接近 Vector 2022），可随时切换。
 - 阅读模式：隐藏侧栏与操作栏，正文限宽居中，专注长文阅读。
 - 搜索联想：接入核心 `mediawiki.searchSuggest`，搜索结果使用 MD3 面板样式。
 - 特殊页：登录（Codex）、历史、版本差异、偏好设置统一 Material 样式。
 - 无外部请求：字体、图标与脚本全部随皮肤分发，不依赖 CDN。
-- 可访问性：WCAG 2.2 AA、键盘可操作、支持 `prefers-reduced-motion`。
+- 可访问性：自动化 axe-core 检查（WCAG 2.2 AA 规则）为 0 violations；完整人工审计仍待补。支持键盘操作与 `prefers-reduced-motion`。
 - 页面结构：标题、页面标签与操作同排；侧栏分组 + 图标；目录支持嵌套与 scroll-spy；引用改为编辑式 pull quote。
 
 
@@ -59,9 +59,9 @@
 
 | MediaWiki | 分支 | 发布 |
 |---|---|---|
-| 1.43 LTS | `REL1_43` | [v0.4.1-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.0-REL1_43) |
-| 1.45 | `REL1_45` | [v0.4.1-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.0-REL1_45) |
-| 1.46 | `REL1_46` | [v0.4.1-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.0-REL1_46) |
+| 1.43 LTS | `REL1_43` | [v0.5.1-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.1-REL1_43) |
+| 1.45 | `REL1_45` | [v0.5.1-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.1-REL1_45) |
+| 1.46 | `REL1_46` | [v0.5.1-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.1-REL1_46) |
 
 每个 Release 提供可直接解压到 `skins/Chroma` 的 ZIP。`main` 分支用于开发，不保证与 Release 同步。
 
@@ -86,6 +86,8 @@ $wgChromaDefaultScheme = 'system';  // system | light | dark
 $wgChromaDefaultLayout = 'app';     // app | reading
 $wgChromaDefaultReadingMode = false;
 $wgChromaAllowUserColor = true;
+$wgChromaAllowUserLayout = true;
+$wgChromaAllowUserReadingMode = true;
 ```
 
 完整配置与用户偏好说明见 [docs/THEMING.md](docs/THEMING.md)。
@@ -93,7 +95,7 @@ $wgChromaAllowUserColor = true;
 ## 兼容性
 
 - MediaWiki 1.43 LTS / 1.45 / 1.46，分别维护于 `REL1_43`、`REL1_45`、`REL1_46` 分支。
-- Tier 1 扩展（MediaWiki 自带 33 个 + 社区轻量热门扩展）见 [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md)。
+- Tier 1 扩展：1.46 harness 配置 31 个（AbuseFilter 因环境依赖未启用）；1.43.0 / 1.45.0 各安装 30 个扩展的矩阵。社区扩展清单见 [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md)，尚未全部逐项验证。
 - MobileFrontend：**全接管**。安装 MobileFrontend 并设置 `$wgDefaultMobileSkin = 'chroma';` 后，手机 UA 直接使用 Chroma 响应式布局，不再依赖 MinervaNeue。
 
 ## 开发
