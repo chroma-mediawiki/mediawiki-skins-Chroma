@@ -66,4 +66,4 @@ jobs:
         run: |
           npm run tokens
           npm run presets
-          git diff --exit-code -- resources/styles/tokens.css resources/styles/tokens-presets.css docs/tokens.json
+          git diff --exit-code -- resources/styles/tokens.css resources/styles/tokens-presets.css tokens.json

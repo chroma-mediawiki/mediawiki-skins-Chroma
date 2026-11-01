@@ -3,7 +3,7 @@ import { writeFileSync } from 'node:fs';
 
 const seed = process.argv[2] || '#006A6A';
 const outCss = process.argv[3] || 'resources/styles/tokens.css';
-const outJson = process.argv[4] || 'docs/tokens.json';
+const outJson = process.argv[4] || 'tokens.json';
 const pal = CorePalette.of(argbFromHex(seed));
 const T = (p, n) => hexFromArgb(p.tone(n));
 

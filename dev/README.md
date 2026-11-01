@@ -11,4 +11,4 @@ checks are **not** shipped as working scripts yet.
 - `extensions.sh`, `seed-pages.php` and one-command setup are not implemented.
 
 For the tested extension list and how each version was checked, see
-`docs/COMPATIBILITY.md` and `docs/COMPAT-MATRIX.md`.
+the [compatibility](https://chroma-mediawiki.github.io/chroma-docs/guide/compatibility) and [testing](https://chroma-mediawiki.github.io/chroma-docs/dev/testing) pages.

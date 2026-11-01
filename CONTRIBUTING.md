@@ -14,9 +14,9 @@ GPL-3.0-or-later license.
 1. `npm run lint`
 2. `php -l` on changed PHP files
 3. Test the affected pages on the MediaWiki versions listed in
-   `docs/COMPAT-MATRIX.md`
+   the [testing & compatibility](https://chroma-mediawiki.github.io/chroma-docs/dev/testing) page
 4. Add before/after screenshots for visual changes
-5. Update `docs/COMPATIBILITY.md` if you touch extension styles
+5. Update the [compatibility](https://chroma-mediawiki.github.io/chroma-docs/guide/compatibility) page if you touch extension styles
 
 ## Commit messages
 
@@ -27,4 +27,4 @@ Use conventional commits: `feat:`, `fix:`, `docs:`, `style:`, `test:`,
 
 Never hand-edit `resources/styles/tokens.css`. Change the seed via
 `npm run tokens` (or a dedicated preset script) and commit both the generated
-CSS and `docs/tokens.json`.
+CSS and `tokens.json`.

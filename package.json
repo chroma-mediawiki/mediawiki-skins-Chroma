@@ -19,7 +19,7 @@
   ],
   "type": "module",
   "scripts": {
-    "tokens": "node tools/generate-tokens.mjs '#006A6A' resources/styles/tokens.css docs/tokens.json",
+    "tokens": "node tools/generate-tokens.mjs '#006A6A' resources/styles/tokens.css tokens.json",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint resources/scripts",
     "lint:css": "stylelint resources/styles/*.css",
