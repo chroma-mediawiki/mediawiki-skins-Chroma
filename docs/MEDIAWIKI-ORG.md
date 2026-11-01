@@ -17,8 +17,9 @@ project is ready to be listed. Keep the infobox fields in sync with `skin.json`.
 }}
 
 '''Chroma''' is a MediaWiki skin inspired by Material Design 3 and M3 Expressive.
-It provides dynamic color presets, light/dark/auto schemes, an app-like layout
-and a reading layout, plus a focus-oriented reading mode.
+It provides four dynamic color presets, light/dark/auto schemes, an app-like
+layout and a reading layout, plus a focus-oriented reading mode. MobileFrontend
+can hand mobile requests to Chroma with `$wgDefaultMobileSkin = 'chroma'`.
 
 == Installation ==
 {{TNT|Skin installation|Chroma}}
@@ -34,7 +35,13 @@ $wgChromaDefaultScheme = 'system'; // system | light | dark
 $wgChromaDefaultLayout = 'app';    // app | reading
 $wgChromaDefaultReadingMode = false;
 $wgChromaAllowUserColor = true;
+$wgChromaAllowUserLayout = true;
+$wgChromaAllowUserReadingMode = true;
+// Optional MobileFrontend takeover
+// $wgDefaultMobileSkin = 'chroma';
 </syntaxhighlight>
+
+Current release line: **v0.5.1** (MediaWiki 1.43 LTS / 1.45 / 1.46).
 
 == Compatibility ==
 MediaWiki 1.43 LTS, 1.45 and 1.46 are maintained as separate branches and

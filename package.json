@@ -1,8 +1,22 @@
 {
   "name": "chroma-mediawiki-skin",
   "private": true,
-  "version": "0.1.0",
-  "description": "Build tooling for the Chroma MediaWiki skin",
+  "version": "0.5.2",
+  "description": "Build tooling and static demo for the Chroma MediaWiki skin",
+  "keywords": [
+    "mediawiki",
+    "mediawiki-skin",
+    "skin",
+    "material-design",
+    "material-design-3",
+    "m3-expressive",
+    "design-tokens",
+    "php",
+    "css",
+    "dark-mode",
+    "accessibility",
+    "theme"
+  ],
   "type": "module",
   "scripts": {
     "tokens": "node tools/generate-tokens.mjs '#006A6A' resources/styles/tokens.css docs/tokens.json",

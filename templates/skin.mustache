@@ -66,15 +66,15 @@
 		</aside>
 		<main id="content" class="chroma-content">
 			<div class="chroma-page">
-				<div class="chroma-page__topline">
-					{{#data-portlets}}
-					{{#data-namespaces}}<nav class="chroma-tabs" aria-label="Namespaces"><ul>{{{html-items}}}</ul></nav>{{/data-namespaces}}
-					{{#data-views}}<nav class="chroma-tabs chroma-tabs--views" aria-label="Views"><ul>{{{html-items}}}</ul></nav>{{/data-views}}
-					{{/data-portlets}}
-				</div>
 				<header class="chroma-page__header">
 					{{{html-title-heading}}}
 					{{{html-subtitle}}}
+					<div class="chroma-page__toolbar">
+						{{#data-portlets}}
+						{{#data-namespaces}}<nav class="chroma-tabs" aria-label="Namespaces"><ul>{{{html-items}}}</ul></nav>{{/data-namespaces}}
+						{{#data-views}}<nav class="chroma-tabs chroma-tabs--views" aria-label="Views"><ul>{{{html-items}}}</ul></nav>{{/data-views}}
+						{{/data-portlets}}
+					</div>
 				</header>
 				<div class="chroma-page__body">
 					<div class="chroma-article">
