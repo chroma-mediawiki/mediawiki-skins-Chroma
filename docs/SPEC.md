@@ -1,155 +1,163 @@
-# Chroma — Specification (v0.1)
+# Chroma — Specification (v0.5.1)
 
-Chroma is a MediaWiki skin that applies Material Design 3 (MD3) tokens and a
-subset of M3 Expressive behaviour to MediaWiki's chrome and content. This
-document is the source of truth for scope, design decisions and acceptance
-criteria for the v0.1 line.
+Chroma is a MediaWiki skin that applies a Material Design 3 token system and a
+small M3 Expressive visual subset to MediaWiki's chrome and content. This
+document reflects the shipped v0.5.1 line.
 
 ## 1. Goals
 
-1. A production-usable MediaWiki skin for small and medium wikis, installable
-   with `wfLoadSkin( 'Chroma' )`.
-2. Faithful MD3 token system: color roles, typescale, shape, elevation, motion,
+1. A production-usable skin for small and medium wikis, installable with
+   `wfLoadSkin( 'Chroma' )`.
+2. An MD3 token system: color roles, typescale, shape, elevation, motion and
    state layers.
-3. A pragmatic M3 Expressive subset: emphasized typescale, expanded shape scale,
-   spring-like motion, expressive components where web support exists.
-4. Tier 1 extension compatibility (see `COMPATIBILITY.md`): no functional
-   breakage, consistent visual language.
-5. Dynamic color: admin default seed, per-user seed and light/dark preference.
-6. Accessibility: WCAG 2.2 AA, keyboard operability, reduced motion.
-7. Three supported MediaWiki lines: 1.43 LTS, 1.45, 1.46 — as separate branches
-   and release lines, not one "works everywhere" skin.
+3. A pragmatic M3 Expressive subset: larger shape scale, spring-like motion,
+   expressive top-app-bar menus and editorial rhythm.
+4. Tier 1 extension compatibility, with the tested matrix documented in
+   `COMPATIBILITY.md`.
+5. Dynamic color: a default seed (`#006A6A`) plus four presets, light/dark/auto
+   scheme, per-user preferences.
+6. A reading-first layout with an app-like default shell and a reading layout.
+7. Three supported MediaWiki lines: 1.43 LTS, 1.45 and 1.46 as separate
+   branches and release lines.
 
-## 2. Non-goals (v0.1)
+## 2. Non-goals
 
-- Semantic MediaWiki / Cargo / PageForms deep visual integration (Tier 2).
-- Replacing MobileFrontend; v0.1 runs alongside it (B2). Full takeover is v0.2.
-- Re-theming every OOUI widget pixel-for-pixel; behaviour is preserved, surface
-  is themed.
-- Fandom / Wikia lookalike features.
+- A complete implementation of every M3 Expressive component.
+- Arbitrary per-user seed colors (four presets are supported).
+- Deep visual integration for Semantic MediaWiki, Cargo, PageForms or Flow.
+- Pixel parity for third-party extension UI.
+- Replacing MediaWiki's content model or extension behaviour.
+- A manual WCAG audit of every page (automated axe-core checks are in CI).
 
 ## 3. Design principles
 
-- **Reading first.** Article surface is calm; chrome recedes; reading mode is a
-  first-class control.
-- **Token-driven.** No hard-coded colours in components; everything resolves to
-  `--md-sys-*` variables.
+- **Reading first.** The article surface is calm; chrome recedes; reading mode
+  is a first-class control.
+- **Token-driven.** Components resolve colours, type, shape and motion to
+  `--md-sys-*` variables where practical.
 - **Progressive enhancement.** Core reading, navigation and search work without
-  JavaScript; JS adds drawer, theme/layout switching and motion.
+  JavaScript; JS adds menus, theme/layout switching, scroll-spy and snackbars.
 - **No external requests.** Fonts, icons and scripts are served from the skin.
 
 ## 4. Token system
 
-Generated from the seed color `#006A6A` by `tools/generate-tokens.mjs`
+Generated from `#006A6A` by `tools/generate-tokens.mjs`
 (`@material/material-color-utilities`), committed as
-`resources/styles/tokens.css` (light, dark, auto) and `docs/tokens.json`.
+`resources/styles/tokens.css` and `docs/tokens.json`.
 
-- Color: 26+ MD3 roles incl. `surface-container-*`, `inverse-*`, `outline-variant`.
-- Typescale: display / headline / title / body / label; Emphasized variants.
+- Colour roles include `surface-container-*`, `inverse-*`, `outline-variant`.
+- Typescale: display / headline / title / body / label.
 - Shape: none, extra-small 4, small 8, medium 12, large 16, extra-large 28,
   extra-extra-large 40, full.
 - Elevation: levels 0–5.
-- Motion: durations short/medium/long 1–4; standard/emphasized easings; a spring
+- Motion: short/medium/long durations, standard/emphasized easings, a spring
   approximation via CSS `linear()`.
-- State layers: hover .08, focus .12, pressed .12, dragged .16.
-
-The token file also exposes a font stack: Roboto Flex subset for Latin, system
-CJK stack, monospace stack.
+- State layers: hover/focus/pressed/dragged opacities.
+- Font stack: Roboto Flex subset for Latin, system CJK stack, monospace stack.
 
 ## 5. Layouts and navigation
 
-Two shells, switchable in preferences and at runtime (`data-chroma-layout`):
+Two shells switchable in Preferences and via the in-page menu
+(`data-chroma-layout`):
 
-- **App** (default): fixed top app bar, navigation drawer (persistent ≥ 1024px,
-  modal below), content column + TOC card, edit FAB.
-- **Reading**: Vector-2022-like left sidebar, top search, right TOC; closer to a
-  classic wiki.
+- **App** (default): top app bar with view-options/account menus, persistent
+  drawer on desktop (overlay on narrow screens), content column + sticky TOC,
+  page tabs and page actions.
+- **Reading**: hides the drawer and TOC, centres the article and reduces chrome.
 
-Reading mode (`data-chroma-reading="on"`) hides drawer/TOC/actions and centres
-the article at ~72ch. Default off (user preference + admin default).
+Reading mode (`data-chroma-reading="on"`) additionally hides page actions and
+the TOC, and centres the article.
 
-## 6. Component inventory (v0.1)
+MobileFrontend takeover: with MobileFrontend installed and
+`$wgDefaultMobileSkin = 'chroma'`, mobile UA requests use Chroma directly.
+Mobile sections are expanded rather than collapsed.
 
-Top app bar, navigation drawer/rail, search bar + suggestions, TOC, tabs,
-icon buttons, menus, buttons (filled/tonal/outlined/text), FAB, chips, cards,
-dialogs, snackbar, progress, switches, text fields, footer, page tools.
+## 6. Component inventory (v0.5.1)
 
-Material Web is used where its component fits the wiki DOM; otherwise components
-are implemented in plain CSS/JS to avoid adapting MediaWiki's server-rendered
-markup to web-component shadow DOM.
+Top app bar, view-options and account popovers, navigation drawer with grouped
+list items and Material Symbols, search field + core search suggestions, page
+tabs, page action buttons, TOC rail with nested sections and scroll-spy, chips,
+cards, code blocks, tables, blockquote pull quotes, login/history/diff surfaces,
+snackbar, footer, print stylesheet.
+
+No floating edit FAB: edit/history actions live in the page action row.
 
 ## 7. Page inventory
 
 - Article view (prose, tables, citations, images, infobox, TOC, categories)
-- Edit (wikitext + VisualEditor + WikiEditor/CodeEditor toolbars)
+- Edit (wikitext, VisualEditor, WikiEditor/CodeEditor on 1.46 harness)
 - History and diff
 - Special pages: Search, Preferences, RecentChanges, Watchlist, Upload, Login,
   AllPages, WhatLinksHere, Random, Version
-- Talk pages (incl. DiscussionTools reply UI)
+- Talk pages (DiscussionTools on 1.46)
 - Print stylesheet
 - Error/permission pages
 
 ## 8. Extension compatibility
 
-Tier 1: MediaWiki 1.43 bundled extensions + lightweight popular community
-extensions (list in `COMPATIBILITY.md`). Definition:
+Tier 1 and the exact tested list live in `COMPATIBILITY.md`. Definitions:
 
 - **A — functional:** no PHP/JS errors, controls present and operable, no
   horizontal overflow, keyboard reachable.
-- **B — visual:** extension UI uses MD3 tokens, no default Vector/OOUI chrome
-  leaking through.
+- **B — visual:** extension UI uses Chroma/MD3 surfaces, no obvious Vector/OOUI
+  chrome leaking through.
 - **C — pixel parity:** not promised for third-party extension UI.
+
+The 1.46 harness has 31 extensions configured (AbuseFilter is disabled by a
+missing environment dependency). The 1.43.0 and 1.45.0 matrices each cover
+30 extensions. AbuseFilter is blocked by a missing Equivset dependency in the
+local harness; VisualEditor/DiscussionTools are 1.46-only.
 
 ## 9. Configuration and preferences
 
-See `THEMING.md`. Admin: default seed, default scheme, default layout, reading
-mode default, toggles to allow user overrides. User: Preferences → Appearance
-("Rendering" section) and an in-page quick toggle.
+See `THEMING.md`. Admin settings: default seed/scheme/layout/reading mode and
+allow-user-override flags. User settings: Preferences → Appearance.
 
 ## 10. Accessibility
 
-WCAG 2.2 AA contrast, visible focus, labels/ARIA on drawer/menus/tabs,
-`prefers-reduced-motion` disables spring/shape transitions, skip link.
+Automated axe-core WCAG 2.0/2.1/2.2 A+AA scans run in CI against the static demo
+and currently report 0 violations. Visible focus, skip links, labelled drawer
+and menus, and `prefers-reduced-motion` handling are implemented. A full manual
+audit of every MediaWiki page remains open.
 
-## 11. Performance budget
+## 11. Performance
 
-- CSS ≤ 150 KB gzip (excluding fonts)
-- JS ≤ 80 KB gzip
-- Fonts ≤ 120 KB (Latin subset, woff2)
-- No external network requests at runtime
+No formal performance budget is enforced. The skin makes no external runtime
+requests and ships its CSS/JS locally.
 
 ## 12. Browser support
 
-MediaWiki Grade A browsers (latest two versions of Chrome, Edge, Firefox,
-Safari). No IE. Graceful degradation below Grade A.
+Current two versions of Chrome, Edge, Firefox and Safari; no Internet Explorer.
 
 ## 13. Versioning and branches
 
-- `REL1_43` (1.43.x, PHP 8.1+), `REL1_45` (1.45.x, PHP 8.2+),
-  `REL1_46` (1.46.x, PHP 8.3+), `main` (development).
-- Tags: `v0.1.0-REL1_43` etc.; releases contain installable ZIPs.
+- `REL1_43` (1.43.x), `REL1_45` (1.45.x), `REL1_46` (1.46.x), `main`
+  (development).
+- Tags: `vX.Y.Z-REL1_43` etc.; releases contain installable ZIPs.
 - Version-specific differences: `COMPAT-MATRIX.md`.
 
-## 14. Acceptance criteria (v0.1)
+## 14. Acceptance criteria (v0.5.1)
 
-1. Installs and renders on all three MW lines with no PHP notices.
-2. Tier 1 extensions pass A; top 10 pass A+B with screenshots.
-3. Dark/light/auto, layout switch, reading mode, dynamic seed work.
-4. Keyboard-only navigation and axe-core scan pass on core pages.
-5. Budgets met; CI matrix green; Pages demo live.
-6. Bilingual README, THEMING and COMPATIBILITY docs complete.
+1. Installs and renders on all three MW lines with no PHP errors.
+2. Tier 1 matrix renders citations, MathML, syntax highlighting, parser
+   functions, poem and inputbox.
+3. Light/dark/auto, app/reading layout, reading mode and four seed presets work.
+4. MobileFrontend takeover works with `$wgDefaultMobileSkin = 'chroma'`.
+5. axe-core demo scan has 0 violations; CI and Pages are green.
+6. Chinese README and English technical docs; mediawiki.org listing and
+  translatewiki registration remain external account tasks.
 
 ## 15. Repository layout
 
 ```
-.github/        CI, release, pages, issue templates
+.github/        CI, release, Pages, issue templates
 docs/           SPEC, THEMING, COMPATIBILITY, COMPAT-MATRIX, tokens.json
 i18n/           en, qqq, zh-hans, zh-hant
-includes/       PHP classes (hooks, preferences, config)
-templates/      Mustache templates
-resources/      tokens, base/components/page styles, scripts, icons, fonts
+includes/       PHP hooks and skin class
+templates/      Mustache template
+resources/      tokens, base/extension styles, scripts
 demo/           static GitHub Pages prototype
-dev/            local MediaWiki harness scripts
-tests/          PHPUnit + Playwright
-tools/          token generator
+tests/          axe-core demo test
+tools/          token/preset generators
+dev/            local harness placeholder (not used by CI)
 ```
