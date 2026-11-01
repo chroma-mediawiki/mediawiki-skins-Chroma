@@ -1,6 +1,10 @@
+<p align="right"><strong>简体中文</strong> · <a href="README.en.md">English</a></p>
+
+<img src="logo.svg" width="72" height="72" align="right" alt="Chroma logo">
+
 # Chroma
 
-受 Material Design 3 与 M3 Expressive 启发的 MediaWiki 皮肤。
+给 MediaWiki 上色。
 
 [![CI](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/actions/workflows/ci.yml/badge.svg)](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/actions/workflows/ci.yml)
 [![License: GPL-3.0-or-later](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](LICENSE)
@@ -52,7 +56,7 @@
 - 搜索联想：接入核心 `mediawiki.searchSuggest`，搜索结果使用 MD3 面板样式。
 - 特殊页：登录（Codex）、历史、版本差异、偏好设置统一 Material 样式。
 - 无外部请求：字体、图标与脚本全部随皮肤分发，不依赖 CDN。
-- 可访问性：自动化 axe-core 检查（WCAG 2.2 AA 规则）为 0 violations；完整人工审计仍待补。支持键盘操作与 `prefers-reduced-motion`。
+- 可访问性：支持键盘操作与 `prefers-reduced-motion`；当前没有自动化 axe 套件，完整人工审计仍待补。
 - 页面结构：标题、页面标签与操作同排；侧栏分组 + 图标；目录支持嵌套与 scroll-spy；引用改为编辑式 pull quote。
 
 
