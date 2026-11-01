@@ -42,7 +42,7 @@
 					<span class="chroma-icon" data-icon="person" aria-hidden="true"></span>
 				</summary>
 				<div class="chroma-app-menu__panel">
-					{{#data-portlets}}{{#data-personal}}<ul class="chroma-user-menu">{{{html-items}}}</ul>{{/data-personal}}{{/data-portlets}}
+					{{#data-portlets}}{{#data-user-menu}}<ul class="chroma-user-menu">{{{html-items}}}</ul>{{/data-user-menu}}{{/data-portlets}}
 				</div>
 			</details>
 		</div>
@@ -71,7 +71,7 @@
 					{{{html-subtitle}}}
 					<div class="chroma-page__toolbar">
 						{{#data-portlets}}
-						{{#data-namespaces}}<nav class="chroma-tabs" aria-label="Namespaces"><ul>{{{html-items}}}</ul></nav>{{/data-namespaces}}
+						{{#data-associated-pages}}<nav class="chroma-tabs" aria-label="Namespaces"><ul>{{{html-items}}}</ul></nav>{{/data-associated-pages}}
 						{{#data-views}}<nav class="chroma-tabs chroma-tabs--views" aria-label="Views"><ul>{{{html-items}}}</ul></nav>{{/data-views}}
 						{{/data-portlets}}
 					</div>
