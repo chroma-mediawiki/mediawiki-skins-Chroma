@@ -1208,3 +1208,35 @@ body[data-chroma-theme="dark"] { color-scheme: dark; }
 }
 .chroma-page__header { margin-block-end: 0; }
 .chroma-page__body { padding-block-start: 8px; }
+
+/* code blocks: one surface, no nested double card */
+.chroma-prose .mw-highlight {
+	background: transparent !important;
+	padding: 0 !important;
+	margin: 1.25em 0 !important;
+	border-radius: 0 !important;
+}
+.chroma-prose .mw-highlight pre,
+.chroma-prose pre {
+	margin: 0;
+	background: var(--md-sys-color-surface-container) !important;
+	border: 0 !important;
+	border-radius: var(--md-sys-shape-corner-large) !important;
+	padding: 18px 20px !important;
+}
+.chroma-prose .mw-highlight pre code,
+.chroma-prose pre code { background: none !important; }
+
+/* action icons: equal tap targets with breathing room */
+.chroma-page__toolbar .chroma-tabs--views { gap: 12px !important; }
+.chroma-page__toolbar .chroma-tabs--views li { display: flex; }
+.chroma-page__toolbar .chroma-tabs--views li a { justify-content: center; }
+@media (max-width: 720px) {
+	.chroma-page__toolbar .chroma-tabs--views { gap: 8px !important; }
+}
+@media (max-width: 720px) {
+	.chroma-page__toolbar .chroma-tabs--views li.selected a {
+		background: transparent;
+		color: var(--md-sys-color-primary);
+	}
+}
