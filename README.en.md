@@ -9,7 +9,7 @@ Color for MediaWiki.
 [![CI](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/actions/workflows/ci.yml/badge.svg)](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/actions/workflows/ci.yml)
 [![License: GPL-3.0-or-later](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](LICENSE)
 [![MediaWiki](https://img.shields.io/badge/MediaWiki-1.43%20%7C%201.45%20%7C%201.46-36c.svg)](https://chroma-mediawiki.github.io/chroma-docs/en/guide/compatibility)
-[![QQ](https://img.shields.io/badge/QQ%20group-join-12B7F5.svg)](https://qm.qq.com/q/zSaZRWS4eY)
+[![QQ](https://img.shields.io/badge/QQ-join-12B7F5.svg)](https://qm.qq.com/q/zSaZRWS4eY)
 
 > Docs & website: https://chroma-mediawiki.github.io/chroma-docs/en/
 >
